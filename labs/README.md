@@ -1,6 +1,6 @@
 # Labs for 432 in Spring 2021
 
-This page links to all materials for each lab this semester.
+There are six labs this semester. The first five are required and linked to specific parts of the course, while the sixth is optional and can be done at any time during the semester. This page links to instructions, data and all other materials for each lab.
 
 - [Lab 01](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab01)
 - [Lab 02](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02)
