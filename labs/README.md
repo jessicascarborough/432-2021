@@ -7,6 +7,6 @@ There are six labs this semester. The first five are required and linked to spec
 - [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03)
 - [Lab 04](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab04)
 - [Lab 05](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab05)
-- [Lab 06](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab06)
+- [Lab 06](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab06) - note that this is an optional Lab that can be completed at any time during the semester
 
 Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove.github.io/432/calendar.html).
