@@ -1,7 +1,7 @@
 432 Lab 01 for Spring 2021
 ================
 
-Version: 2021-01-25 13:01:08
+Version: 2021-01-25 13:21:36
 
 # General Instructions
 
@@ -19,6 +19,13 @@ for this Lab.
 Start a separate R Project for Lab 1, as your first step, and place the
 data in that project’s directory or (if you want to match what I did) in
 a data sub-directory under that project’s directory.
+
+-   There is an R Markdown **template** for Lab 01, which [you can find
+    here](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/lab01_template.Rmd).
+    Please feel encouraged to use the template as it is, or modify it to
+    produce something that you like better.
+-   If you want to see how this template looks as a knitted HTML file,
+    [visit this link](https://rpubs.com/TELOVE/lab01-template-432-2021).
 
 ## The `hbp3456` data
 
