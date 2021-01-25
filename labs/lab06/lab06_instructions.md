@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-01-25 16:38:45
+Last Updated: 2021-01-25 16:45:24
 
 Note that this Lab is **completely optional**.
 
@@ -85,7 +85,8 @@ bonus for your course lab grade, depending on how robust your work is.
 
 The TAs will be happy to review your work on Lab 06 at any time from now
 up through 2021-05-01, and they will try to provide suggestions for
-improvements. You can also ask questions through Piazza in the **lab06**
+improvements. You can also ask questions [through
+Piazza](https://piazza.com/case/spring2021/pqhs432) in the **lab06**
 folder.
 
 Again, we’re not going to talk about this much (if at all) in class, and
