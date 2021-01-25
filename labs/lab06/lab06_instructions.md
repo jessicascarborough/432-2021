@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-01-25 16:34:28
+Last Updated: 2021-01-25 16:38:45
 
 Note that this Lab is **completely optional**.
 
@@ -59,6 +59,11 @@ projects on your website. That’s up to you.
     [tutorial](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html)
     might be of some help to you, as well, if you’re looking to create a
     website just using R Markdown (and perhaps some Github.)
+
+**Note** If you find a helpful resource for using blogdown to build a
+personal website other than those listed above, please feel encouraged
+to pass it along through Piazza in the lab06 folder. We’ll give some
+class participation credit for useful suggestions.
 
 ## Why do it?
 
