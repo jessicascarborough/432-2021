@@ -6,11 +6,15 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 ## Instructions
 
-The instructions for completing Lab 01 [will appear here].
+The instructions for completing Lab 01 [will appear here](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/lab01_instructions.md).
 
 ## Data
 
 The data set used in Lab 01 is the `hbp3456.csv` data, available now on our [course data page](https://github.com/THOMASELOVE/432-data).
+
+## Questions?
+
+If you have questions about Lab 01, please ask them [at TA office hours](https://thomaselove.github.io/432/contact.html), or [via Piazza](https://piazza.com/case/spring2021/pqhs432) using the **lab01** folder.
 
 ## Post-Deadline Materials
 
