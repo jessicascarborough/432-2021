@@ -1,6 +1,8 @@
 432 Homework 1
 ================
 
+Version: 2021-01-25 12:59:38
+
 # General Instructions
 
 Submit your work via [Canvas](https://canvas.case.edu/). The deadline is
@@ -20,16 +22,22 @@ a data sub-directory under that project’s directory.
 
 ## The `hbp3456` data
 
-The (simulated) data describe a total of 3456 people living with
-hypertension (high blood pressure) diagnoses who receive primary care in
-one of eight practices. 432 (different) individuals (who I’ll call
-subjects in what follows) were sampled at random from the list of
-eligible subjects for this study within each of the eight practices. The
-data are based on real electronic health record (EHR) data, but with
-some noise added. The practices are named after streets that appear in
-*The Simpsons*. There are 62 (fictional) providers identified across the
-eight practices, and each provider cares for subjects within a single
-practice.
+The (simulated) data in the `hbp3456` file describe a total of 3456
+people living with hypertension (high blood pressure) diagnoses who
+receive primary care in one of eight practices.
+
+-   In each of the eight practices, 432 (different) individuals (who
+    I’ll call subjects in what follows) were sampled at random from all
+    eligible subjects.
+-   The data are based on real electronic health record (EHR) data, but
+    with some noise added.
+    -   The practices are named after streets that appear in *The
+        Simpsons*.
+    -   There are 62 (fictional) providers identified across the eight
+        practices, and each provider cares for subjects within a single
+        practice.
+
+### Eligibility Criteria
 
 The data are cross-sectional and describe results from a one-year
 reporting window. To be eligible for the study, a subject had to meet
@@ -53,6 +61,8 @@ all of the following criteria:
     recent diastolic BP between 40 and 140 mm Hg, where the systolic BP
     is at least 15 and no more than 130 mm Hg larger than the diastolic
     BP.
+
+### Codebook
 
 |    Variable | Description                                                                                                                                                                     |
 |------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -80,35 +90,35 @@ all of the following criteria:
 |    `acearb` | does subject have a current prescription for an ACE-inhibitor or ARB? Yes or No                                                                                                 |
 |     `betab` | does subject have a current prescription for a beta-blocker? Yes or No                                                                                                          |
 
-The list of medications included in `bpmed` is: ACE-inhibitor, ARB,
-Diuretic, Calcium-Channel Blocker, Beta-Blocker, Alpha-1 Blocker,
-Centrally acting Alpha-2 Agonist, Vasodilator or other antihypertensive
-agents. A subject with a current prescription for any of these will have
-a Yes in `bpmed`.
+### Notes on Specific Variables
 
-For the `acearb`, `betab`, `bpmed`, `statin` and `depdiag` variables, a
-No response includes all subjects where there’s no evidence in the EHR
-of meeting the Yes criterion, so that there are no missing values (a
-missing value is interpreted there as No.)
+-   The list of medications included in `bpmed` is: ACE-inhibitor, ARB,
+    Diuretic, Calcium-Channel Blocker, Beta-Blocker, Alpha-1 Blocker,
+    Centrally acting Alpha-2 Agonist, Vasodilator or other
+    antihypertensive agents. A subject with a current prescription for
+    any of these will have a Yes in `bpmed`.
+-   For the `acearb`, `betab`, `bpmed`, `statin` and `depdiag`
+    variables, a No response includes all subjects where there’s no
+    evidence in the EHR of meeting the Yes criterion, so that there are
+    no missing values (a missing value is interpreted there as No.)
+-   For the `height`, `weight` and `ldl` results, implausible values
+    were treated as missing in preparing the data for you.
+-   The `race` and `eth_hisp` values are self-reported, and some
+    subjects refused to answer one or both of the relevant questions.
+-   The `income` and `hsgrad` values are imputed from the subject’s home
+    address, usually at the census block level, but occasionally at the
+    level of the zip code.
+    -   When a subject’s home address could not be geocoded, these
+        values are noted as missing.
+    -   Geocoded estimates of `income` below 6500 are reported as 6500,
+        and estimates above 130000 are reported as 130000.
+    -   For `hsgrad`, geocoded estimates below 40 are reported as 40,
+        and estimates above 99.9 are reported as 99.9.
 
-In addition, for the `height`, `weight` and `ldl` results, implausible
-values were treated as missing.
+## Summarizing the Complete Data
 
-The `race` and `eth_hisp` values are self-reported, and some subjects
-refused to answer one or both of the relevant questions.
-
-The `income` and `hsgrad` values are imputed from the subject’s home
-address, usually at the census block level, but occasionally at the
-level of the zip code. When a subject’s home address could not be
-geocoded, these values are noted as missing. Geocoded estimates of
-`income` below 6500 are reported as 6500, and values above 130000 are
-reported as 130000. For `hsgrad`, values below 40 are reported as 40,
-and values above 99.9 are reported as 99.9.
-
-## Describing the Complete Data
-
-Here’s a summary of the data from the `describe` function in the `Hmisc`
-package.
+Here’s a summary of the data using the `describe` function in the
+`Hmisc` package.
 
 ``` r
 lab1 <- read_csv(here("data", "hbp3456.csv")) # reads the hbp3456.csv file
@@ -324,37 +334,47 @@ describe(lab1) # from the Hmisc package
 
 Build a Table 1 to compare the subjects in the **Highland** practice to
 the subjects in the **Sycamore** practice on the following nine
-variables: age, race, Hispanic ethnicity, sex, primary insurance, body
-mass index, BMI category, and systolic and diastolic blood pressure.
+variables:
+
+-   age,
+-   race,
+-   Hispanic ethnicity,
+-   sex,
+-   primary insurance,
+-   body mass index,
+-   BMI category,
+-   systolic blood pressure, and
+-   diastolic blood pressure.
+
 Make the Table as well as you can within R Markdown, and display the
-result as part of your HTML file. **Include a description of the
-important results from your Table 1 that does not exceed 100 words,
-using complete English sentences**.
+result as part of your HTML file. All code must be visible to us.
+**Include a description of the important results from your Table 1 that
+does not exceed 100 words, using complete English sentences**.
 
 1.  Be sure that your table specifies the number of subjects in each
     practice. **Note that you’ll have to do something so that your work
     focuses on the comparison of Highland to Sycamore, leaving out (for
     this question only) the other practices.**
-2.  You’ll have to deal with some missing values in the data, in an
-    appropriate way. All missing values are indicated in the .csv file
-    with NA. Be sure to specify what you did with the missing data (and
-    how much you had to deal with) in a footnote to the table.
-    Specifically, list the notes as a bulleted list in the Markdown
-    file, and never leave Markdown during the entire enterprise. It’s
-    not usually appropriate to report results that include imputation in
-    a Table 1, so I expect the best choice is to build a note specifying
-    the amount of missing data.
-3.  Some variables will present as characters in the data if you import
-    it as I did above, but you’d instead prefer them to appear as
-    **factors**. Be sure to include code in your response to make these
-    changes (the `forcats` package is your friend here) and then
-    (perhaps using the `fct_relevel` function in the `forcats` package)
-    be sure to move the levels of those factors into an order that
-    facilitates interpretation.
+2.  You’ll have to deal with some missing values in the data. All
+    missing values are indicated in the .csv file with NA. It’s not
+    usually appropriate to report results that include imputation in a
+    Table 1, so build a note specifying the amount of missing data in a
+    footnote to the table. An appropriate approach would be to list
+    these notes as a bulleted list in the Markdown file just below your
+    Table.
+3.  Some variables will present as characters in the data, but you’d
+    instead prefer them to appear as **factors**. Be sure to include
+    code in your response to make these changes (the `forcats` package
+    is your friend here) and then (perhaps using the `fct_relevel`
+    function in the `forcats` package) be sure to move the levels of
+    those factors into an order that facilitates interpretation.
 4.  Be sure, too, to make reasoned choices about whether means and
     standard deviations or instead medians and quartiles are more
     appropriate displays for the quantitative variables. Include your
     reasons in your bulleted list of footnotes at the end of your table.
+    Note that the `record` information is just a code (even though it is
+    numerical) and should be treated as a character variable in using
+    these data, as I did above.
 5.  Note that body mass index (BMI) and BMI category are not supplied in
     the data, although you do have height and weight. **So, you’ll have
     to calculate the BMI and add it to the data set.** If you don’t know
@@ -380,10 +400,12 @@ impact on their **systolic blood pressure**, adjusting for whether or
 not they have a prescription for a **beta-blocker**? Decide whether your
 model should include an interaction term in a sensible way (providing a
 graph to help us understand your reasoning), and then fit your choice of
-model using the `lm` function in R. Be sure to provide a written
-explanation of your findings, in complete sentences. In that
-explanation, you should address both the overall quality of fit and the
-interpretation of the coefficients of your chosen model.
+model using the `lm` function in R.
+
+**Be sure to provide a written explanation of your findings, in complete
+sentences**. In that explanation, you should address both the overall
+quality of fit and the interpretation of the coefficients of your chosen
+model.
 
 1.  As a hint, one graph you might use would be one to assess the need
     for an interaction term. Another graph (or perhaps table) to
@@ -400,14 +422,16 @@ identify a specific example of how this idea has helped or might help
 you deal with an issue that comes up in your life as a scientist.
 
 Write a short essay (between 150 and 250 words is appropriate) using
-clearly constructed and complete sentences to respond to this.
+clearly constructed and complete sentences to respond to this. The essay
+should be composed using R Markdown.
 
 -   We encourage you to provide brief citations or quotes from Silver
     and elsewhere as needed.
 -   In citing *The Signal and the Noise* a quotation with (Silver,
-    Introduction) or (Silver, Chapter X) is sufficient.
+    Introduction) or (Silver, Chapter 1), for example, is sufficient.
 -   In citing another work, a more detailed citation is appropriate.
-    Citations and quotations should not count towards the word limit.
+    Citations and quotations do not count towards the suggested word
+    limit.
 
 ## Question 4. (10 points)
 
@@ -424,6 +448,10 @@ task.
 -   Dr. Love has provided his own post on this issue in the
     **lab01\_music** folder on Piazza.
 
+In your R Markdown and HTML file in response to this assignment, for
+Question 4, I suggest you write: “I have posted on Piazza in response to
+Question 4.”
+
 ## Question 5. (10 points)
 
 Please tell us your Github user name.
@@ -435,9 +463,9 @@ Please tell us your Github user name.
 
 ## Please add the session information.
 
-Finally, at the end of this homework and all subsequent assignments
+Finally, at the end of this lab and all subsequent assignments
 (including the projects), please add the session information. My
-preferred way for you to do this is…
+preferred way for you to do this for 432 is…
 
 ``` r
 xfun::session_info()
