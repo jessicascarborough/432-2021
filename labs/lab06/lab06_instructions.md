@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-01-25 16:45:24
+Last Updated: 2021-01-25 16:46:40
 
 Note that this Lab is **completely optional**.
 
@@ -62,8 +62,10 @@ projects on your website. That’s up to you.
 
 **Note** If you find a helpful resource for using blogdown to build a
 personal website other than those listed above, please feel encouraged
-to pass it along through Piazza in the lab06 folder. We’ll give some
-class participation credit for useful suggestions.
+to pass it along through [through
+Piazza](https://piazza.com/case/spring2021/pqhs432) in the **lab06**
+folder. We’ll give some class participation credit for useful
+suggestions.
 
 ## Why do it?
 
