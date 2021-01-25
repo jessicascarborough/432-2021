@@ -4,4 +4,14 @@ This is the main page for Lab 01 for the 432 course in Spring 2021.
 
 Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove.github.io/432/calendar.html).
 
-Further details to come.
+## Instructions
+
+The instructions for completing Lab 01 [will appear here].
+
+## Data
+
+The data set used in Lab 01 is the `hbp3456.csv` data, available now on our [course data page](https://github.com/THOMASELOVE/432-data).
+
+## Post-Deadline Materials
+
+will appear after the deadline.
