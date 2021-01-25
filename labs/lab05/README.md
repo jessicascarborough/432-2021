@@ -1,7 +1,25 @@
-# Lab 05
+# Lab 05 
 
 This is the main page for Lab 05 for the 432 course in Spring 2021.
 
 Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove.github.io/432/calendar.html).
 
-Further details to come.
+## Instructions
+
+The instructions for completing Lab 05 will be available soon.
+
+## Data
+
+The data used in Lab 05 will be described here.
+
+## Template
+
+A suggested R Markdown template for Lab 05 will be available soon.
+
+## Questions?
+
+If you have questions about Lab 05, please ask them [at TA office hours](https://thomaselove.github.io/432/contact.html), or [via Piazza](https://piazza.com/case/spring2021/pqhs432) using the **lab05** folder.
+
+## Post-Deadline Materials
+
+will appear after the deadline.
