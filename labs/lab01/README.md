@@ -6,7 +6,7 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 ## Instructions
 
-The instructions for completing Lab 01 [will appear here](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/lab01_instructions.md).
+The instructions for completing Lab 01 [are now available](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/lab01_instructions.md).
 
 ## Data
 
