@@ -108,7 +108,7 @@ Piazza](https://piazza.com/case/spring2021/pqhs432) using the
 # Project 1 involves two tasks
 
 In task 1 (which you’ll do in February), you will develop a [project
-proposal](https://github.com/THOMASELOVE/432-2021/tree/master/project1/01_proposal_instructions.md),
+proposal](https://github.com/THOMASELOVE/432-2021/tree/master/project1/01_project1_proposal_instructions.md),
 due at the start of March.
 
 -   The proposal requires you to have completed the cleaning of the data
@@ -118,7 +118,7 @@ due at the start of March.
 
 In task 2 (which you’ll do in March), you will develop your [analyses
 and present your
-results](https://github.com/THOMASELOVE/432-2021/tree/master/project1/02_analysis_and_presentation.md),
+results](https://github.com/THOMASELOVE/432-2021/tree/master/project1/02_project1_analysis_and_presentation_instructions.md),
 and this will be due near the end of March.
 
 -   The work you’ll do in March will involve analyzing the data, fitting
@@ -131,13 +131,13 @@ deadlines.
 ## Detailed Instructions for Task 1 (The Proposal)
 
 The [Task 1
-instructions](https://github.com/THOMASELOVE/432-2021/tree/master/project1/01_proposal_instructions.md)
+instructions](https://github.com/THOMASELOVE/432-2021/tree/master/project1/01_project1_proposal_instructions.md)
 are now available.
 
 ## Detailed Instructions for Task 2 (Analysis and Presentation)
 
 The [Task 2
-instructions](https://github.com/THOMASELOVE/432-2021/tree/master/project1/02_analysis_and_presentation.md)
+instructions](https://github.com/THOMASELOVE/432-2021/tree/master/project1/02_project1_analysis_and_presentation_instructions.md)
 are now available.
 
 ## Templates for Project 1
