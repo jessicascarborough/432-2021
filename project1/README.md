@@ -4,7 +4,7 @@ This is the main page for Project 1.
 
 ## Instructions
 
-[Start here with General instructions for Project 1](https://github.com/THOMASELOVE/432-2021/blob/master/project1/00_project1_general_instructions.md). Project 1 includes two Tasks.
+[Start here with General instructions for Project 1](https://github.com/THOMASELOVE/432-2021/blob/master/project1/00_project1_instructions.md). Project 1 includes two Tasks.
 
 - Specific instructions for Task 1 (The Proposal) are available now. 
     - This includes data cleaning and exploration work, and is what you'll be working on in February.
