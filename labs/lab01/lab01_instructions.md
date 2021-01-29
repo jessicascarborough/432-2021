@@ -1,7 +1,7 @@
 432 Lab 01 for Spring 2021
 ================
 
-Version: 2021-01-25 13:21:36
+Version: 2021-01-29 12:50:53
 
 # General Instructions
 
@@ -84,12 +84,12 @@ all of the following criteria:
 |    `income` | estimated median income of subject’s home neighborhood (via American Community Survey, to nearest $100)                                                                         |
 |    `hsgrad` | estimated percentage of adults living in the subject’s home neighborhood who have graduated from high school (via American Community Survey, to the nearest tenth of a percent) |
 |   `tobacco` | tobacco use status (Current, Former, or Never)                                                                                                                                  |
-|   `depdiag` | does subject have depression diagnosis? Yes or No                                                                                                                               |
+| `depr_diag` | does subject have depression diagnosis? Yes or No                                                                                                                               |
 |    `height` | subject’s height in meters, rounded to two decimal places                                                                                                                       |
 |    `weight` | subject’s weight in kilograms, rounded to one decimal place                                                                                                                     |
 |       `ldl` | subject’s LDL cholesterol level, in mg/dl                                                                                                                                       |
 |    `statin` | does subject have a current prescription for a statin medication? Yes or No                                                                                                     |
-|     `bpmed` | does subject have a current prescription for a blood pressure control medication? Yes or No                                                                                     |
+|    `bp_med` | does subject have a current prescription for a blood pressure control medication? Yes or No                                                                                     |
 |       `sbp` | subject’s most recently obtained systolic blood pressure, in mm Hg                                                                                                              |
 |       `dbp` | subject’s most recently obtained diastolic blood pressure, in mm Hg                                                                                                             |
 |  `visits_1` | subject’s number of visits for primary care in reporting period (one year)                                                                                                      |
@@ -99,12 +99,12 @@ all of the following criteria:
 
 ### Notes on Specific Variables
 
--   The list of medications included in `bpmed` is: ACE-inhibitor, ARB,
+-   The list of medications included in `bp_med` is: ACE-inhibitor, ARB,
     Diuretic, Calcium-Channel Blocker, Beta-Blocker, Alpha-1 Blocker,
     Centrally acting Alpha-2 Agonist, Vasodilator or other
     antihypertensive agents. A subject with a current prescription for
-    any of these will have a Yes in `bpmed`.
--   For the `acearb`, `betab`, `bpmed`, `statin` and `depdiag`
+    any of these will have a Yes in `bp_med`.
+-   For the `acearb`, `betab`, `bpmed`, `statin` and `depr_diag`
     variables, a No response includes all subjects where there’s no
     evidence in the EHR of meeting the Yes criterion, so that there are
     no missing values (a missing value is interpreted there as No.)
@@ -508,7 +508,7 @@ xfun::session_info()
       dbplyr_2.0.0        desc_1.2.0          diffobj_0.3.3      
       digest_0.6.27       dplyr_1.0.3         ellipsis_0.3.1     
       evaluate_0.14       fansi_0.4.2         farver_2.0.3       
-      forcats_0.5.0       foreign_0.8-81      Formula_1.2-4      
+      forcats_0.5.1       foreign_0.8-81      Formula_1.2-4      
       fs_1.5.0            generics_0.1.0      ggplot2_3.3.3      
       glue_1.4.2          graphics_4.0.3      grDevices_4.0.3    
       grid_4.0.3          gridExtra_2.3       gtable_0.3.0       
@@ -516,19 +516,19 @@ xfun::session_info()
       Hmisc_4.4-2         hms_1.0.0           htmlTable_2.1.0    
       htmltools_0.5.0     htmlwidgets_1.5.3   httr_1.4.2         
       isoband_0.2.3       jpeg_0.1-8.1        jsonlite_1.7.2     
-      knitr_1.30          labeling_0.4.2      lattice_0.20-41    
+      knitr_1.31          labeling_0.4.2      lattice_0.20-41    
       latticeExtra_0.6-29 lifecycle_0.2.0     lubridate_1.7.9.2  
       magrittr_2.0.1      markdown_1.1        MASS_7.3.53        
       Matrix_1.2-18       methods_4.0.3       mgcv_1.8.33        
       mime_0.9            modelr_0.1.8        munsell_0.5.0      
-      nlme_3.1.149        nnet_7.3-14         openssl_1.4.3      
+      nlme_3.1.149        nnet_7.3-15         openssl_1.4.3      
       pillar_1.4.7        pkgbuild_1.2.0      pkgconfig_2.0.3    
       pkgload_1.1.0       png_0.1-7           praise_1.0.0       
       prettyunits_1.1.1   processx_3.4.5      progress_1.2.2     
       ps_1.5.0            purrr_0.3.4         R6_2.5.0           
       RColorBrewer_1.1-2  Rcpp_1.0.6          readr_1.4.0        
       readxl_1.3.1        rematch_1.0.1       rematch2_2.1.2     
-      reprex_0.3.0        rlang_0.4.9         rmarkdown_2.6      
+      reprex_1.0.0        rlang_0.4.9         rmarkdown_2.6      
       rpart_4.1-15        rprojroot_2.0.2     rstudioapi_0.13    
       rvest_0.3.6         scales_1.1.1        selectr_0.4.2      
       splines_4.0.3       stats_4.0.3         stringi_1.5.3      
@@ -537,5 +537,5 @@ xfun::session_info()
       tidyselect_1.1.0    tidyverse_1.3.0     tinytex_0.29       
       tools_4.0.3         utf8_1.1.4          utils_4.0.3        
       vctrs_0.3.6         viridis_0.5.1       viridisLite_0.3.0  
-      waldo_0.2.3         whisker_0.4         withr_2.4.0        
-      xfun_0.19           xml2_1.3.2          yaml_2.2.1         
+      waldo_0.2.3         withr_2.4.1         xfun_0.19          
+      xml2_1.3.2          yaml_2.2.1         
