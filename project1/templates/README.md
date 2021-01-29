@@ -4,11 +4,13 @@ We have provided three templates to make it easier to meet the requirements of P
 
 There are three styles, each of which is a good choice as far as we are concerned.
 
-## Task 1 (Proposal) Templates
+## Task 1 (Proposal) R Markdown Templates
 
-- [Floating Table of Contents](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_proposal_template_floatingTOC.Rmd) Style
-- [HTML Clean](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_proposal_template_htmlclean.Rmd) Style
-- [Readthedown](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_proposal_template_readthedown.Rmd) Style
+Style | R Markdown Template | See the HTML Result
+---------------------- | ---------------- | ------------------
+Floating Table of Contents | [R Markdown file](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_proposal_template_floatingTOC.Rmd) | [View HTML](https://rpubs.com/TELOVE/proj1_floatTOC_432)
+HTML Clean | [R Markdown file](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_proposal_template_htmlclean.Rmd) | [View HTML](https://rpubs.com/TELOVE/proj1_clean_432)
+Read The Down | [R Markdown file](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_proposal_template_readthedown.Rmd) | [View HTML](https://rpubs.com/TELOVE/proj1_readthedown_432)
 
 ### Highlight: How R code is presented
 
@@ -26,7 +28,7 @@ Check out https://bookdown.org/yihui/rmarkdown/html-document.html for more on cu
 
 ## Task 2 (Final Presentation) Templates
 
-The Task 2 templates just add three additional sections (Linear Regression Modeling, Logistic Regression Modeling, and Discussion) to the Task 1 templates.
+The Task 2 templates just add three additional sections (Linear Regression Modeling, Logistic Regression Modeling, and Discussion) to the Task 1 templates. Grab those R Markdown files at the links below, or just add the three new sections yourself to your completed Task 1 document.
 
 - [Floating Table of Contents](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_floatingTOC.Rmd) Style
 - [HTML Clean](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_htmlclean.Rmd) Style
