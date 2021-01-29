@@ -32,3 +32,4 @@ The Task 2 templates just add three additional sections (Linear Regression Model
 - [HTML Clean](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_htmlclean.Rmd) Style
 - [Readthedown](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_readthedown.Rmd) Style
 
+# [Return to the Main page for Project 1]
