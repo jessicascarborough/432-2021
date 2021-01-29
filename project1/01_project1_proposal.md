@@ -38,7 +38,7 @@ Task 1 (The Project Proposal)
     Proposal?](#how-will-we-evaluate-the-proposal)
 -   [Links](#links)
 
-Last Update: 2021-01-28 20:36:01
+Last Update: 2021-01-28 21:58:43
 
 # Use a template, please!
 
@@ -224,6 +224,10 @@ order, in the codebook and in these results.
 
 # 6 Linear Regression Plans
 
+Begin this section by specifying a question that you hope to answer with
+the linear model you are proposing. Eventually, you will need to answer
+this question (in Task 2).
+
 ## 6.1 My Quantitative Outcome
 
 This subsection tells us what you will use your linear regression model
@@ -263,6 +267,10 @@ Now, tell us precisely which four (or more) candidate predictors
     rounding down, where N is the sample size for your tibble.
 
 # 7 Logistic Regression Plans
+
+Begin this section by specifying a question that you hope to answer with
+the logistic model you are proposing. Eventually, you will need to
+answer this question (in Task 2).
 
 ## 7.1 My Binary Outcome
 
@@ -398,7 +406,7 @@ the following:
 -   We will evaluate each of the 10 main sections of the proposal. You
     will receive one point for each section that is successfully
     completed.
-    -   The TAs will evaluate the proposals, using a rubric we will make
+    -   Details on the process we’ll use for this evaluation will be
         available soon.
 -   If you receive a grade lower than 10, we will specify the
     problematic sections and then you will have to redo the work
