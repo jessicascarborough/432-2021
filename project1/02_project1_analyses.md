@@ -9,7 +9,7 @@ Task 2 (Analyses and Presentation)
     -   [Section 9: Logistic Regression](#section-9-logistic-regression)
     -   [Section 10: The Discussion](#section-10-the-discussion)
 -   [The Presentation](#the-presentation)
-    -   [Your audience](#your-audience)
+    -   [Your Audience](#your-audience)
     -   [Outline of the Presentation](#outline-of-the-presentation)
 -   [Submission Requirements](#submission-requirements)
 -   [Evaluating Task 2](#evaluating-task-2)
@@ -18,7 +18,7 @@ Task 2 (Analyses and Presentation)
         Slides](#evaluating-the-presentations-slides)
 -   [Links](#links)
 
-Last Update: 2021-01-29 14:46:41
+Last Update: 2021-01-29 14:50:10
 
 # Your Proposal is Approved. Now What?
 
@@ -322,7 +322,7 @@ most important finding from your Project 1.
     both of your voices included for about an equal amount of time, and
     the total time should not exceed 5 minutes.
 
-## Your audience
+## Your Audience
 
 Your audience for this presentation includes Dr. Love, the TAs and your
 fellow students. Prepare your presentation with that audience in mind.
@@ -400,18 +400,22 @@ can come directly from the materials contained in your portfolio.
 
 # Submission Requirements
 
-Submit Task 2 materials to Canvas in the “Project 1 Final Submission”
-section.
+Submit Task 2 materials to [Canvas](https://canvas.case.edu) in the
+“Project 1 Final Submission” section.
 
 Your submission should include:
 
 1.  Everything you submitted for the Proposal (updated as necessary).
-    That includes the raw data, the cleaned (.Rds) data, the R Markdown
-    file for the complete portfolio, and the HTML result)
+    That includes the raw data, the cleaned (`.Rds`) data, the R
+    Markdown file for the complete portfolio including the three new
+    sections for Task 2 and all of the materials originally included in
+    Task 1, as well as the HTML result from that R Markdown file.
 
-2.  The slides from your 5-minute Presentation
+2.  The slides you used in your 5-minute Presentation, so if we cannot
+    see something well in your recording (which is a problem), we can
+    look at it more closely.
 
-3.  Your video recording (we prefer mp4 format) of your 5-minute
+3.  Your video recording (we prefer `.mp4` format) of your 5-minute
     presentation
 
 Again, if you’re working with a partner, one of you should submit all of
