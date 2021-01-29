@@ -8,7 +8,7 @@ This is the main page for Project 1.
 2. Next, visit the [Specific instructions for Task 1 (The Proposal)](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md).
     - This includes details on the required data cleaning and exploratory work, and is what you'll be working on in February.
 3. Next, review the [R Markdown templates for Project 1](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/README.md) and select one to use for your work on Task 1 and (later) on Task 2.
-    - Using one of these templates will help you complete Project 1's two Tasks in ways that will be attractive, organized and easy for us to review.
+    - Using one of these templates will yield results that are attractive, organized and easy for us to review. Please use them.
     - There is also a [(draft) rubric we'll use in evaluating your proposals](https://github.com/THOMASELOVE/432-2021/blob/master/project1/project1_proposal_rubric.pdf), which should help you get through the Proposal stage efficiently.
 4. Finally, look at the [Specific instructions for Task 2 (Analyses and Presentation)](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md) so you have a better sense of what is coming.
     - This includes data analyses and presentation work, and is what you'll be working on in March.
