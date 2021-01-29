@@ -1,7 +1,7 @@
 432 Lab 01 for Spring 2021
 ================
 
-Version: 2021-01-29 12:50:53
+Version: 2021-01-29 14:20:44
 
 # General Instructions
 
@@ -478,9 +478,7 @@ preferred way for you to do this for 432 is…
 xfun::session_info()
 ```
 
-the results of which are shown at the bottom of this page.
-
-### End of Homework 1
+the results of which are shown below.
 
 ``` r
 xfun::session_info()
@@ -539,3 +537,5 @@ xfun::session_info()
       vctrs_0.3.6         viridis_0.5.1       viridisLite_0.3.0  
       waldo_0.2.3         withr_2.4.1         xfun_0.19          
       xml2_1.3.2          yaml_2.2.1         
+
+### End of Lab 01
