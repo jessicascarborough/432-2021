@@ -28,7 +28,7 @@ Check out https://bookdown.org/yihui/rmarkdown/html-document.html for more on cu
 
 The Task 2 templates just add three additional sections (Linear Regression Modeling, Logistic Regression Modeling, and Discussion) to the Task 1 templates.
 
-- Floating Table of Contents Style
-- HTML Clean Style
-- Readthedown Style
+- [Floating Table of Contents](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_floatingTOC.Rmd) Style
+- [HTML Clean](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_htmlclean.Rmd) Style
+- [Readthedown](https://github.com/THOMASELOVE/432-2021/blob/master/project1/templates/proj1_complete_template_readthedown.Rmd) Style
 
