@@ -11,7 +11,7 @@
 -   [6 Getting Help](#getting-help)
 -   [Links](#links)
 
-Last Update: 2021-01-28 19:33:51
+Last Update: 2021-01-28 20:02:20
 
 # 1 Introduction
 
@@ -75,6 +75,11 @@ of this page.
     -   You are permitted to use BRFSS data, but you are not permitted
         to use data from SMART BRFSS, since we will be using that
         regularly in class.
+    -   In submitting your proposal, you will need to be able to write
+        “I am certain that it is completely appropriate for these data
+        to be shared with anyone, without any conditions. There are no
+        concerns about privacy or security.” So be sure that’s true
+        before you pick a data set.
 2.  **Size**.
     -   A **minimum** of 100 complete observations are required on each
         variable. It is fine if there are some missing values, as well,
@@ -162,7 +167,11 @@ Project 1 or anything else about Project 1, please feel free to ask it:
 
 # Links
 
--   Detailed Instructions for Project 1 Task 1 (The Proposal)
--   Templates for use in building your Project 1
--   Detailed Instructions for Project 1 Task 2 (Analyses and
-    Presentation)
+-   Detailed [Instructions for Project 1 Task 1 (The
+    Proposal)](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md)
+-   [Templates for Project
+    1](https://github.com/THOMASELOVE/432-2021/tree/master/project1/templates)
+-   Detailed [Instructions for Project 1 Task 2 (Analyses and
+    Presentation)](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md)
+-   [Main Page for Project
+    1](https://github.com/THOMASELOVE/432-2021/tree/master/project1)
