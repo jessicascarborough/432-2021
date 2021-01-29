@@ -6,15 +6,11 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 ## Instructions
 
-The instructions for completing Lab 03 will be available soon.
+The instructions for completing Lab 03 [are now available](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
 
 ## Data
 
-The data used in Lab 03 will be described here.
-
-## Template
-
-A suggested R Markdown template for Lab 03 will be available soon.
+The data set used in Lab 03 is the `hbp3456.csv` data that we saw back in Lab 01, available now in the [data subfolder above](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03/data) as well as on our [course data page](https://github.com/THOMASELOVE/432-data).
 
 ## Questions?
 
