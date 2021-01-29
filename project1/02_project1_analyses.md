@@ -11,13 +11,14 @@ Task 2 (Analyses and Presentation)
 -   [The Presentation](#the-presentation)
     -   [Your audience](#your-audience)
     -   [Outline of the Presentation](#outline-of-the-presentation)
+-   [Submission Requirements](#submission-requirements)
 -   [Evaluating Task 2](#evaluating-task-2)
     -   [Evaluating the Portfolios](#evaluating-the-portfolios)
     -   [Evaluating the Presentations /
         Slides](#evaluating-the-presentations-slides)
 -   [Links](#links)
 
-Last Update: 2021-01-28 21:58:57
+Last Update: 2021-01-29 14:46:41
 
 # Your Proposal is Approved. Now What?
 
@@ -396,6 +397,26 @@ can come directly from the materials contained in your portfolio.
 -   Developing the presentation is where **you** have to make decisions
     about what’s most important to show an audience to get them
     interested in your work. That’s a critically important skill.
+
+# Submission Requirements
+
+Submit Task 2 materials to Canvas in the “Project 1 Final Submission”
+section.
+
+Your submission should include:
+
+1.  Everything you submitted for the Proposal (updated as necessary).
+    That includes the raw data, the cleaned (.Rds) data, the R Markdown
+    file for the complete portfolio, and the HTML result)
+
+2.  The slides from your 5-minute Presentation
+
+3.  Your video recording (we prefer mp4 format) of your 5-minute
+    presentation
+
+Again, if you’re working with a partner, one of you should submit all of
+this material, and the partner submits a one-page note (Word is fine)
+saying who will be responsible for submitting the Project 1 materials.
 
 # Evaluating Task 2
 
