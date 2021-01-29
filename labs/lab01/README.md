@@ -10,7 +10,7 @@ The instructions for completing Lab 01 [are now available](https://github.com/TH
 
 ## Data
 
-The data set used in Lab 01 is the `hbp3456.csv` data, available now on our [course data page](https://github.com/THOMASELOVE/432-data).
+The data set used in Lab 01 is the `hbp3456.csv` data, available now in the [data subfolder above](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab01/data) as well as on our [course data page](https://github.com/THOMASELOVE/432-data).
 
 ## Template
 
