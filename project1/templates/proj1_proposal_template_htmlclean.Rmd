@@ -106,15 +106,13 @@ Follow the instructions.
 
 Be sure to include the text provided in the instructions.
 
-Note that in the proposal, you will skip from here to the References and then Session Information, skipping the next three sections (which only apply to the full portfolio, and should not be included in the proposal.)
+Note that for Task 2 (Analyses and Presentation), we will add in sections called:
 
-In the full document (part of Task 2) we will add in sections called 
-
-- Linear Regression Analysis
-- Logistic Regression Analysis
+- Linear Regression Modeling
+- Logistic Regression Modeling
 - Discussion
 
-after the Affirmation and before the References.
+before the Affirmation but otherwise leave the template alone.
 
 # References
 

@@ -3,10 +3,13 @@ title: "Real Title Goes Here"
 author: "Your Name(s) Here"
 date: "`r Sys.Date()`"
 output:
-  rmdformats::readthedown:
-    highlight: kate
-    number_sections: TRUE
-    code_folding: show
+  html_document:
+      theme: paper
+      highlight: textmate
+      toc: TRUE
+      toc_float: TRUE
+      number_sections: TRUE
+      code_folding: show
 ---
 
 ```{r setup, echo = FALSE, cache=FALSE}
@@ -102,17 +105,21 @@ Follow the instructions.
 
 Follow the instructions.
 
+# Linear Regression Modeling
+
+Follow the instructions provided for Task 2.
+
+# Logistic Regression Modeling
+
+Follow the instructions provided for Task 2.
+
+# Discussion
+
+Follow the instructions provided for Task 2.
+
 # Affirmation 
 
 Be sure to include the text provided in the instructions.
-
-Note that for Task 2 (Analyses and Presentation), we will add in sections called:
-
-- Linear Regression Modeling
-- Logistic Regression Modeling
-- Discussion
-
-before the Affirmation but otherwise leave the template alone.
 
 # References
 

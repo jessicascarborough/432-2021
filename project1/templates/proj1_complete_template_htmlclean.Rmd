@@ -3,8 +3,8 @@ title: "Real Title Goes Here"
 author: "Your Name(s) Here"
 date: "`r Sys.Date()`"
 output:
-  rmdformats::readthedown:
-    highlight: kate
+  rmdformats::html_clean:
+    highlight: haddock
     number_sections: TRUE
     code_folding: show
 ---
@@ -102,17 +102,21 @@ Follow the instructions.
 
 Follow the instructions.
 
+# Linear Regression Modeling
+
+Follow the instructions provided for Task 2.
+
+# Logistic Regression Modeling
+
+Follow the instructions provided for Task 2.
+
+# Discussion
+
+Follow the instructions provided for Task 2.
+
 # Affirmation 
 
 Be sure to include the text provided in the instructions.
-
-Note that for Task 2 (Analyses and Presentation), we will add in sections called:
-
-- Linear Regression Modeling
-- Logistic Regression Modeling
-- Discussion
-
-before the Affirmation but otherwise leave the template alone.
 
 # References
 
