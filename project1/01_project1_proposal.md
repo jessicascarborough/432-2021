@@ -38,7 +38,7 @@ Task 1 (The Project Proposal)
     Proposal?](#how-will-we-evaluate-the-proposal)
 -   [Links](#links)
 
-Last Update: 2021-01-28 21:58:43
+Last Update: 2021-01-28 22:42:04
 
 # Use a template, please!
 
@@ -396,6 +396,12 @@ the following:
 
 # How Will We Evaluate the Proposal?
 
+Details on our evaluation process for the proposal are available in
+[this (draft)
+rubric](https://github.com/THOMASELOVE/432-2021/blob/master/project1/project1_proposal_rubric.pdf).
+Please feel encouraged to review this rubric before you submit your
+work.
+
 -   To evaluate your work, we will have to receive all necessary
     materials (raw data if needed, clean data as .Rds, .Rmd and HTML)
     successfully.
@@ -403,17 +409,13 @@ the following:
         proposal, and the other must submit a single-page text document
         (Word is fine) which states that their partner will submit the
         joint proposal, before we will evaluate your work.
--   We will evaluate each of the 10 main sections of the proposal. You
-    will receive one point for each section that is successfully
-    completed.
-    -   Details on the process we’ll use for this evaluation will be
-        available soon.
+-   There are 10 elements we will assess, worth one point each.
 -   If you receive a grade lower than 10, we will specify the
-    problematic sections and then you will have to redo the work
+    problematic elements and then you will have to redo the work
     (quickly) to fix the problems until we are satisfied.
 -   One you have successfully completed all tasks, you will receive full
-    credit for the proposal and can move on to the second task (Analysis
-    and Presentation).
+    credit for the proposal and can then move on to Task 2 (Analysis and
+    Presentation).
 
 # Links
 
