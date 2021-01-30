@@ -1,7 +1,7 @@
 432 Lab 03 for Spring 2021
 ================
 
-Version: 2021-01-29 14:15:13
+Version: 2021-01-29 21:47:26
 
 # General Instructions
 
@@ -63,8 +63,9 @@ model to predict whether the subject has a statin prescription based on:
     `statin` data are removed) from these four practices. An appropriate
     response will make use of at least two different assessments of fit
     quality, and should include at least one graphical depiction of the
-    fit. Be sure to justify your eventual selection (between the
-    “interaction” or “no interaction” model) with complete sentences.
+    fit for each model. Be sure to justify your eventual selection
+    (between the “interaction” or “no interaction” model) with complete
+    sentences.
 
 ## Question 2 (40 points, 10 points for each part)
 
@@ -106,8 +107,8 @@ categorical predictors appropriately.
 4.  For each engine, assess the quality of fit through a summary measure
     developed using 10-fold cross validation on the sample of 1000
     subjects. Compare the results in a sentence or two. What difference
-    does the choice of engine make here in terms of fit quality (with an
-    appropriate cross-validated measure)?
+    does the choice of engine make here in terms of fit quality (based
+    on an appropriate cross-validated measure)?
 
 ## Question 3 (20 points)
 
