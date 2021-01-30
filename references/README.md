@@ -1,6 +1,8 @@
 # References and Resources for 432 in Spring 2021
 
-This is just a repository of references I expect to use or refer to during the semester. Some items are password-protected. The password is revealed in the first class session.
+This is a repository of things I expect to use or refer to during the semester. 
+
+Some items are password-protected. The password is revealed in the first class session.
 
 All of these items will be linked through [Class READMEs](https://github.com/THOMASELOVE/432-2021/tree/master/classes), as well, as they become useful to us.
 
@@ -12,6 +14,7 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
 ## The Books We've Read in 431 or Will Read in 432 include:
 
 - (431) David Spiegelhalter *The Art of Statistics* available at Amazon and other retailers.
+    - Here's [the book's website](https://dspiegel29.github.io/ArtofStatistics/) which contains R code, corrections and other materials.
 - (431) Jeffrey Leek [The Elements of Data Analytic Style](https://leanpub.com/datastyle) available via Leanpub.
 - (432) Nate Silver *The Signal and the Noise* available at Amazon and other retailers.
 - (432) Jeffrey Leek [How to be a Modern Scientist](https://leanpub.com/modernscientist) available via Leanpub.
