@@ -4,3 +4,73 @@ This is just a repository of references I expect to use or refer to during the s
 
 All of these items will be linked through [Class READMEs](https://github.com/THOMASELOVE/432-2021/tree/master/classes), as well, as they become useful to us.
 
+## Course Notes
+
+- The 431 notes and other materials will remain at https://thomaselove.github.io/431/ until June 2021.
+- The 432 main page is at https://thomaselove.github.io/432/ and will remain there until June 2021.
+
+## The Books We've Read in 431 or Will Read in 432 include:
+
+- (431) David Spiegelhalter *The Art of Statistics* available at Amazon and other retailers.
+- (431) Jeffrey Leek [The Elements of Data Analytic Style](https://leanpub.com/datastyle) available via Leanpub.
+- (432) Nate Silver *The Signal and the Noise* available at Amazon and other retailers.
+- (432) Jeffrey Leek [How to be a Modern Scientist](https://leanpub.com/modernscientist) available via Leanpub.
+
+## YouTube Video Series Recommended by Dr. Love
+
+1. Frank Harrell's [Biostatistics for Biomedical Research (BBR) Course](https://www.youtube.com/channel/UC-o_ZZ0tuFUYn8e8rf-QURA/videos) includes a series of lectures on many of the topics we'll be discussing in 432, in addition to several late-breaking items. Details on the course are available [here](https://hbiostat.org/bbr/) and the notes are linked in the Statistics and Modeling books below.
+2. Richard McElreath [Statistical Rethinking (Winter 2019)](https://www.youtube.com/playlist?list=PLDcUM9US4XdNM4Edgs7weiyIguLSToZRI) lecture series is the best introduction to Bayesian ideas and methods available. 
+    - If you want to just spend two hours rather than dive in to the full thing, Richard's lecture [Bayesian Inference is Just Counting](https://www.youtube.com/watch?v=_NEMHM1wDfI) is great, too.
+    - Richard's book [Statistical Rethinking (2nd edition) - not free] is incredible, too. See also the freely available book by Kurz, below.
+
+## Other Books or Book-Length Documents Recommended by Dr. Love
+
+### On Statistics and Modeling
+
+1. Frank Harrell and Chris Slaughter [Biostatistics for Biomedical Research Notes](http://hbiostat.org/doc/bbr.pdf) (pdf) - also see the YouTube course above.
+2. Frank E. Harrell [Regression Modeling Strategies](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Harrell_Regression_Modeling_Strategies_2015_2e_protected.pdf), 2nd Edition, 2015.
+3. Paul Roback and Julie Legler [Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/)
+4. A Solomon Kurz [Statistical rethinking with brms, ggplot2, and the tidyverse](https://bookdown.org/content/3890/)
+5. Julian J. Faraway [Practical Regression and Anova using R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Faraway_Practical_Regression_and_ANOVA_using_R.pdf), 2002.
+6. David G. Kleinbaum and Mitchel Klein [Logistic Regression: A Self-Learning Text](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Kleinbaum_and_Klein_Logistic_Regression_2010_3e_protected.pdf), 3rd Edition, 2010.
+7. Simon J. Sheather [A Modern Approach to Regression with R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Sheather_Modern_Approach_to_Regression_with_R_2009_protected.pdf), 2009.
+8. Eric Vittinghoff, David V. Glidden, Stephen C. Shiboski and Charles E. McCulloch [Regression Methods in Biostatistics](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Vittinghoff_et_al_Regression_Methods_in_Biostatistics_2e_protected.pdf), 2nd Edition, 2012.
+9. Rob J Hyndman and George Athanasopoulos [Forecasting: Principles and Practice](https://otexts.com/fpp2/)
+
+### On Visualization and R
+
+1. Winston Chang [R-Graphics Cookbook, version 2.0](https://r-graphics.org/)
+2. Kieran Healy [Data Visualization: A practical introduction](https://socviz.co/)
+3. Claus O. Wilke [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+4. Rob Kabacoff [Data Visualization with R](https://rkabacoff.github.io/datavis/)
+
+### On Using R and Related Tools
+
+1. Hadley Wickham and Garrett Grolemund [R for Data Science](https://r4ds.had.co.nz/)
+2. Chester Ismay and Albert Y. Kim [Statistical Inference via Data Science: A Modern Dive into R and the Tidyverse](https://moderndive.com/)
+3. Yihui Xie, Christophe Dervieux, Emily Riederer [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+4. Yihui Xie, Amber Thomas, Alison Presmanes Hill [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/)
+5. Yihui Xie, J. J. Allaire, Garrett Grolemund [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+6. Hadley Wickham and Jenny Bryan [R Packages](https://r-pkgs.org/)
+7. Peter D. R. Higgins [Reproducible Medical Research with R](https://bookdown.org/pdr_higgins/rmrwr/)
+
+## Key Articles
+
+1. [Statistical Inference in the 21st Century: A World Beyond *p* < 0.05](https://amstat.tandfonline.com/toc/utas20/73/sup1) from 2019 in *The American Statistician*
+2. The American Statistical Association's 2016 [Statement on p-Values](http://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108): Context, Process and Purpose.
+3. [Project-oriented workflow](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) at tidyverse.org from Jenny Bryan.
+4. From the Ten Simple Rules series at PLOS Computational Biology:
+    - [Ten Simple Rules for Effective Statistical Practice](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1004961) by Kass RE et al. 2016
+    - [Ten Simple Rules for Graduate Students](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030229) by Gu J Bourne PE 2007
+    - [Ten Simple Rules for Better Figures](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833) by Rougier NP Droettboom M Bourne PE 2014
+    - [Ten Simple Rules for Creating a Good Data Management Plan](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525) by Michener WK 2015
+5. Karl W. Broman & Kara H. Woo (2018) [Data Organization in Spreadsheets](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Broman_and_Woo_2018_Data_Organization_in_Spreadsheets.pdf), *The American Statistician*, 72:1, 2-10, DOI: [10.1080/00031305.2017.1375989](https://doi.org/10.1080/00031305.2017.1375989)
+
+## Miscellany
+
+- Andrew Gelman (and others) blog: [Statistical Modeling, Causal Inference, and Social Science](https://statmodeling.stat.columbia.edu/)
+- [datamethods](https://discourse.datamethods.org/) "is a place where statisticians, epidemiologists, informaticists, machine learning practitioners, and other research methodologists communicate with themselves and with clinical, translational, and health services researchers to discuss issues related to data: research methods, quantitative methods, study design, measurement, statistical analysis, interpretation of data and statistical results, clinical trials, journal articles, statistical graphics, causal inference, medical decision making, and more." This new (2018-) resource's [rationale is here](http://fharrell.com/post/disc).
+- [RStudio Community](https://community.rstudio.com/) "is a community for all things R and RStudio."
+- [RStudio Cheat Sheets](https://rstudio.com/resources/cheatsheets/) which have expanded enormously in recent years.
+- Dr. Love's favorite list of [Colors in R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
+
