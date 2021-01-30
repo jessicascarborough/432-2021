@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-01-25 16:46:40
+Last Updated: 2021-01-29 21:35:36
 
 Note that this Lab is **completely optional**.
 
@@ -55,6 +55,9 @@ projects on your website. That’s up to you.
     R Markdown](https://bookdown.org/yihui/blogdown/) which describes a
     lot of available options, but like the rest of these documents, is a
     little out of date with the changes in blogdown 1.0.
+-   Alison Hill’s [Up & running with blogdown in
+    2021](https://alison.rbind.io/post/new-year-new-blogdown/) may be
+    helpful to you.
 -   Emily Zabor’s
     [tutorial](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html)
     might be of some help to you, as well, if you’re looking to create a
