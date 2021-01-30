@@ -1,7 +1,7 @@
 432 Lab 02 for Spring 2021
 ================
 
-Version: 2021-01-29 21:38:04
+Version: 2021-01-29 21:41:31
 
 # General Instructions
 
@@ -129,7 +129,7 @@ oh20
     #   median_income <dbl>, population <dbl>, age65plus <dbl>, `african-am` <dbl>,
     #   hispanic <dbl>, white <dbl>, female <dbl>, rural <dbl>
 
-## Question 1 (20 points)
+## Question 1 (30 points)
 
 Create a visualization (using R) based on some part of the
 `oh_counties_2020.csv` data set, and share it (the visualization and the
@@ -199,26 +199,18 @@ predictors, will be sufficient.
 
 Evaluate the quality of the model you fit in Question 3 in terms of
 adherence to regression modeling assumptions, through the specification
-and written evaluation of residual plots and other diagnostics. What
-might be done to improve the fit of the model you’ve developed in
-Question 3? Identify by name any outlying counties, in terms of the
-relationship you’re studying, and explain why they are flagged as
-outliers.
+and written evaluation of residual plots. What might be done to improve
+the fit of the model you’ve developed in Question 3? Identify by name
+any outlying counties and explain why they are flagged as outliers.
 
 ## Question 5 (20 points)
 
 Create a logistic regression model to predict the presence of a water
 violation (as contained in `h2oviol`) on the basis of `sev_housing` and
-`pm2.5`. Specify and then carefully interpret the estimated coefficient
-of `sev_housing` and a 90% uncertainty interval around that estimate in
-context using nothing but complete English sentences. A model using main
-effects only, entered as linear predictors, will be sufficient.
-
-## Question 6 (10 points)
-
-Produce and interpret the meaning of a confusion matrix which describes
-the quality of the predictions you have developed in Question 5. How
-well does the model you fit make predictions about `h2oviol`?
+`pm2.5`. Specify and then carefully interpret the estimated odds ratio
+associated with the `sev_housing` effect and a 90% uncertainty interval
+around that estimate in context using nothing but complete English
+sentences. Use a model with main effects only.
 
 ## Please add the session information.
 
