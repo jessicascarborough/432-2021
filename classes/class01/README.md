@@ -20,7 +20,7 @@ If you haven't taken the survey already, please [do so today](http://bit.ly/432-
     - Not yet. Nor has my 86 year old mother in New York, nor anyone else in my family. I look forward to those miraculous occurrences.
     - Some of our teaching assistants work for health systems and have been vaccinated, as have many of my colleagues at Metro. I am very grateful that is true.
 3. How did Dr. Love spend his holiday season?
-    - With my wife and two children, in the house. We watched a fair amount of stuff on the internet, and did a lot of crossword puzzles and spelling bees, and ate, a lot.
+    - With my wife and two children, in the house. We watched a fair amount of stuff together, and did a lot of crossword puzzles and spelling bees, and ate, a lot.
     - My older son has now returned to his off-campus apartment in Pittsburgh for his last semester of undergraduate education and his part-time job at the Carnegie Museum.
     - My younger son continues to do his first year of college (Columbia University) at home, which is not what anyone wants, but he's a good roommate.
 4. Are there multiple students who did not take 431 this past Fall?
