@@ -6,7 +6,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 > Quote will go here.
 
-This is a placeholder for Class 01 Materials.
+## Class 01 Materials will appear here as they become available.
 
 ## Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
 
