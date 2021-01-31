@@ -14,9 +14,10 @@ If you haven't taken the survey already, please [do so today](http://bit.ly/432-
 
 1. How is Dr. Love feeling?
     - I am fine, in the 2021 sense that I am essentially healthy and my family is, as well, and those of us who were employed last February still are. On the other hand, I am anxious most of the time, and certainly not functioning at full capacity. I ask for your patience.
-    - With regard to the upcoming semester, I am hopeful that we can deliver an effective course, and that we can connect with each of you in a helpful, supportive way. I am very grateful for our teaching assistants, who do a lot to keep me moving forward and I am extremely grateful. Please let us know if we can help you along the way.
+    - With regard to the upcoming semester, I am hopeful that we can deliver an effective course, and that we can connect with each of you in a helpful, supportive way. 
+    - I am very grateful for [our teaching assistants](https://thomaselove.github.io/432-2021-syllabus/teaching-assistants.html), who do a lot to keep us all moving forward (especially me). [Please let us know](https://thomaselove.github.io/432/contact.html) if we can help you along the way.
 2. Has Dr. Love been vaccinated against COVID-19?
-    - Not yet. Nor has my mother, or anyone else in my family. I look forward to that miraculous occurrence.
+    - Not yet. Nor has my 86 year old mother in New York, nor anyone else in my family. I look forward to those miraculous occurrences.
     - Some of our teaching assistants work for health systems and have been vaccinated, as have many of my colleagues at Metro. I am very grateful that is true.
 3. How did Dr. Love spend his holiday season?
     - With my wife and two children, in the house. We watched a fair amount of stuff on the internet, and did a lot of crossword puzzles and spelling bees, and ate, a lot.
