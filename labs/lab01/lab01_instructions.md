@@ -1,7 +1,7 @@
 432 Lab 01 for Spring 2021
 ================
 
-Version: 2021-01-29 14:20:44
+Version: 2021-01-31 17:47:51
 
 # General Instructions
 
@@ -452,6 +452,7 @@ task.
 -   We simply want to verify that you can post on Piazza, and gather a
     little more information about what people taking this class like to
     listen to.
+-   Please post using a **note** rather than a **question**.
 -   Dr. Love has provided his own post on this issue in the
     **lab01\_music** folder on Piazza.
 
