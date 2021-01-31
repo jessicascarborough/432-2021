@@ -13,7 +13,7 @@ This is a placeholder for Class 01 Materials.
 If you haven't taken the survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
 
 1. How is Dr. Love feeling?
-    - I am fine, in the 2021 sense that I am essentially healthy and my family is, as well, and those of us who were employed last February still are. On the other hand, I am anxious most of the time, and certainly not functioning at full capacity. I hope you'll be patient with me.
+    - I am fine, in the 2021 sense that I am essentially healthy and my family is, as well, and those of us who were employed last February still are. On the other hand, I am anxious most of the time, and certainly not functioning at full capacity. I ask for your patience.
     - With regard to the upcoming semester, I am hopeful that we can deliver an effective course, and that we can connect with each of you in a helpful, supportive way. I am very grateful for our teaching assistants, who do a lot to keep me moving forward and I am extremely grateful. Please let us know if we can help you along the way.
 2. Has Dr. Love been vaccinated against COVID-19?
     - Not yet. Nor has my mother, or anyone else in my family. I look forward to that miraculous occurrence.
