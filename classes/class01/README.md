@@ -22,8 +22,8 @@ If you haven't taken the survey already, please [do so today](http://bit.ly/432-
     - With my wife and two children, in the house. We watched a fair amount of stuff on the internet, and did a lot of crossword puzzles and spelling bees, and ate, a lot.
     - My older son has now returned to his off-campus apartment in Pittsburgh for his last semester of undergraduate education and his part-time job at the Carnegie Museum.
     - My younger son continues to do his first year of college (Columbia University) at home, which is not what anyone wants, but he's a good roommate.
-4. (from a student who did not take 431 with us in the Fall) Are there any specific parts of 431 that we should review and pay special attention to and that will be integral to succeeding in 432? 
-    - I expect the most obviously useful elements will be the discussion of specific R packages and functions related to working with linear models. It would also be helpful to look at the lab assignments and project requirements and tips from 431 since we build on that knowledge in the 432 materials. [The R-basics document](https://github.com/THOMASELOVE/432-2021/tree/master/r-basics) from the 432 R and Data menu is certainly worth some of your time, too.
-5. Are there multiple students who did not take 431 this past Fall?
+4. Are there multiple students who did not take 431 this past Fall?
     - Yes, about a half dozen, I think.
+5. (from a student who did not take 431 with us in the Fall) Are there any specific parts of 431 that we should review and pay special attention to and that will be integral to succeeding in 432? 
+    - I expect the most obviously useful elements will be the discussion of specific R packages and functions related to working with linear models. It would also be helpful to look at the lab assignments and project requirements and tips from 431 since we build on that knowledge in the 432 materials. [The R-basics document](https://github.com/THOMASELOVE/432-2021/tree/master/r-basics) from the 432 R and Data menu is certainly worth some of your time, too.
 
