@@ -8,6 +8,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Class 01 Materials will appear here as they become available.
 
+- Slides for Class 01 are available in [R Markdown] and [in PDF].
+- Class 01, like all 432 classes, is recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu)
+- **BONUS video** I pre-recorded a 9-minute video walking through (fairly quickly) the development of the Bradley example in R Studio, anticipating that I might not get to it today in class. You'll find that recording on our Shared Google Drive (log into Google with your CWRU account).
+    - The Shared Drive is called 432 Spring 2021 Dr Love and Students. Inside that Drive, you should see a folder called 432 Spring 2021 Bonus Videos. 
+
+
+
 ## Logistics and Reminders
 
 1. You should have received an email from me in the last 3-4 days with the subject heading "**PQHS / CRSP / MPHP 432: Start of the Semester - Welcome!**" 
@@ -48,6 +55,10 @@ Don't forget our additional list of [Sources](https://github.com/THOMASELOVE/432
 ## Materials for the Bradley et al. Table 1 example
 
 Here are the materials I'll refer to in discussing the development of a Table 1 for the Bradley example. [Chapter 1 in the Course Notes](https://thomaselove.github.io/432-notes/building-table-1.html) covers the topic of building a Table 1 far more extensively, with two detailed examples. Those notes should be helpful for doing the Table 1 work required in [Lab 01](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/README.md).
+
+- **BONUS video** I pre-recorded a 9-minute video walking through (fairly quickly) the development of the Bradley example in R Studio, anticipating that I might not get to it today in class. You'll find the recording on our Shared Google Drive (log into Google with your CWRU account).
+
+You'll also find:
 
 - the [`bradley.csv`](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/data/bradley.csv) data file is in the data folder above (click **Raw** to download), and is also available on [our 432-data page](https://github.com/THOMASELOVE/432-data) for general downloads.
 - [`bradley_table1.Rmd`](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/bradley_table1.md) is the R Markdown script. Click **Raw** to download it.
