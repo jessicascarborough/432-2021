@@ -8,8 +8,8 @@ for everything | for deadlines | expectations | from Dr. Love | zoom info | for 
 
 This is a placeholder for Class 02 Materials.
 
-# One Last Thing
+# Two Last Things
 
-You might be interested in [6 RStudio Keyboard Shortcuts](https://www.youtube.com/watch?v=U373PGg8Y_0) on YouTube, or if you prefer, just [read the article](https://www.r-bloggers.com/2021/01/6-life-altering-rstudio-keyboard-shortcuts/).
-
-
+- Jānis Stūris at [Data Cornering](http://datacornering.com/) had a nice post back on 2020-01-01 of [My favorite RStudio tips and tricks](http://datacornering.com/my-favorite-rstudio-tips-and-tricks/) some of which would definitely save me some time and energy. Jānis produces lots of useful tips, and I encourage you to take a look.
+- In a similar vein, you might also be interested in [6 RStudio Keyboard Shortcuts](https://www.youtube.com/watch?v=U373PGg8Y_0) on YouTube, or if you prefer, just [read the article](https://www.r-bloggers.com/2021/01/6-life-altering-rstudio-keyboard-shortcuts/).
+- Perhaps my favorite RStudio tip is to hit F7 for spell-check.
