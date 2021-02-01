@@ -26,7 +26,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - [How to Write Dates](https://xkcd.com/1179/)
     - [Naming Files in Hard](https://xkcd.com/1459/)
 
-Don't forget our additional list of [Sources](https://github.com/THOMASELOVE/432-2021/edit/master/references/README.md) for the course.
+## What's that course password again?
+
+Some of the materials on the [References and Resources page](https://github.com/THOMASELOVE/432-2021/blob/master/references/README.md) of books, articles, videos and other things are password-protected. Please dip into them as your time allows.
+
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/tukey.png)
 
 ## Materials for the Bradley et al. Table 1 example
 
@@ -62,9 +66,12 @@ You'll also find:
 6. By next Tuesday (2021-02-09), we'll expect you to have read:
     - the readings in [the required books by Nate Silver and Jeff Leek](https://thomaselove.github.io/432/calendar.html#Readings) listed on [2021-02-05 in the Calendar](https://thomaselove.github.io/432/calendar.html#February_2021)
     - the [instructions for Project 1](https://github.com/THOMASELOVE/432-2021/blob/master/project1/README.md), especially as they relate to the first of its two tasks: the [Project Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) (which is due at 9 PM on 2021-03-01.)
-7. There is no [Minute Paper](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) this week. Our first Minute Paper is due next Wednesday 2021-02-10.
-8. The final word on all deadlines is the [Course Calendar](https://thomaselove.github.io/432/calendar.html). All deliverables for the entire semester are listed.
-9. I want to remind you of the University's resources to help you that are listed in [Section 15 of our syllabus](https://thomaselove.github.io/432-2021-syllabus/university-resources-for-student-support.html), especially the newly available [CWRU Care 24/7 Mental Telehealth for Students](https://timely.md/faq/cwrucare/) program
+7. You might want to take a look at the [Glossary of Statistical Terms](https://hbiostat.org/doc/glossary.pdf) (pdf) compiled by Frank Harrell and colleagues. 
+    - This week, we will tacitly assume you know, for example, what the following terms mean: binary variable, case-control study, categorical variable, comparative trial, confidence limits, continuous variable, data science, dummy variable, estimate, goodness of fit, inter-quartile range, mean, median, nonparametric estimator, nonparametric tests, normal distribution, null hypothesis, observational study, one-sided test, p-value, parametric test, percentile, predictor, probability, quartiles, random error, random sample, rate, replication, risk, significance level, standard deviation, standard error, two-sided test, Type I error, variance.
+    - If any of these terms seem unfamiliar, read up on them. If that's not too overwhelming, then glance through the remainder of the list and find a few more that interest you, and read those closely.
+8. There is no [Minute Paper](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) this week. Our first Minute Paper is due next Wednesday 2021-02-10. If you have comments or questions about the class, ask them on Piazza, or in TA office hours (starting Thursday) or before/after class, or in the chat, etc. We want to hear from you!
+9. The final word on all deadlines is the [Course Calendar](https://thomaselove.github.io/432/calendar.html). All deliverables for the entire semester are listed.
+10. I want to remind you of the University's resources to help you that are listed in [Section 15 of our syllabus](https://thomaselove.github.io/432-2021-syllabus/university-resources-for-student-support.html), especially the newly available [CWRU Care 24/7 Mental Telehealth for Students](https://timely.md/faq/cwrucare/) program
 
 ## Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
 
@@ -86,9 +93,6 @@ Again, if you haven't taken the survey already, please [do so today](http://bit.
 5. (from a student who did not take 431 with us in the Fall) Are there any specific parts of 431 that we should review and pay special attention to and that will be integral to succeeding in 432? 
     - I expect the most obviously useful elements will be the discussion of specific R packages and functions related to working with linear models. It would also be helpful to look at the lab assignments and project requirements and tips from 431 since we build on that knowledge in the 432 materials. [The R-basics document](https://github.com/THOMASELOVE/432-2021/tree/master/r-basics) from the 432 R and Data menu is certainly worth some of your time, too.
 
-## What's that course password again?
 
-Some of the materials on the [References and Resources page](https://github.com/THOMASELOVE/432-2021/blob/master/references/README.md) of books, articles, videos and other things are password-protected.
 
-![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/tukey.png)
 
