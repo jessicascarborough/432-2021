@@ -4,6 +4,10 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/mchorse_2020-12-26.png)
+
+- See [Dr. McHorse's suggestions here](https://twitter.com/fossilosophy/status/1342871356254334977).
+
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/branch_tw.png)
 
 ## Materials for Today's Class
