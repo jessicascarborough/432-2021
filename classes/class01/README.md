@@ -78,7 +78,7 @@ Some of the materials on the [References and Resources page](https://github.com/
 
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/tukey.png)
 
-## One Last Thing: Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
+## Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
 
 Again, if you haven't taken the survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
 
@@ -98,6 +98,13 @@ Again, if you haven't taken the survey already, please [do so today](http://bit.
 5. (from a student who did not take 431 with us in the Fall) Are there any specific parts of 431 that we should review and pay special attention to and that will be integral to succeeding in 432? 
     - I expect the most obviously useful elements will be the discussion of specific R packages and functions related to working with linear models. It would also be helpful to look at the lab assignments and project requirements and tips from 431 since we build on that knowledge in the 432 materials. [The R-basics document](https://github.com/THOMASELOVE/432-2021/tree/master/r-basics) from the 432 R and Data menu is certainly worth some of your time, too.
 
+## One Last Thing
 
+Want to read the most misguided paper of 2020? Darren Dahly's [Twitter thread has you covered](https://twitter.com/statsepi/status/1338501499039739906).
+
+- The paper Darren refers to is called [Basic statistics: A research primer for low- and middle-income countries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7718448/).
+- Another 2020 paper in the series called [Research skills and the data spreadsheet: A research primer for low- and middle-income countries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7718460/) is even more, well, I don't know what to say except for heaven's sake, don't take any of its advice. 
+    - I'm happy to believe that the intentions here were nothing but good, but this has really gone wrong.
+    - Check out the annotated biography in that second paper, for example.
 
 
