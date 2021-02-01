@@ -17,7 +17,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-To come.
+1. Alex Cookson's great 5-minute talk [The Power of Great Datasets](https://rstudio.com/resources/rstudioglobal-2021/the-power-of-great-datasets/) from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) is now available. 
+    - I hope Alex will motivate you to curate Great Datasets and perhaps explore something you're not currently thinking about for a project or other activity to develop your statistical or programming skills. 
 
 ## One Last Thing - RStudio Tips
 
