@@ -4,7 +4,10 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | for deadlines | expectations | from Dr. Love | zoom info | for downloads | to read/watch | need help?
 
-![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/branch_tw.png)
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/lowndes_tidy_tw.png)
+
+- Read [the entire illustrated series about tidy data here](https://twitter.com/juliesquid/status/1315710359404113920). 
+- `@juliesquid` and `@allison_horst` are great people to follow on Twitter. 
 
 ## Materials for Today's Class
 
