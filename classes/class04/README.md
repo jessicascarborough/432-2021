@@ -11,6 +11,12 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides04.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides04.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
+## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
+
+Today, I'll share Kara Woo's terrific 22-minute talk [Always look on the bright side of plots](https://rstudio.com/resources/rstudioglobal-2021/always-look-on-the-bright-side-of-plots/). 
+
+- Everyone who creates visualizations in R is bound to make mistakes that prevent their plots from looking as they should. Sometimes, these mistakes create beautiful "accidental aRt", though other times they're just plain frustrating. Either way, however, there's something to be learned.
+
 ## Announcements
 
 To come.
