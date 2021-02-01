@@ -6,4 +6,15 @@ for everything | for deadlines | expectations | from Dr. Love | zoom info | for 
 
 > Quote will go here.
 
-This is a placeholder for Class 04 Materials.
+## Materials for Today's Class
+
+- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides04.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides04.Rmd).
+- All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
+
+## Announcements
+
+To come.
+
+## One Last Thing
+
+To come.
