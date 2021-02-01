@@ -74,7 +74,7 @@ You'll also find:
 9. The final word on all deadlines is the [Course Calendar](https://thomaselove.github.io/432/calendar.html). All deliverables for the entire semester are listed.
 10. I want to remind you of the University's resources to help you that are listed in [Section 15 of our syllabus](https://thomaselove.github.io/432-2021-syllabus/university-resources-for-student-support.html), especially the newly available [CWRU Care 24/7 Mental Telehealth for Students](https://timely.md/faq/cwrucare/) program
 
-## Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
+## One Last Thing: Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
 
 Again, if you haven't taken the survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
 
