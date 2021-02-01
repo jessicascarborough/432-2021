@@ -69,6 +69,8 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
     - [Ten Simple Rules for Better Figures](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833) by Rougier NP Droettboom M Bourne PE 2014
     - [Ten Simple Rules for Creating a Good Data Management Plan](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525) by Michener WK 2015
 6. Karl W. Broman & Kara H. Woo (2018) [Data Organization in Spreadsheets](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Broman_and_Woo_2018_Data_Organization_in_Spreadsheets.pdf), *The American Statistician*, 72:1, 2-10, DOI: [10.1080/00031305.2017.1375989](https://doi.org/10.1080/00031305.2017.1375989)
+7. Min Q. Wang, Alice F. Yan and Ralph V. Katz (2018) [Researcher Requests for Inappropriate Analysis and Reporting: A U.S. Survey of Consulting Biostatisticians](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Wang_Researcher_Requests_2018.pdf) *Annals of Internal Medicine* https://doi.org/10.7326/M18-1230.
+    - Accompanying editorial by A. Russell Localio, Catherine B. Stack, Anne R. Meibohm et al. (2018) [Inappropriate Statistical Analysis and Reporting in Medical Research: Perverse Incentives and Institutional Solutions](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Localio_Inappropriate_2018.pdf) *Annals of Internal Medicine* https://doi.org/10.7326/M18-2516.
 
 ## Miscellany
 
