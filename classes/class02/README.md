@@ -4,6 +4,10 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class02/figures/galvan_2020-11-17.png)
+
+- Note that Tony also [shares his R code](https://twitter.com/GDataScience1/status/1328860920534106112?s=20) working with [data culled from Wikipedia](https://en.wikipedia.org/wiki/List_of_African-American_firsts).
+
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class02/figures/tufte_2020-06-27.png)
 
 ## Materials for Today's Class
