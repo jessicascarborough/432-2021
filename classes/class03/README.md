@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | for deadlines | expectations | from Dr. Love | zoom info | for downloads | to read/watch | need help?
 
-> Quote will go here.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/branch_tw.png)
 
 ## Materials for Today's Class
 
