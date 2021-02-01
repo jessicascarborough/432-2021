@@ -13,8 +13,9 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
 
-1. Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Science with R](https://rstudio.com/resources/rstudioglobal-2021/humanitarian-data-science-with-r/). 
-    - Ahmadou Dicko is a statistics and data analysis officer at the United Nations High Commissioner for Refugees (UNHCR) where he uses statistics and data science to help safeguard the rights and well-being of refugees in West and Central Africa. 
+Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Science with R](https://rstudio.com/resources/rstudioglobal-2021/humanitarian-data-science-with-r/). 
+
+- Ahmadou Dicko is a statistics and data analysis officer at the United Nations High Commissioner for Refugees (UNHCR) where he uses statistics and data science to help safeguard the rights and well-being of refugees in West and Central Africa. 
 
 
 ## One Last Thing
