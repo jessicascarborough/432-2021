@@ -11,9 +11,11 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides03.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides03.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
-## Announcements
+## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
 
-To come.
+1. Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Science with R](https://rstudio.com/resources/rstudioglobal-2021/humanitarian-data-science-with-r/). 
+    - Ahmadou Dicko is a statistics and data analysis officer at the United Nations High Commissioner for Refugees (UNHCR) where he uses statistics and data science to help safeguard the rights and well-being of refugees in West and Central Africa. 
+
 
 ## One Last Thing
 
