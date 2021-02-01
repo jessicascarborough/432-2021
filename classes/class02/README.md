@@ -7,3 +7,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 > Quote will go here.
 
 This is a placeholder for Class 02 Materials.
+
+# One Last Thing
+
+You might be interested in [6 RStudio Keyboard Shortcuts](https://www.youtube.com/watch?v=U373PGg8Y_0) on YouTube, or if you prefer, just [read the article](https://www.r-bloggers.com/2021/01/6-life-altering-rstudio-keyboard-shortcuts/).
+
+
