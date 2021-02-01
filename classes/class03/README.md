@@ -6,9 +6,16 @@ for everything | for deadlines | expectations | from Dr. Love | zoom info | for 
 
 > Quote will go here.
 
-This is a placeholder for Class 03 Materials.
+## Materials for Today's Class
 
-# One Last Thing
+- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides03.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides03.Rmd).
+- All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
+
+## Announcements
+
+To come.
+
+## One Last Thing
 
 Ted Laderas runs a nice [newsletter of Ready for R materials](https://tinyletter.com/ready4r), with lots of practical tips that might interest you. You can see the archive and sign up (free with an email) at https://tinyletter.com/ready4r.
 
