@@ -4,38 +4,14 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | zoom information | for downloads
 
-> Quote will go here.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/branch_tw.png)
 
-## Class 01 Materials will appear here as they become available.
+## Today's Slides
 
-- Slides for Class 01 are available in [R Markdown] and [in PDF].
-- Class 01, like all 432 classes, is recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu)
+- Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides01.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides01.Rmd).
+- All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 - **BONUS video** I pre-recorded a 9-minute video walking through (fairly quickly) the development of the Bradley example in R Studio, anticipating that I might not get to it today in class. You'll find that recording on our Shared Google Drive (log into Google with your CWRU account).
     - The Shared Drive is called 432 Spring 2021 Dr Love and Students. Inside that Drive, you should see a folder called 432 Spring 2021 Bonus Videos. 
-
-
-
-## Logistics and Reminders
-
-1. You should have received an email from me in the last 3-4 days with the subject heading "**PQHS / CRSP / MPHP 432: Start of the Semester - Welcome!**" 
-    - If you have this email, please attend to what it asks you to do. 
-    - If you don't have this email, please let me know that via email to Thomas dot Love at case dot edu now.
-2. If you haven't taken the Welcome to 432 survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
-    - You must log into Google through your CWRU account to take the survey.
-3. [Lab 01](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab01) is due this coming Monday 2021-02-08 at 9 PM.
-    - To do this Lab, you'll need to have [R and RStudio up and running for you](https://thomaselove.github.io/432/software_install.html), and [download the data from our Data site](https://thomaselove.github.io/432/data_index.html).
-4. Please read the [Syllabus](https://thomaselove.github.io/432-2021-syllabus/) and familiarize yourself with the [Course Website](https://thomaselove.github.io/432), the Shared Google Drive (which you can see from your Google CWRU account), [Piazza](https://piazza.com/case/spring2021/pqhs432) and [Canvas](https://canvas.case.edu/) before Thursday's class so that if you have any questions or problems getting started, we can settle them quickly.
-    - Questions should be posted to Piazza in the general discussion folder, whenever that's appropriate.
-    - If you have an individual concern you want to raise with Dr. Love, email him at Thomas dot Love at case dot edu.
-5. [TA office hours](https://thomaselove.github.io/432/calendar.html#TA_Office_Hours) begin on Thursday 2021-02-04. 
-    - The schedule is found on [the Course Calendar](https://thomaselove.github.io/432/calendar.html#TA_Office_Hours), and in the [Contact Us](https://thomaselove.github.io/432/contact.html) menu on the website.
-    - Zoom information for TA office hours can be found in the [Announcements section of Canvas](https://canvas.case.edu/), and is also in our Shared Google Drive.
-6. By next Tuesday (2021-02-09), we'll expect you to have read:
-    - the readings in [the required books by Nate Silver and Jeff Leek](https://thomaselove.github.io/432/calendar.html#Readings) listed on [2021-02-05 in the Calendar](https://thomaselove.github.io/432/calendar.html#February_2021)
-    - the [instructions for Project 1](https://github.com/THOMASELOVE/432-2021/blob/master/project1/README.md), especially as they relate to the first of its two tasks: the [Project Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) (which is due at 9 PM on 2021-03-01.)
-7. There is no [Minute Paper](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) this week. Our first Minute Paper is due next Wednesday 2021-02-10.
-8. The final word on all deadlines is the [Course Calendar](https://thomaselove.github.io/432/calendar.html). All deliverables for the entire semester are listed.
-9. I want to remind you of the University's resources to help you that are listed in [Section 15 of our syllabus](https://thomaselove.github.io/432-2021-syllabus/university-resources-for-student-support.html), especially the newly available [CWRU Care 24/7 Mental Telehealth for Students](https://timely.md/faq/cwrucare/) program
 
 ## Today's References (from the Slides, etc.) 
 
@@ -68,6 +44,28 @@ You'll also find:
 - [JAMA Table Creation Instructions](https://jama.jamanetwork.com/data/ifora-forms/jama/tablecreationinst.pdf) (pdf)
 - [How I created/simulated the `bradley.csv` data](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/bradley_sim.md)
 
+## Logistics and Reminders
+
+1. You should have received an email from me in the last 3-4 days with the subject heading "**PQHS / CRSP / MPHP 432: Start of the Semester - Welcome!**" 
+    - If you have this email, please attend to what it asks you to do. 
+    - If you don't have this email, please let me know that via email to Thomas dot Love at case dot edu now.
+2. If you haven't taken the Welcome to 432 survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
+    - You must log into Google through your CWRU account to take the survey.
+3. [Lab 01](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab01) is due this coming Monday 2021-02-08 at 9 PM.
+    - To do this Lab, you'll need to have [R and RStudio up and running for you](https://thomaselove.github.io/432/software_install.html), and [download the data from our Data site](https://thomaselove.github.io/432/data_index.html).
+4. Please read the [Syllabus](https://thomaselove.github.io/432-2021-syllabus/) and familiarize yourself with the [Course Website](https://thomaselove.github.io/432), the Shared Google Drive (which you can see from your Google CWRU account), [Piazza](https://piazza.com/case/spring2021/pqhs432) and [Canvas](https://canvas.case.edu/) before Thursday's class so that if you have any questions or problems getting started, we can settle them quickly.
+    - Questions should be posted to Piazza in the general discussion folder, whenever that's appropriate.
+    - If you have an individual concern you want to raise with Dr. Love, email him at Thomas dot Love at case dot edu.
+5. [TA office hours](https://thomaselove.github.io/432/calendar.html#TA_Office_Hours) begin on Thursday 2021-02-04. 
+    - The schedule is found on [the Course Calendar](https://thomaselove.github.io/432/calendar.html#TA_Office_Hours), and in the [Contact Us](https://thomaselove.github.io/432/contact.html) menu on the website.
+    - Zoom information for TA office hours can be found in the [Announcements section of Canvas](https://canvas.case.edu/), and is also in our Shared Google Drive.
+6. By next Tuesday (2021-02-09), we'll expect you to have read:
+    - the readings in [the required books by Nate Silver and Jeff Leek](https://thomaselove.github.io/432/calendar.html#Readings) listed on [2021-02-05 in the Calendar](https://thomaselove.github.io/432/calendar.html#February_2021)
+    - the [instructions for Project 1](https://github.com/THOMASELOVE/432-2021/blob/master/project1/README.md), especially as they relate to the first of its two tasks: the [Project Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) (which is due at 9 PM on 2021-03-01.)
+7. There is no [Minute Paper](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) this week. Our first Minute Paper is due next Wednesday 2021-02-10.
+8. The final word on all deadlines is the [Course Calendar](https://thomaselove.github.io/432/calendar.html). All deliverables for the entire semester are listed.
+9. I want to remind you of the University's resources to help you that are listed in [Section 15 of our syllabus](https://thomaselove.github.io/432-2021-syllabus/university-resources-for-student-support.html), especially the newly available [CWRU Care 24/7 Mental Telehealth for Students](https://timely.md/faq/cwrucare/) program
+
 ## Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
 
 Again, if you haven't taken the survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
@@ -87,4 +85,10 @@ Again, if you haven't taken the survey already, please [do so today](http://bit.
     - Yes, about a half dozen, I think.
 5. (from a student who did not take 431 with us in the Fall) Are there any specific parts of 431 that we should review and pay special attention to and that will be integral to succeeding in 432? 
     - I expect the most obviously useful elements will be the discussion of specific R packages and functions related to working with linear models. It would also be helpful to look at the lab assignments and project requirements and tips from 431 since we build on that knowledge in the 432 materials. [The R-basics document](https://github.com/THOMASELOVE/432-2021/tree/master/r-basics) from the 432 R and Data menu is certainly worth some of your time, too.
+
+## What's that course password again?
+
+Some of the materials on the [References and Resources page](https://github.com/THOMASELOVE/432-2021/blob/master/references/README.md) of books, articles, videos and other things are password-protected.
+
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/tukey.png)
 
