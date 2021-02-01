@@ -6,7 +6,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/branch_tw.png)
 
-## Today's Slides
+## Materials for Today's Class
 
 - Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides01.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides01.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
