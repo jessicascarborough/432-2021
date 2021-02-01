@@ -102,7 +102,9 @@ Again, if you haven't taken the survey already, please [do so today](http://bit.
 
 Want to read the most misguided paper of 2020? Darren Dahly's [Twitter thread has you covered](https://twitter.com/statsepi/status/1338501499039739906).
 
-- The paper Darren refers to is called [Basic statistics: A research primer for low- and middle-income countries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7718448/).
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/dahly_2020-12-14.png)
+
+- The paper Darren refers to is [Basic statistics: A research primer for low- and middle-income countries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7718448/).
 - Another 2020 paper in the series called [Research skills and the data spreadsheet: A research primer for low- and middle-income countries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7718460/) is even more, well, I don't know what to say except for heaven's sake, don't take any of its advice. 
     - I'm happy to believe that the intentions here were nothing but good, but this has really gone wrong.
     - Check out the annotated biography in that second paper, for example.
