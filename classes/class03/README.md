@@ -7,3 +7,8 @@ for everything | for deadlines | expectations | from Dr. Love | zoom info | for 
 > Quote will go here.
 
 This is a placeholder for Class 03 Materials.
+
+# One Last Thing
+
+Ted Laderas runs a nice [newsletter of Ready for R materials](https://tinyletter.com/ready4r), with lots of practical tips that might interest you. You can see the archive and sign up (free with an email) at https://tinyletter.com/ready4r.
+
