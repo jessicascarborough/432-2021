@@ -60,6 +60,7 @@ You'll also find:
     - To do this Lab, you'll need to have [R and RStudio up and running for you](https://thomaselove.github.io/432/software_install.html), and [download the data from our Data site](https://thomaselove.github.io/432/data_index.html).
 4. Please read the [Syllabus](https://thomaselove.github.io/432-2021-syllabus/) and familiarize yourself with the [Course Website](https://thomaselove.github.io/432), the Shared Google Drive (which you can see from your Google CWRU account), [Piazza](https://piazza.com/case/spring2021/pqhs432) and [Canvas](https://canvas.case.edu/) before Thursday's class so that if you have any questions or problems getting started, we can settle them quickly.
     - Questions should be posted to Piazza in the general discussion folder, whenever that's appropriate.
+    - I encourage you to change the default Piazza settings so that you receive email notifications either every 12 or 24 hours.
     - If you have an individual concern you want to raise with Dr. Love, email him at Thomas dot Love at case dot edu.
 5. [TA office hours](https://thomaselove.github.io/432/calendar.html#TA_Office_Hours) begin on Thursday 2021-02-04. 
     - The schedule is found on [the Course Calendar](https://thomaselove.github.io/432/calendar.html#TA_Office_Hours), and in the [Contact Us](https://thomaselove.github.io/432/contact.html) menu on the website.
