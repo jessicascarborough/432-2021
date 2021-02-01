@@ -15,10 +15,15 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 - Jonas Kristoffer Lindeløv [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/)
 
+## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
+
+Today, I'll share Alex Cookson's 5-minute talk [The Power of Great Datasets](https://rstudio.com/resources/rstudioglobal-2021/the-power-of-great-datasets/). 
+
+- I hope Alex will motivate you to curate Great Datasets and perhaps explore something you're not currently thinking about for a project or other activity to develop your statistical or programming skills. 
+
 ## Announcements
 
-1. Alex Cookson's great 5-minute talk [The Power of Great Datasets](https://rstudio.com/resources/rstudioglobal-2021/the-power-of-great-datasets/) from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) is now available. 
-    - I hope Alex will motivate you to curate Great Datasets and perhaps explore something you're not currently thinking about for a project or other activity to develop your statistical or programming skills. 
+1. To come.
 
 ## One Last Thing - RStudio Tips
 
