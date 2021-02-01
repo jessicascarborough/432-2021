@@ -24,7 +24,7 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
 1. Frank Harrell's [Biostatistics for Biomedical Research (BBR) Course](https://www.youtube.com/channel/UC-o_ZZ0tuFUYn8e8rf-QURA/videos) includes a series of lectures on many of the topics we'll be discussing in 432, in addition to several late-breaking items. Details on the course are available [here](https://hbiostat.org/bbr/) and the notes are linked in the Statistics and Modeling books below.
 2. Richard McElreath [Statistical Rethinking (Winter 2019)](https://www.youtube.com/playlist?list=PLDcUM9US4XdNM4Edgs7weiyIguLSToZRI) lecture series is the best introduction to Bayesian ideas and methods available. 
     - If you want to just spend two hours rather than dive in to the full thing, Richard's lecture [Bayesian Inference is Just Counting](https://www.youtube.com/watch?v=_NEMHM1wDfI) is great, too.
-    - Richard's book [Statistical Rethinking (2nd edition) - not free](https://xcelab.net/rm/statistical-rethinking/) is incredible, too. See also the freely available book by Kurz, below.
+    - Richard's book [Statistical Rethinking (2nd edition)](https://xcelab.net/rm/statistical-rethinking/) is available to you through [the CWRU library system](https://case.edu/library/) as an ebook. See also the freely available book by Kurz, below.
 
 ## Other Books or Book-Length Documents Recommended by Dr. Love
 
