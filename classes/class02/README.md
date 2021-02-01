@@ -8,10 +8,14 @@ for everything | for deadlines | expectations | from Dr. Love | zoom info | for 
 
 ## Materials for Today's Class
 
-- Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides02.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides02.Rmd).
+- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides02.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides02.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
-# One Last Thing - RStudio Tips
+## Announcements
+
+To come.
+
+## One Last Thing - RStudio Tips
 
 - Jānis Stūris at [Data Cornering](http://datacornering.com/) had a nice post back on 2020-01-01 of [My favorite RStudio tips and tricks](http://datacornering.com/my-favorite-rstudio-tips-and-tricks/) some of which would definitely save me some time and energy. Jānis produces lots of useful tips, and I encourage you to take a look.
 - In a similar vein, you might also be interested in [6 RStudio Keyboard Shortcuts](https://www.youtube.com/watch?v=U373PGg8Y_0) on YouTube, or if you prefer, just [read the article](https://www.r-bloggers.com/2021/01/6-life-altering-rstudio-keyboard-shortcuts/).
