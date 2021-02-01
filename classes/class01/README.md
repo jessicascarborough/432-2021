@@ -10,8 +10,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 - Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides01.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/432_2021_slides01.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
-- **BONUS video** I pre-recorded a 9-minute video walking through (fairly quickly) the development of the Bradley example in R Studio, anticipating that I might not get to it today in class. You'll find that recording on our Shared Google Drive (log into Google with your CWRU account).
-    - The Shared Drive is called 432 Spring 2021 Dr Love and Students. Inside that Drive, you should see a folder called 432 Spring 2021 Bonus Videos. 
+- **BONUS video** I pre-recorded a 9-minute video walking through (fairly quickly) the development of the Bradley example in R Studio, anticipating that I might not get to it today in class. 
+    - You'll find that recording on our Shared Google Drive (log into Google with your CWRU account).
+    - The Shared Drive is called *432 Spring 2021 Dr Love and Students*. Inside that Drive, you should see a folder called *432 Spring 2021 Bonus Videos*. 
 
 ## Today's References (from the Slides, etc.) 
 
