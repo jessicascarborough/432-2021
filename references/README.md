@@ -32,13 +32,14 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
 
 1. Frank Harrell and Chris Slaughter [Biostatistics for Biomedical Research Notes](http://hbiostat.org/doc/bbr.pdf) (pdf) - also see the YouTube course above.
 2. Frank E. Harrell [Regression Modeling Strategies](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Harrell_Regression_Modeling_Strategies_2015_2e_protected.pdf), 2nd Edition, 2015.
-3. Paul Roback and Julie Legler [Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/)
-4. A Solomon Kurz [Statistical rethinking with brms, ggplot2, and the tidyverse](https://bookdown.org/content/3890/)
-5. Julian J. Faraway [Practical Regression and Anova using R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Faraway_Practical_Regression_and_ANOVA_using_R.pdf), 2002.
-6. David G. Kleinbaum and Mitchel Klein [Logistic Regression: A Self-Learning Text](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Kleinbaum_and_Klein_Logistic_Regression_2010_3e_protected.pdf), 3rd Edition, 2010.
-7. Simon J. Sheather [A Modern Approach to Regression with R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Sheather_Modern_Approach_to_Regression_with_R_2009_protected.pdf), 2009.
-8. Eric Vittinghoff, David V. Glidden, Stephen C. Shiboski and Charles E. McCulloch [Regression Methods in Biostatistics](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Vittinghoff_et_al_Regression_Methods_in_Biostatistics_2e_protected.pdf), 2nd Edition, 2012.
-9. Rob J Hyndman and George Athanasopoulos [Forecasting: Principles and Practice](https://otexts.com/fpp2/)
+3. Max Kuhn and Julia Silge [Tidy Modeling with R](https://www.tmwr.org/)
+4. Paul Roback and Julie Legler [Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/)
+5. A Solomon Kurz [Statistical rethinking with brms, ggplot2, and the tidyverse](https://bookdown.org/content/3890/)
+6. Julian J. Faraway [Practical Regression and Anova using R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Faraway_Practical_Regression_and_ANOVA_using_R.pdf), 2002.
+7. David G. Kleinbaum and Mitchel Klein [Logistic Regression: A Self-Learning Text](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Kleinbaum_and_Klein_Logistic_Regression_2010_3e_protected.pdf), 3rd Edition, 2010.
+8. Simon J. Sheather [A Modern Approach to Regression with R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Sheather_Modern_Approach_to_Regression_with_R_2009_protected.pdf), 2009.
+9. Eric Vittinghoff, David V. Glidden, Stephen C. Shiboski and Charles E. McCulloch [Regression Methods in Biostatistics](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Vittinghoff_et_al_Regression_Methods_in_Biostatistics_2e_protected.pdf), 2nd Edition, 2012.
+10. Rob J Hyndman and George Athanasopoulos [Forecasting: Principles and Practice](https://otexts.com/fpp2/)
 
 ### On Visualization and R
 
@@ -50,12 +51,13 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
 ### On Using R and Related Tools
 
 1. Hadley Wickham and Garrett Grolemund [R for Data Science](https://r4ds.had.co.nz/)
-2. Chester Ismay and Albert Y. Kim [Statistical Inference via Data Science: A Modern Dive into R and the Tidyverse](https://moderndive.com/)
-3. Yihui Xie, Christophe Dervieux, Emily Riederer [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
-4. Yihui Xie, Amber Thomas, Alison Presmanes Hill [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/)
-5. Yihui Xie, J. J. Allaire, Garrett Grolemund [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
-6. Hadley Wickham and Jenny Bryan [R Packages](https://r-pkgs.org/)
-7. Peter D. R. Higgins [Reproducible Medical Research with R](https://bookdown.org/pdr_higgins/rmrwr/)
+2. Max Kuhn and Julia Silge [Tidy Modeling with R](https://www.tmwr.org/) (Yes, I'm listing it twice, because it's useful in both contexts.)
+3. Chester Ismay and Albert Y. Kim [Statistical Inference via Data Science: A Modern Dive into R and the Tidyverse](https://moderndive.com/)
+4. Yihui Xie, Christophe Dervieux, Emily Riederer [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+5. Yihui Xie, Amber Thomas, Alison Presmanes Hill [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/)
+6. Yihui Xie, J. J. Allaire, Garrett Grolemund [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+7. Hadley Wickham and Jenny Bryan [R Packages](https://r-pkgs.org/)
+8. Peter D. R. Higgins [Reproducible Medical Research with R](https://bookdown.org/pdr_higgins/rmrwr/)
 
 ## Key Articles
 
