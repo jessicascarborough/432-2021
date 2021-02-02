@@ -78,6 +78,10 @@ Some of the materials on the [References and Resources page](https://github.com/
 
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class01/figures/tukey.png)
 
+## Something Inspiring?
+
+In [Celebrating Black History Month](https://magazine.amstat.org/blog/2021/02/01/celebrating-black-history-month/) the American Statistical Association recognizes 10 of the many individuals from the Black/African-American collective who have made tremendous contributions to the field of statistics.
+
 ## Questions (with Answers) from the "[Welcome to 432 Survey](http://bit.ly/432-2021-welcome-survey)"
 
 Again, if you haven't taken the survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
