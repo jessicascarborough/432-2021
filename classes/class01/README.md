@@ -23,7 +23,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
     - If you have this email, please attend to what it asks you to do. 
     - If you don't have this email, please let me know that via email to Thomas dot Love at case dot edu now.
 2. If you haven't taken the Welcome to 432 survey already, please [do so today](http://bit.ly/432-2021-welcome-survey).
-    - You must log into Google through your CWRU account to take the survey.
+    - Thanks to the 50 of you who've now completed the survey!
 3. [Lab 01](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab01) is due this coming Monday 2021-02-08 at 9 PM.
     - To do this Lab, you'll need to have [R and RStudio up and running for you](https://thomaselove.github.io/432/software_install.html), and [download the data from our Data site](https://thomaselove.github.io/432/data_index.html).
 4. Please read the [Syllabus](https://thomaselove.github.io/432-2021-syllabus/) and familiarize yourself with the [Course Website](https://thomaselove.github.io/432), the Shared Google Drive (which you can see from your Google CWRU account), [Piazza](https://piazza.com/case/spring2021/pqhs432) and [Canvas](https://canvas.case.edu/) before Thursday's class so that if you have any questions or problems getting started, we can settle them quickly.
