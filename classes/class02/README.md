@@ -7,8 +7,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class02/figures/galvan_2020-11-17.png)
 
 - Note that Tony also [shares his R code](https://twitter.com/GDataScience1/status/1328860920534106112?s=20) working with [data culled from Wikipedia](https://en.wikipedia.org/wiki/List_of_African-American_firsts).
-
-![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class02/figures/tufte_2020-06-27.png)
+- The most recent [TidyTuesday live screencast](https://www.youtube.com/watch?v=TSG74voJQ3E) from David Robinson looks at data about enrollment in historically black colleges and universities.
 
 ## Materials for Today's Class
 
@@ -17,7 +16,11 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## References for Today's Material
 
-- Jonas Kristoffer Lindeløv [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/)
+- I don't make reference to this within the slides, but I want to call your attention to Jonas Kristoffer Lindeløv [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/), which makes the point that a wide range of "statistical tests" are just linear models, including all of the ANOVA and ANCOVA models we'll build today.
+
+## Announcements
+
+1. Carrie Wright, Shannon Ellis, Stephanie Hicks, and Roger D. Peng have a new book out at LeanPub called [Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience) which looks terrific, including some materials discussed in 431 and some we'll discuss this term.
 
 ## A little bit of inspiration
 
@@ -25,9 +28,7 @@ In each of the next few class READMEs, I've decided to spend a moment sharing on
 
 - I hope Alex will motivate you to curate Great Datasets and perhaps explore something you're not currently thinking about for a project or other activity to develop your statistical or programming skills. 
 
-## Announcements
-
-1. To come.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class02/figures/tufte_2020-06-27.png)
 
 ## One Last Thing - RStudio Tips
 
