@@ -52,6 +52,7 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
 
 1. Hadley Wickham and Garrett Grolemund [R for Data Science](https://r4ds.had.co.nz/)
 2. Max Kuhn and Julia Silge [Tidy Modeling with R](https://www.tmwr.org/) (Yes, I'm listing it twice, because it's useful in both contexts.)
+3. Carrie Wright, Shannon Ellis, Stephanie Hicks, and Roger D. Peng [Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience).
 3. Chester Ismay and Albert Y. Kim [Statistical Inference via Data Science: A Modern Dive into R and the Tidyverse](https://moderndive.com/)
 4. Yihui Xie, Christophe Dervieux, Emily Riederer [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 5. Yihui Xie, Amber Thomas, Alison Presmanes Hill [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/)
