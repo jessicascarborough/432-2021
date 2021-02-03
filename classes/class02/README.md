@@ -20,7 +20,9 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. Carrie Wright, Shannon Ellis, Stephanie Hicks, and Roger D. Peng have a new book out at LeanPub called [Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience) which looks terrific, including some materials discussed in 431 and some we'll discuss this term.
+1. I placed a *Student List* of names, emails, pronouns, programs on our Shared Google Drive.
+    - While looking at it, you can learn something interesting (lightly edited from the Welcome to 432 survey) about each of your colleagues.
+2. Carrie Wright, Shannon Ellis, Stephanie Hicks, and Roger D. Peng have a new book out for sale (suggested price: $25) at LeanPub called [Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience) which looks terrific, including some materials discussed in 431 and some we'll discuss this term.
 
 ## A little bit of inspiration
 
