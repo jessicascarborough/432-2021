@@ -16,7 +16,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## References for Today's Material
 
-- I don't make reference to this within the slides, but I want to call your attention to Jonas Kristoffer Lindeløv [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/), which makes the point that a wide range of "statistical tests" are just linear models, including all of the ANOVA and ANCOVA models we'll build today.
+- Jonas Kristoffer Lindeløv's post [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/) makes the point that a wide range of "statistical tests" are just linear models, including all of the ANOVA and ANCOVA models we'll build today. While I don't refer to this within the slides, I was motivated by it in deciding to present these ideas exclusively through the lens of regression.
 
 ## Announcements
 
