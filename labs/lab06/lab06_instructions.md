@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-01-29 21:35:36
+Last Updated: 2021-02-04 15:32:33
 
 Note that this Lab is **completely optional**.
 
@@ -21,7 +21,8 @@ Note that this Lab is **completely optional**.
 ## What are we doing?
 
 Your task is to build a web presence for yourself on the Internet using
-R Markdown, and specifically a tool called `blogdown`.
+R Markdown, and specifically a tool called `blogdown`, or something
+analogous.
 
 -   [A new version of
     blogdown](https://blog.rstudio.com/2021/01/18/blogdown-v1.0/)
@@ -51,6 +52,10 @@ projects on your website. That’s up to you.
         blogdown package” which is certainly worth a look. [Dan’s 2019
         tutorial](https://www.dsquintana.blog/free-website-in-r-easy/)
         is one of Wyatt’s key references.
+    -   In 2020, [Dan’s updated
+        guide](https://www.dsquintana.blog/create-an-academic-website-free-easy-2020/)
+        switches to an alternative approach for building your site. If
+        you want to use that approach instead, great.
 -   Again, the most detailed source is [blogdown: Creating Websites with
     R Markdown](https://bookdown.org/yihui/blogdown/) which describes a
     lot of available options, but like the rest of these documents, is a
@@ -81,6 +86,8 @@ bonus for your course lab grade, depending on how robust your work is.
 -   There’s no need to include all of the things that are possible.
 -   We’d be very happy with a modest meaningful step in the right
     direction.
+-   Something that works for you is definitely the way to go - if that
+    means using something other than RStudio to do the work, so be it.
 -   There’s also no need to spend any money to make this happen,
     although if you want to purchase a domain name of your own, they are
     available (for instance through Google Domains) very cheaply (under
