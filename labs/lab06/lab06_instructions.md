@@ -36,6 +36,7 @@ analogous.
 -   Another good model is [this one from our current TA Anastasia
     Vassiliou](https://anastasiavassiliou.netlify.app/) built for the
     class last Spring.
+-   Additional examples built by your colleagues can be [found here](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab06/examples.md)
 
 One appealing strategy is to include results from your class projects as
 projects on your website. That’s up to you.
