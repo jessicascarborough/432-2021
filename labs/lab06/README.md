@@ -11,3 +11,7 @@ The instructions for completing Lab 06 [are available now](https://github.com/TH
 Unlike the other Labs, this Lab is optional, and does not rely on any of the materials we'll provide in class, so you can build it at any time during the semester. 
 
 Submit your Lab 06 via email, [as the instructions suggest](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab06/lab06_instructions.md), at any time up to the deadline.
+
+## Examples
+
+Examples from your colleagues of their websites may be inspirational to you. Here's a [list of examples so far](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab06/examples.md).
