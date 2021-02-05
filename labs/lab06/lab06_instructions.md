@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-02-04 15:32:33
+Last Updated: 2021-02-05 17:18:21
 
 Note that this Lab is **completely optional**.
 
@@ -21,8 +21,8 @@ Note that this Lab is **completely optional**.
 ## What are we doing?
 
 Your task is to build a web presence for yourself on the Internet using
-R Markdown, and specifically a tool called `blogdown`, or something
-analogous.
+R Markdown, and specifically a tool called `blogdown`, **or** an
+analogous tool, if you prefer.
 
 -   [A new version of
     blogdown](https://blog.rstudio.com/2021/01/18/blogdown-v1.0/)
@@ -36,7 +36,8 @@ analogous.
 -   Another good model is [this one from our current TA Anastasia
     Vassiliou](https://anastasiavassiliou.netlify.app/) built for the
     class last Spring.
--   Additional examples built by your colleagues can be [found here](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab06/examples.md)
+-   Additional examples built by your colleagues can be [found
+    here](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab06/examples.md)
 
 One appealing strategy is to include results from your class projects as
 projects on your website. That’s up to you.
