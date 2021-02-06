@@ -1,7 +1,7 @@
 432 Lab 06 for Spring 2021
 ================
 
-Last Updated: 2021-02-05 17:18:21
+Last Updated: 2021-02-06 11:28:08
 
 Note that this Lab is **completely optional**.
 
@@ -20,9 +20,15 @@ Note that this Lab is **completely optional**.
 
 ## What are we doing?
 
-Your task is to build a web presence for yourself on the Internet using
-R Markdown, and specifically a tool called `blogdown`, **or** an
-analogous tool, if you prefer.
+Your task is to build a web presence for yourself on the Internet
+**either** using R Markdown, and specifically a tool called `blogdown`,
+as these instructions describe **or** an analogous tool where you use
+code to build a professional site for yourself, if you prefer.
+
+The instructions are designed to help you use R Markdown and `blogdown`
+to do this task, but we’ll be happy to see any other approach that works
+better for you. The big issue is the commitment required to post this,
+and maintain it into the future.
 
 -   [A new version of
     blogdown](https://blog.rstudio.com/2021/01/18/blogdown-v1.0/)
