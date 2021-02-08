@@ -12,7 +12,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Materials for Today's Class
 
-- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/432_2021_slides03.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/432_2021_slides03.Rmd).
+- Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/432_2021_slides03.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/432_2021_slides03.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
 ## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
@@ -21,6 +21,9 @@ Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Sc
 
 - Ahmadou Dicko is a statistics and data analysis officer at the United Nations High Commissioner for Refugees (UNHCR) where he uses statistics and data science to help safeguard the rights and well-being of refugees in West and Central Africa. 
 
+## Reminders
+
+- The [Minute Paper after Class 03](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) is due tomorrow (2021-02-10) at noon. It should take about 5 minutes. Remember to log into Google via CWRU to see the form.
 
 ## One Last Thing
 
