@@ -4,10 +4,6 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/mchorse_2020-12-26.png)
-
-- See [Dr. McHorse's suggestions here](https://twitter.com/fossilosophy/status/1342871356254334977).
-
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/branch_tw.png)
 
 ## Materials for Today's Class
@@ -15,15 +11,31 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/432_2021_slides03.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/432_2021_slides03.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
+## Reminders
+
+- The [Minute Paper after Class 03](http://bit.ly/432-2021-minute-03) is due Wednesday 2021-02-10 at noon. 
+    - It should take about 5 minutes. Remember to log into Google via CWRU to [access the form](http://bit.ly/432-2021-minute-03).
+    - Please complete these Minute Papers in a timely fashion even if you haven't yet caught up with us in class.
+    - The [complete schedule of Minute Papers](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) is available.
+- *Reading*: We expect you to have read the introduction and Chapter 1 of Nate Silver's *The Signal and the Noise* as well as the Data-Sharing and Reading scientific papers sections of Jeff Leek's *How to be a modern scientist* by now. (Of course, some of this was in Lab 1.)
+    - We won't be discussing these pieces each week, but we will catch up with them irregularly through the semester, and in Labs and Quizzes.
+- [Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) is the next substantial assignment, due at 9 PM on 2021-02-22.
+- Were I you, I would take advantage of the relative lull coming up this weekend in 432 work to look closely at the requirements of [Project 1](https://github.com/THOMASELOVE/432-2021/tree/master/project1) and in particular, the [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) which is due on 2021-03-01. 
+    - It's never too early to get started, and finding an appropriate data set is not something you want to put off until the end of the month.
+
 ## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
 
 Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Science with R](https://rstudio.com/resources/rstudioglobal-2021/humanitarian-data-science-with-r/). 
 
 - Ahmadou Dicko is a statistics and data analysis officer at the United Nations High Commissioner for Refugees (UNHCR) where he uses statistics and data science to help safeguard the rights and well-being of refugees in West and Central Africa. 
 
-## Reminders
+## Tips for Graduate Students
 
-- The [Minute Paper after Class 03](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) is due tomorrow (2021-02-10) at noon. It should take about 5 minutes. Remember to log into Google via CWRU to see the form.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/mchorse_2020-12-26.png)
+
+- See [Dr. McHorse's suggestions here](https://twitter.com/fossilosophy/status/1342871356254334977).
+
+
 
 ## One Last Thing
 
