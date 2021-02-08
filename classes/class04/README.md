@@ -11,9 +11,10 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/432_2021_slides04.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/432_2021_slides04.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
-## Minute Paper after Class 3
+## Announcements
 
-- Visit [the Minute Paper page](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers) for the feedback link.
+1. Visit [the Minute Paper page](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers) for the link to Dr. Love's feedback to the Minute Paper after Class 03.
+2. A new monthly Zoom lecture series on social determinants of health, led by my colleague Dr. Ash Sehgal at [MetroHealth](https://www.metrohealth.org/) and the [Institute for H.O.P.E.](https://www.metrohealth.org/institute-for-hope) starts soon. [This two-page flyer](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/figures/SDOH_Seminar_Series_2021_March_and_April.pdf) describes the sessions and speakers for 2021-03-01 (Laura Gottlieb) and 2021-04-05 (Rishi Manchanda).
 
 ## Sources from Today's Class
 
