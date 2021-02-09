@@ -21,7 +21,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
     - We won't be discussing these pieces each week, but we will catch up with them irregularly through the semester, and in Labs and Quizzes.
 - [Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) is the next substantial assignment, due at 9 PM on 2021-02-22.
 - Were I you, I would take advantage of the relative lull coming up this weekend in 432 work to look closely at the requirements of [Project 1](https://github.com/THOMASELOVE/432-2021/tree/master/project1) and in particular, the [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) which is due on 2021-03-01. 
-    - It's never too early to get started, and finding an appropriate data set is something you probably need to do in the next two weeks in order to get everything finished at the end of the month comfortably.
+    - It's never too early to get started, and finding an appropriate data set and ingesting it into R is something you probably need to do in the next two weeks in order to get everything finished at the end of the month comfortably.
 
 ## Need some suggestions for attractive data for 432 projects?
 
