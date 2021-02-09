@@ -32,7 +32,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
     - Otherwise, you run the risk of us rejecting your proposal because we don't want you to use the data you've chosen.
     - If a TA is unsure about what you're suggesting, they'll put you in touch with Dr. Love for an "OK".
 
-Four especially appealing sources that I'd really like to see people use for Project 2 are:
+Four especially appealing sources that I'd really like to see people use for Project 1 are:
 
 1. The [Health and Retirement Study](https://hrsdata.isr.umich.edu/data-products/public-survey-data?_ga=2.79574685.849210420.1612760982-241136149.1612760982)
 2. The [General Social Survey](https://gssdataexplorer.norc.org/)
