@@ -32,8 +32,9 @@ Today, I'll share Kara Woo's terrific 22-minute talk [Always look on the bright 
 
 ## Reminders
 
-1. A reminder to take advantage of the relative lull coming up this weekend in 432 work to look closely at the requirements of [Project 1](https://github.com/THOMASELOVE/432-2021/tree/master/project1) and in particular, the [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) which is due on 2021-03-01. Finding an appropriate data set is not something you want to put off until the end of the month - remember our [comments in the Class 3 README](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class03) on this subject.
-    - It is never a bad idea to run a project data set past Dr. Love and/or the TAs via Piazza or Office Hours. We mostly need to know about the data source, and including a URL is a key component of letting us assess the data.
+1. A reminder to take advantage of the relative lull coming up this weekend in 432 work to look closely at the requirements of [Project 1](https://github.com/THOMASELOVE/432-2021/tree/master/project1) and in particular, the [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) which is due on 2021-03-01. See our [comments in the Class 3 README](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class03) on this subject.
+    - It is never a bad idea to run a project data set past Dr. Love and/or the TAs via Piazza or Office Hours. 
+    - To quickly assess your data, we need to know the data source (including a URL where we can see the data) and we need to know what variables you're intending to use as outcomes, and the variables you intend to use as predictors.
 2. [Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) is the next substantial assignment, due at 9 PM on 2021-02-22.
 
 ## One Last Thing
