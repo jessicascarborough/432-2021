@@ -1,0 +1,381 @@
+---
+title: "432 Lab 01 Answer Sketch"
+author: "432 Instructional Staff"
+date: 'Due 2020-02-08. Version: `r Sys.Date()`'
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+        number_sections: TRUE
+        code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# This is an answer sketch {-}
+
+This is an answer sketch. This means sometimes we include more information than we expect you to provide (here, that applies to questions 1 and 2), and then sometimes we include less (for example, on essay questions, where we don't write sketches.)
+
+# Setup and Data Ingest {-}
+
+**Note**: It's good practice not to load any more packages than you will actually use.
+
+```{r, message=FALSE}
+library(here); library(janitor); library(magrittr)  
+library(broom); library(knitr); library(patchwork)
+
+library(tableone)
+library(kableExtra)
+library(naniar)
+
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+```{r message=FALSE}
+lab1 <- read_csv(here("data", "hbp3456.csv")) %>%
+    mutate(record = as.character(record))
+```
+
+
+# Question 1 (40 points)
+
+**Note**: We expect you not to repeat the questions in your responses to the labs. We include excerpts from the questions here to help provide context for the sketch.
+
+> Build a Table 1 to compare the subjects in practice A to the subjects in practice C on the following nine variables: age, race, Hispanic ethnicity, sex, primary insurance, body mass index, BMI category, and systolic and diastolic blood pressure. Make the Table as well as you can within R Markdown, and display the result as part of your HTML file. **Include a description of the important results from your Table 1 that does not exceed 100 words, using complete English sentences.**
+
+## Data Management
+
+### Creating `bmi` and `bmi_cat` variables
+
+With the metric system, the formula for BMI is weight (in kilograms) divided by the square of height (in meters.)
+
+```{r}
+lab1 <- lab1 %>%
+  
+  # first we'll create the bmi values
+  
+  mutate( bmi = weight / (height*height) ) %>%
+  
+  # next we'll create the bmi categories with case_when
+  # note that values of NA in bmi return NA in bmi_cat, too
+  
+  mutate( bmi_cat = case_when(
+    bmi < 18.5 ~ "Underweight",
+    bmi < 25 ~ "Normal",
+    bmi < 30 ~ "Overweight",
+    bmi >= 30 ~ "Obese")) %>%
+  
+  # finally we arrange the bmi_cat by the median(bmi) levels
+  # we could instead have arranged by hand using fct_relevel
+  
+  mutate( bmi_cat = fct_reorder( bmi_cat, bmi, median ))
+```
+
+As a sanity check, let's ensure that the subjects in each `bmi_cat` have `bmi` values in the range we expect...
+
+```{r, warning=FALSE}
+lab1 %>%
+  group_by(bmi_cat) %>%
+  summarize(n = n(), min = min(bmi), max = max(bmi))
+```
+
+OK. The minima and maxima match what we're looking for. 
+
+**Note**: In practical work, we might collapse together the Underweight and Normal categories, since there are so few patients in the Underweight category.
+
+```{r}
+lab1 <- lab1 %>%
+  mutate(bmi_cat3 = fct_collapse(bmi_cat, 
+            "Not_Overweight" = c("Underweight", "Normal")))
+```
+
+And again, a little sanity check to ensure we've not made a mistake.
+
+```{r, warning = FALSE}
+lab1 %>% count(bmi_cat, bmi_cat3)
+```
+
+### Focus on Two Practices
+
+We want to compare the subjects in the **Highland** practice to the subjects in the **Sycamore** practice, thus we need to filter out the subjects in the other practices. Then we select our variables of interest. Finally, `fct_drop` is used to remove the now empty levels of the unused practice locations from `practice`.
+
+```{r}
+lab1_t1 <- lab1 %>%
+  filter(practice %in% c("Highland", "Sycamore")) %>%
+  select(record, practice, age, race, eth_hisp, sex, insurance, bmi, bmi_cat, sbp, dbp) %>%
+  mutate(practice = fct_drop(practice))
+```
+
+### Missing Values?
+
+```{r}
+miss_var_summary(lab1_t1)
+```
+
+```{r}
+miss_case_summary(lab1_t1)
+```
+
+We're missing the following values:
+
+- `eth_hisp` on `r sum(is.na(lab1_t1$eth_hisp))` subjects (all at the Sycamore practice), and
+- `race` on `r sum(is.na(lab1_t1$race))` subjects (all at the Sycamore practice), and
+- `bmi` on `r sum(is.na(lab1_t1$bmi))` subjects (all in the Highland practice), and
+- `bmi_cat` on `r sum(is.na(lab1_t1$bmi_cat))` subjects (all in the Highland practice).
+
+To figure out which practice subjects missing data are from, we could use:
+
+```{r}
+lab1_t1 %>%
+  group_by(practice) %>%
+miss_var_summary() %>%
+  filter(n_miss > 0)
+```
+
+## Table 1 first try
+
+```{r}
+t1_attempt1 <- CreateTableOne(data = lab1_t1, 
+               vars = c("age", "race", "eth_hisp", "sex",
+                        "insurance", "bmi", "bmi_cat",
+                        "sbp", "dbp"),
+               strata = c("practice"))
+
+```
+
+### Evaluating the summary of our first try
+
+Note that if we look at a `summary` of this Table 1, we see that:
+
+- the difference in *p* values between the "normal" and "non-normal" versions of each of the continuous variables is pretty modest, so it won't matter which we choose, practically, and
+- the practical impact of the choice of *p* values between the "approximate" and "exact" versions of each of the categorical variables is also small.
+
+```{r}
+summary(t1_attempt1)
+```
+
+### A closer look at `age`
+
+As an example of what we might do to understand the distribution of a quantitative variable, let's plot the `age` data within each practice to evaluate Normality. Just for fun, I'll run
+
+- a boxplot
+- a histogram, and
+- a normal Q-Q plot
+
+of the ages within each practice.
+
+```{r}
+p1 <- ggplot(lab1_t1, aes(x = practice, y = age)) +
+  geom_boxplot(fill = c("darkorange", "green")) + 
+  coord_flip()
+
+p2 <- ggplot(lab1_t1, aes(x = age, fill = practice)) +
+  geom_histogram(bins = 15, col = "white") +
+  scale_fill_manual(values = c("darkorange", "green")) +
+  guides(fill = FALSE) +
+  facet_wrap( ~ practice, labeller = label_both)
+
+p3 <- ggplot(lab1_t1, aes(sample = age, color = practice)) +
+  geom_qq() + 
+  scale_color_manual(values = c("darkorange", "green")) +
+  guides(color = FALSE) +
+  facet_wrap( ~ practice, labeller = label_both)
+
+p1 / (p2 + p3) + 
+  plot_annotation(title = "Comparing Age in Sycamore and Highland Practices")
+```
+
+The data aren't *perfectly* Normally distributed, of course (they never are.) There's some sign of left skew, perhaps, in the Sycamore practice, in particular, but I don't see a big problem with summarizing via means and standard deviations. We could do something similar with each of the other quantitative variables, but we certainly weren't expecting you to do this in this Lab.
+
+## "Clean" Table 1, with Notes
+
+In advance of seeing your work, we expected most people to produce something that looks like this.
+
+```{r}
+print(t1_attempt1)
+```
+
+**Notes for Table 1**:
+
+1. There are 34 subjects missing Hispanic ethnicity (`eth_hisp`) status in the Sycamore practice.
+2. There are 31 subjects missing `race` in the Sycamore practice.
+4. There are 7 subject missing `bmi` and `bmi_cat` in the Highland practice.
+3. Results are shown in terms of means and standard deviations for quantitative variables, and t tests are used for comparisons.
+4. For categorical variables, we display counts and percentages, and use Pearson chi-square tests of significance.
+
+
+## An Alternative Presentation
+
+The `kableone` function within the `kableExtra` package can be used to augment this approach a little bit, and embed a footnote within the table. This works nicely when you're producing an HTML document, as we are here, although this approach doesn't work so nicely when we build PDF or Word documents from R Markdown.
+
+- Now we can insert our four notes as footnotes, sort of.
+
+```{r}
+kableone(t1_attempt1, align = "c", escape = F) %>%
+  kable_classic(full_width = F) %>%
+  footnote(general = c("There are 31 subjects missing `race` in the Sycamore practice.", "There are 34 subjects missing Hispanic ethnicity (`eth_hisp`) status in the Sycamore practice.", "There are 7 subject missing `bmi` and `bmi_cat` in the Highland practice.", "For categorical variables, we display counts and percentages, and use Pearson chi-square tests of significance."))
+```
+
+## Describing the Table
+
+The key conclusions of Table 1 are that the two practices are not especially comparable on anything except for perhaps systolic blood pressure and BMI categories. Subjects seen in at the Sycamore practice are more frequently of Black race, less often of Hispanic ethnicity, more likely to have Commercial or Medicare insurance (but less likely to have Medicaid or be uninsured) and display smaller diastolic blood pressure values than Highland subjects. Patients at Highland the practice are a bit younger on average, more likely to be male, and have larger BMI values.
+
+Notice that our conclusion here doesn't involve any reference to *p* values.
+
+\newpage
+
+# Question 2. (20 points)
+
+> Does which **insurance** status a person has seem to have a meaningful impact on their **systolic blood pressure**, adjusting for whether or not they have a prescription for a **beta-blocker**? Decide whether your model should include an interaction term in a sensible way (providing a graph to help us understand your reasoning), and then fit your choice of model using the `lm` function in R.
+
+## Summarizing the data 
+
+We want to understand something about the impact of insurance status on SBP, adjusting for beta-blocker status.
+
+### Counting / Numerical Summaries
+
+Let's start with a count of the number of patients within the different insurance groups and medication groups, along with some basic summaries of the SBP data within each group. The table below confirms that there are no missing observations in these variables.
+
+```{r}
+lab1_q2summaries <- lab1 %>% 
+  group_by(insurance, betab) %>% 
+  summarize(n = n(), missing = n_miss(sbp), 
+            median = median(sbp), mean = mean(sbp), stdev = sd(sbp))
+
+lab1_q2summaries
+```
+
+We have some pretty small cell sizes, especially in the Uninsured groups, but the medians and means are quite close in each group, suggesting no substantial skew. 
+
+### Visualizing the Data
+
+Let's try some graphs, first of the raw data distributions...
+
+```{r}
+lab1 %>%
+  ggplot(., aes(x = sbp, fill = factor(insurance))) +
+  geom_histogram(bins = 12, col = "white") +
+  guides(fill = FALSE) +
+  facet_grid(betab ~ insurance, labeller = label_both) +
+  labs(title = "SBP by Beta-Blocker and Insurance")
+```
+
+There aren't any major problems with an assumption of Normality for the systolic blood pressure values. We do have some small counts for the Uninsured groups, but we'll go ahead and use means and standard deviations to summarize the distribution of `sbp`, overall, and within the groups formed by these two factors.
+
+### An Interaction Plot
+
+So, let's try graphing the means in an interaction plot.
+
+```{r}
+ggplot(lab1_q2summaries, 
+       aes(x = factor(betab), y = mean, col = insurance)) +
+  geom_point(size = 2) +
+  geom_line(aes(group = insurance)) +
+  scale_color_viridis_d(end = 0.8, option = "C") +
+  labs(y = "Systolic Blood Pressure",
+       x = "Prescription for a Beta Blocker?",
+       col = "Insurance",
+       title = "Interaction Plot for SBP in the hbp3456 data")
+```
+
+Here, we've used one of the `viridis` color scales that are designed to be perceived effectively by viewers with common forms of colour blindness.
+
+The lines joining the beta-blocker groups vary by insurance type. Medicaid, Medicare, and Uninsured look fairly parallel, but the Commercial insurance group looks very different.
+
+There definitely seems to be a some interaction between `betab` and `insurance`. More specifically:
+
+- There's a small increase in SBP for Uninsured, Medicare and Medicaid patients with a beta-blocker compared to those without.  
+- It appears there's a larger increase in SBP for Commercial patients with a beta-blocker compared to those without.  
+
+### Flipping the factors in the plot
+
+We could certainly have switched the roles of `betab` and `insurance` in the interaction plot, and we should then come to the same conclusion. That might look something like this...
+
+```{r}
+ggplot(lab1_q2summaries, 
+       aes(x = insurance, y = mean, col = factor(betab))) +
+  geom_point(size = 2) +
+  geom_line(aes(group = factor(betab))) +
+  scale_color_viridis_d(end = 0.6, option = "D") +
+  labs(y = "Systolic Blood Pressure",
+       x = "Insurance Group",
+       color = "Beta-Blocker?",
+       title = "Interaction Plot for SBP in the hbp3456 data")
+```
+
+### Adding in standard deviations
+
+As an alternative, we could use the "dodge" approach to build an interaction plot with error bars, like this...
+
+```{r}
+pd <- position_dodge(0.2)
+
+ggplot(lab1_q2summaries, aes(x = factor(betab), y = mean, col = insurance)) +
+  geom_errorbar(aes(ymin = mean - stdev, 
+                    ymax = mean + stdev),
+                width = 0.2, position = pd) +
+  geom_point(size = 2, position = pd) +
+  geom_line(aes(group = insurance), position = pd) +
+  scale_color_viridis_d(end = 0.8, option = "C") +
+  labs(y = "Systolic Blood Pressure",
+       x = "Prescription for a Beta Blocker?",
+       title = "Observed Means (+/- SD) for SBP")
+```
+
+This plot shows the enormous variation around these means, where the differences in `sbp` within each insurance and beta-blocker group are overwhelmingly larger than the differences between the means in the groups.
+
+## A two-way ANOVA model with interaction
+
+Since our plots suggest some meaningful non-parallelism, we'll first fit a model with an interaction term. 
+
+```{r}
+hw1_q2_with_int <- 
+  lab1 %$% lm(sbp ~ insurance * betab)
+
+anova(hw1_q2_with_int)
+
+tidy(hw1_q2_with_int, conf.int = TRUE) %>%
+  select(term, estimate, std.error, p.value, conf.low, conf.high) %>%
+  knitr::kable(digits = 3)
+```
+
+Note that these are 95% confidence intervals, which is the default.
+
+The main conclusion here is the interaction is neither significant, nor does it account for a large fraction of the variation in the SBP values (~0.001%). We could interpret this result, probably by specifying the predictions that the model would make for each possible combination of `insurance` and `betab`, but perhaps it's reasonable to assume the interaction is small enough to at least consider a two-factor ANOVA model without interaction.
+
+## A two-way ANOVA model without interaction (main effects only)
+
+```{r}
+hw1_q2_no_int <- 
+  lab1 %$% lm(sbp ~ insurance + betab)
+
+anova(hw1_q2_no_int)
+
+summary(hw1_q2_no_int)
+```
+
+Subjects without BP medication have statistically detectably lower SBP levels, on average. It appears individuals with Medicaid insurance have a statistically detectably higher SBP on average, compared to individuals with commercial insurance. Neither Medicare or uninsured status seem to have a particularly strong impact on SBP. 
+
+
+# Question 3. (20 points)
+
+We don't write answer sketches for essay questions, largely because we ask questions that don't have identical answers across all of the people responding. Sometimes, we share some of the stronger or more interesting entries after grading is complete. In our rubric (available with the grades about one week after the submission deadline), we will provide some information abut what we look for when we grade essays.
+
+# Question 4. (10 points)
+
+It was suggested you write: "I have posted on Piazza in response to Question 4." We will confirm this action in grading. 
+
+# Question 5. (10 points)
+
+All you needed to do was tell us your Github user name. 
+
+# Session Information
+
+```{r}
+xfun::session_info()
+```
+
