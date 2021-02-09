@@ -46,7 +46,9 @@ Other sources students have used successfully in the past and that I’m happy t
 8. [Kaggle Public Datasets](https://www.kaggle.com/datasets) are allowed but **only** those with really useful variables, no hierarchical structure and strong descriptions of how the data were gathered (which is at best 5% of what's available on Kaggle). Don't select a Kaggle data set without running it by Dr. Love on Piazza (a private note is fine) to see if he's willing to let you use it.
 
 - Data on COVID-19 is permitted for 432 projects, but most of the available data is longitudinal and thus unsuitable for Project 1. 
-- Don't type "regression data sets" into Google. That will lead you to data sets we've seen before, and don't want to see again. The data sets posted by the Cleveland Clinic for educational purposes are also a poor choice, since we've seen them before, many times.
+- Don't type "regression data sets" into Google. That will lead you to data sets we've seen before or to data that have been nicely cleaned up, that's not what we're looking for, at all. 
+    - The data sets posted by the Cleveland Clinic for educational purposes are really nice, but also a poor choice because we've seen them before, many times, and because they're generally pretty well cleaned up. 
+    - We're not going to let you use "textbook"-style examples because we want you to confront real issues with defining and understanding sources of data, types of measurements and with missing and surprising data.
 - I encourage those of you who used NHANES data last Fall in 431 to use something else (just so that you can get familiar with some new data), but those of you who really want to may benefit from some [advice from the 431 class about using NHANES data](https://thomaselove.github.io/431-2020-projectB/your2.html) in a different project. Note that your rules are different, but most of the advice still holds well.
 
 ## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
@@ -60,8 +62,6 @@ Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Sc
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class03/figures/mchorse_2020-12-26.png)
 
 - See [Dr. McHorse's suggestions here](https://twitter.com/fossilosophy/status/1342871356254334977).
-
-
 
 ## One Last Thing
 
