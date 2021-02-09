@@ -9,6 +9,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 ## Materials for Today's Class
 
 - Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/432_2021_slides04.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/432_2021_slides04.Rmd).
+    - We'll pick up where we left off in Class 3. I've incorporated the key parts of what we did then into this new deck.
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
 ## Announcements
@@ -37,4 +38,4 @@ Today, I'll share Kara Woo's terrific 22-minute talk [Always look on the bright 
 
 ## One Last Thing
 
-To come.
+![](https://imgs.xkcd.com/comics/hug_count.png) from [XKCD](https://xkcd.com/2419/)
