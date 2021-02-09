@@ -28,13 +28,11 @@ output:
 knitr::opts_chunk$set(comment = NA)  
 options(width = 60)     
 
-library(here)           
-library(knitr)          
-library(skimr)         
-library(patchwork)      
-library(janitor)        
-library(naniar)         
-library(simputation)    
+library(here); library(knitr)          
+library(janitor); library(patchwork)       
+library(naniar); library(simputation)    
+library(skimr)          ## for a specific summary  
+library(equatiomatic)   ## print equations
 library(broom)
 library(rsample)        ## new today: data splitting
 library(yardstick)      ## new today: evaluating fits
@@ -384,6 +382,33 @@ tidy(m_1, conf.int = TRUE, conf.level = 0.90) %>%
     kable(digits = c(0,2,2,2,3,2,2))
 ```
 
+## Equation for Model without Interaction
+
+From `m1` our equation is ...
+
+```{r, results = "asis"}
+extract_eq(m_1, use_coefs = TRUE, wrap = TRUE) 
+```
+
+- You need to use `results = "asis"` in the code chunk label to get this to work.
+- This function `extract_eq` comes from the `equatiomatic` package.
+
+## Interpreting the `m_1` model
+
+```{r, results = "asis", echo = FALSE}
+extract_eq(m_1, use_coefs = TRUE, wrap = TRUE) 
+```
+
+Name | `exerany` | `health` | predicted `bmi`
+-------- | :------: | :------: | ---------:
+Harry | 0 | Excellent | 26.66
+Sally   | 1 | Excellent | 26.66 - 1.37 = 25.29
+Billy | 0 | Fair | 26.66 + 3.82 = 30.48
+Meg | 1 | Fair | 26.66 - 1.37 + 3.82 = 29.11
+
+- Effect of `exerany`?
+- Effect of `health` = Fair instead of Excellent?
+
 ## Plot the Residuals from model `m_1`?
 
 ```{r, eval = FALSE}
@@ -445,6 +470,53 @@ tidy(m_1int, conf.int = TRUE, conf.level = 0.90) %>%
     rename(se = std.error, t = statistic, p = p.value) %>%
     kable(digits = c(0,2,2,2,3,2,2))
 ```
+
+## Equation for Interaction Model 
+
+From `m1_int` our equation is ...
+
+```{r, results = "asis"}
+extract_eq(m_1int, use_coefs = TRUE, 
+           wrap = TRUE, terms_per_line = 2) 
+```
+
+
+Don't forget to use `results = "asis"` in the code chunk label.
+
+## Interpreting the `m_1int` model
+
+```{r, results = "asis", echo = FALSE}
+extract_eq(m_1int, use_coefs = TRUE, 
+           wrap = TRUE, terms_per_line = 2) 
+```
+
+Name | `exerany` | `health` | predicted `bmi`
+-------- | :------: | :------: | ---------:
+Harry | 0 | Excellent | 25.82
+Sally   | 1 | Excellent | 25.82 - 0.41 = 25.41
+Billy | 0 | Fair | 25.82 + 6.88 = 32.70
+Meg | 1 | Fair | 25.82 - 0.41 + 6.88 - 4.83 = 27.46
+
+- How do we interpret effect sizes here?
+
+
+## Interpreting the `m_1int` model
+
+Name | `exerany` | `health` | predicted `bmi`
+-------- | :------: | :------: | ---------:
+Harry | 0 | Excellent | 25.82
+Sally   | 1 | Excellent | 25.82 - 0.41 = 25.41
+Billy | 0 | Fair | 25.82 + 6.88 = 32.70
+Meg | 1 | Fair | 25.82 - 0.41 + 6.88 - 4.83 = 27.46
+
+- How do we interpret effect sizes here? **It depends**.
+- Effect of `exerany`?
+    - If `health` = Excellent, effect is -0.41
+    - If `health` = Fair, effect is (-0.41 - 4.83) = -5.24
+- Effect of `health` = Fair instead of Excellent?
+    - If `exerany` = 0 (no), effect is 6.88
+    - If `exerany` = 1 (yes), effect is (6.88 - 4.83) = 2.05
+
 
 ## Plot the Residuals from model `m_1int`?
 
