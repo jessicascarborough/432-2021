@@ -38,19 +38,22 @@ Four especially appealing sources that I'd really like to see people use for Pro
 3. The many many public use data sets available at [ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/)
 4. The [500 Cities and PLACES data portal](https://chronicdata.cdc.gov/browse?category=500+Cities+%26+Places&sortBy=newest&utf8), most probably I would focus on the [County-level data](https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-County-Data-20/swc5-untb).
 
-Other sources students have used successfully in the past and that I’m happy to see include:
+Three other sources students have used successfully in the past and that I’m generally happy to see include:
 
-5. [National Center on Health Statistics](https://www.cdc.gov/nchs/data_access/ftp_data.htm) including NHANES
-6. [Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/data_documentation/index.htm)
-7. [County Health Rankings](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation)
-8. [Kaggle Public Datasets](https://www.kaggle.com/datasets) are allowed but **only** those with really useful variables, no hierarchical structure and strong descriptions of how the data were gathered (which is probably less than 1% of what's available on Kaggle). Don't select a Kaggle data set without running it by Dr. Love on Piazza (a private note is fine) to see if he's willing to let you use it.
+5. [County Health Rankings](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation)
+6. [National Center on Health Statistics](https://www.cdc.gov/nchs/data_access/ftp_data.htm) including NHANES
+    - I encourage those of you who used NHANES data last Fall in 431 to use something else (just so that you can get familiar with some new data), but those of you who really want to may benefit from some [advice from the 431 class about using NHANES data](https://thomaselove.github.io/431-2020-projectB/your2.html) in a different project. Note that your rules are different, but most of the advice still holds well.
+7. [Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/data_documentation/index.htm)
 
-- Data on COVID-19 is permitted for 432 projects, but most of the available data is longitudinal and thus unsuitable for Project 1. 
+#### Data Sets I'd probably avoid:
+
 - Don't type "regression data sets" into Google. That will lead you to data sets we've seen before or to data that have been nicely cleaned up, that's not what we're looking for, at all. 
-    - The data sets posted by the Cleveland Clinic for educational purposes are really nice, but also a poor choice because we've seen them before, many times, and because they're generally pretty well cleaned up. 
-    - We're not going to let you use "textbook"-style examples because we want you to confront real issues with defining and understanding sources of data, types of measurements and with missing and surprising data.
-- I encourage those of you who used NHANES data last Fall in 431 to use something else (just so that you can get familiar with some new data), but those of you who really want to may benefit from some [advice from the 431 class about using NHANES data](https://thomaselove.github.io/431-2020-projectB/your2.html) in a different project. Note that your rules are different, but most of the advice still holds well.
-
+- We're not going to let you use "textbook"-style examples because we want you to confront real issues with defining and understanding sources of data, types of measurements and with missing and surprising data.
+- [Kaggle Public Datasets](https://www.kaggle.com/datasets) are allowed but **only** those with really useful variables, no hierarchical structure and strong descriptions of how the data were gathered (which is probably less than 1% of what's available on Kaggle). 
+- The same goes for data from the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php), and in addition, for several of those data sets, we've either seen them before or they're just too "clean" or there isn't enough information about the variables involved and how they were collected. 
+- Data on COVID-19 is permitted for 432 projects, but most of the available data is longitudinal and thus unsuitable for Project 1. 
+- The data sets posted by the Cleveland Clinic for educational purposes are really nice, but also a poor choice because we've seen them before, many times, and because they're generally pretty well cleaned up. Other sources of data for "educational purposes" usually have similar problems.
+    
 ## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
 
 Today, I'll share Ahmadou Dicko's inspiring 19-minute talk [Humanitarian Data Science with R](https://rstudio.com/resources/rstudioglobal-2021/humanitarian-data-science-with-r/). 
