@@ -526,6 +526,8 @@ plot(m_1int)
 par(mfrow = c(1,1))
 ```
 
+# We stopped here in Class 03. I've left the remaining slides here, but will move them to Class 04 for that presentation.
+
 ## Adding in the covariate `fruit_day` to `m_1`
 
 ```{r}
