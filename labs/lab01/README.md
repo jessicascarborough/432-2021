@@ -22,4 +22,6 @@ If you have questions about Lab 01, please ask them [at TA office hours](https:/
 
 ## Post-Deadline Materials
 
-will appear after the deadline.
+The Answer Sketch for Lab 1 is now available in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/sketch/2021-02-08_lab01_sketch.Rmd). You can [review the HTML output here](https://rpubs.com/TELOVE/sketch_01_432_2021).
+
+- The grading rubric and grades will appear by 2021-02-16.
