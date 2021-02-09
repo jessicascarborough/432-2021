@@ -43,7 +43,7 @@ Other sources students have used successfully in the past and that I’m happy t
 5. [National Center on Health Statistics](https://www.cdc.gov/nchs/data_access/ftp_data.htm) including NHANES
 6. [Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/data_documentation/index.htm)
 7. [County Health Rankings](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation)
-8. [Kaggle Public Datasets](https://www.kaggle.com/datasets) are allowed but **only** those with really useful variables, no hierarchical structure and strong descriptions of how the data were gathered (which is at best 5% of what's available on Kaggle). Don't select a Kaggle data set without running it by Dr. Love on Piazza (a private note is fine) to see if he's willing to let you use it.
+8. [Kaggle Public Datasets](https://www.kaggle.com/datasets) are allowed but **only** those with really useful variables, no hierarchical structure and strong descriptions of how the data were gathered (which is probably less than 1% of what's available on Kaggle). Don't select a Kaggle data set without running it by Dr. Love on Piazza (a private note is fine) to see if he's willing to let you use it.
 
 - Data on COVID-19 is permitted for 432 projects, but most of the available data is longitudinal and thus unsuitable for Project 1. 
 - Don't type "regression data sets" into Google. That will lead you to data sets we've seen before or to data that have been nicely cleaned up, that's not what we're looking for, at all. 
