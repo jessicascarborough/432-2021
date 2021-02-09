@@ -16,6 +16,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 1. Visit [the Minute Paper page](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers) for the link to Dr. Love's feedback to the Minute Paper after Class 03.
 2. A new monthly Zoom lecture series on social determinants of health, led by my colleague Dr. Ash Sehgal at [MetroHealth](https://www.metrohealth.org/) and the [Institute for H.O.P.E.](https://www.metrohealth.org/institute-for-hope) starts soon. [This two-page flyer](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/figures/SDOH_Seminar_Series_2021_March_and_April.pdf) describes the sessions and speakers for 2021-03-01 (Laura Gottlieb) and 2021-04-05 (Rishi Manchanda).
+3. Boston U. and the Society for Epidemiologic Research, are hosting a 3 part webinar series called  "[Epidemiology and Race: Why and How We Study Racial Health Disparities](https://www.bu.edu/sph/conversations/uncategorized/part-1-epidemiology-and-race-why-and-how-we-study-racial-health-disparities/)". The sessions are on 2021-02-25 and 2021-02-26 and registration is required.
 
 ## Sources from Today's Class
 
