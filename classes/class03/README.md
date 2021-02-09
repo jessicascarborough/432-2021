@@ -17,7 +17,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
     - It should take about 5 minutes. Remember to log into Google via CWRU to [access the form](http://bit.ly/432-2021-minute-03).
     - Please complete these Minute Papers in a timely fashion even if you haven't yet caught up with us in class.
     - The [complete schedule of Minute Papers](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) is available.
-- *Reading*: We expect you to have read the introduction and Chapter 1 of Nate Silver's *The Signal and the Noise* as well as the Data-Sharing and Reading scientific papers sections of Jeff Leek's *How to be a modern scientist* by now. (Of course, some of this was in Lab 1.)
+- *Reading*: We expect you to have read the introduction and Chapter 1 of Nate Silver's *The Signal and the Noise* as well as the Data-Sharing and Reading scientific papers sections of Jeff Leek's *How to be a modern scientist* by now. (See Lab 1.)
     - We won't be discussing these pieces each week, but we will catch up with them irregularly through the semester, and in Labs and Quizzes.
 - [Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) is the next substantial assignment, due at 9 PM on 2021-02-22.
 - Were I you, I would take advantage of the relative lull coming up this weekend in 432 work to look closely at the requirements of [Project 1](https://github.com/THOMASELOVE/432-2021/tree/master/project1) and in particular, the [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) which is due on 2021-03-01. 
