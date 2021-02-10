@@ -19,6 +19,18 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 3. A new monthly Zoom lecture series on social determinants of health, led by my colleague Dr. Ash Sehgal at [MetroHealth](https://www.metrohealth.org/) and the [Institute for H.O.P.E.](https://www.metrohealth.org/institute-for-hope) starts soon. [This two-page flyer](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/figures/SDOH_Seminar_Series_2021_March_and_April.pdf) describes the sessions and speakers for 2021-03-01 (Laura Gottlieb) and 2021-04-05 (Rishi Manchanda).
 4. Boston University and the Society for Epidemiologic Research are hosting a 3 part webinar series called  "[Epidemiology and Race: Why and How We Study Racial Health Disparities](https://www.bu.edu/sph/conversations/uncategorized/part-1-epidemiology-and-race-why-and-how-we-study-racial-health-disparities/)". The sessions are on 2021-02-25 and 2021-02-26 and registration is required.
 
+## Running a Data Set Past Us for Project 1
+
+To get Dr. Love and the TAs to "sign off" on a data set as appropriate for your project 1 proposal, you need to tell us five things in a (private or public - your choice) note on Piazza in the project1 folder:
+
+1. the data source, as described [here in item 1 in the proposal instructions](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md#1-data-source) along with a URL so we can access the data
+2. a description of who the subjects are and how they were selected, as described [here in item 2 in the proposal instructions](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md#2-the-subjects) - it helps if you also tell us how many subjects are in the data
+3. what quantitative outcome you plan to use in your linear regression model, including its units of measurement and the minimum, mean and maximum values available in your data
+4. what binary outcome you plan to use in your logistic regression model, specifying both of the mutually exclusive and collectively exhaustive categories and how many subjects fall into each of those two categories.
+5. that you've carefully read the [what makes an acceptable data set section of the project 1 instructions](https://github.com/THOMASELOVE/432-2021/blob/master/project1/00_project1_general.md#3-what-makes-an-acceptable-data-set) and can confirm that your data meets all of those specifications.
+
+Also, we ask that you not ask us to pick between two "options" - submit the one you'd rather do. If it's a problem, we'll let you know, and you can then change to another option if necessary.
+
 ## from [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021) 
 
 Today, I'll share Kara Woo's terrific 22-minute talk [Always look on the bright side of plots](https://rstudio.com/resources/rstudioglobal-2021/always-look-on-the-bright-side-of-plots/). 
