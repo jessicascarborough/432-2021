@@ -24,4 +24,4 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## One Last Thing
 
-To come.
+[Create Your Own Spurious COVID Correlation](https://ivelasq.shinyapps.io/SpuriousCOVIDCorrelationCreator/)
