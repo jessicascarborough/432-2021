@@ -14,7 +14,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. Visit [the Minute Paper page](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers) for the link to Dr. Love's feedback to the Minute Paper after Class 03.
+1. [Dr. Love's feedback for the Minute Paper after Class 03](http://bit.ly/432-2021-min03-feedback) is now available.
 2. If you're looking for more information about restricted cubic splines after today's discussion, try Frank E. Harrell and Chris Slaughter [Biostatistics for Biomedical Research Notes](http://hbiostat.org/doc/bbr.pdf) (pdf).
 3. The American Statistical Association has a new monthly podcast called [Practical Significance](https://magazine.amstat.org/podcast-2), meant to inspire listeners with compelling stories from statistics and data science and to propel data-driven careers forward with learning opportunities for all. The latest episode ([Episode 2](https://magazine.amstat.org/podcast-2/), entitled How to Become a JEDI) is about the ASA's Anti-Racism Task Force, and its outreach group to address justice, equity, diversity and inclusion (JEDI).
     - ASA's complete [roster of sponsored podcasts can be found here](https://magazine.amstat.org/blog/2021/02/01/asa-sponsored-podcasts/).
