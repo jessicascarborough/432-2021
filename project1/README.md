@@ -38,3 +38,16 @@ Other sources students have used successfully in the past and that I’m happy t
 - Data on COVID-19 is permitted for 432 projects, but most of the available data is longitudinal and thus unsuitable for Project 1. 
 - Don't type "regression data sets" into Google. That will lead you to data sets we've seen before, and don't want to see again. The data sets posted by the Cleveland Clinic for educational purposes are also a poor choice, since we've seen them before, many times.
 - I encourage those of you who used NHANES data last Fall in 431 to use something else (just so that you can get familiar with some new data), but those of you who really want to may benefit from some [advice from the 431 class about using NHANES data](https://thomaselove.github.io/431-2020-projectB/your2.html) in a different project. Note that your rules are different, but most of the advice still holds well.
+
+## Running a Data Set Past Us for Project 1
+
+To get Dr. Love and the TAs to "sign off" on a data set as appropriate for your project 1 proposal, you need to tell us five things in a (private or public - your choice) note on Piazza in the project1 folder:
+
+1. the data source, as described [here in item 1 in the proposal instructions](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md#1-data-source) along with a URL so we can access the data
+2. a description of who the subjects are and how they were selected, as described [here in item 2 in the proposal instructions](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md#2-the-subjects) - it helps if you also tell us how many subjects are in the data
+3. what quantitative outcome you plan to use in your linear regression model, including its units of measurement and the minimum, mean and maximum values available in your data
+4. what binary outcome you plan to use in your logistic regression model, specifying both of the mutually exclusive and collectively exhaustive categories and how many subjects fall into each of those two categories.
+5. that you've carefully read the [what makes an acceptable data set section of the project 1 instructions](https://github.com/THOMASELOVE/432-2021/blob/master/project1/00_project1_general.md#3-what-makes-an-acceptable-data-set) and can confirm that your data meets all of those specifications.
+
+Also, we ask that you not ask us to pick between two "options" - submit the one you'd rather do. If it's a problem, we'll let you know, and you can then change to another option if necessary.
+
