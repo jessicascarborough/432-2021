@@ -4,7 +4,9 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-![](https://imgs.xkcd.com/comics/hug_count.png) from [XKCD](https://xkcd.com/2419/)
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class04/figures/ellie_tw.PNG)
+
+The UN's 2021 Theme for this, the International Day of Women and Girls in Science, is [Women Scientists at the forefront of the fight against COVID-19](https://www.un.org/en/observances/women-and-girls-in-science-day).
 
 ## Materials for Today's Class
 
@@ -39,6 +41,8 @@ Also, we ask that you not ask us to pick between two "options" - submit the one 
 Today, I'll share Kara Woo's terrific 22-minute talk [Always look on the bright side of plots](https://rstudio.com/resources/rstudioglobal-2021/always-look-on-the-bright-side-of-plots/). 
 
 - Everyone who creates visualizations in R is bound to make mistakes that prevent their plots from looking as they should. Sometimes, these mistakes create beautiful "accidental aRt", though other times they're just plain frustrating. Either way, however, there's something to be learned.
+
+![](https://imgs.xkcd.com/comics/hug_count.png) from [XKCD](https://xkcd.com/2419/)
 
 ## Reminders
 
