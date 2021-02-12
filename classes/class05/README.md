@@ -22,6 +22,17 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Frank E. Harrell and Chris Slaughter [Biostatistics for Biomedical Research Notes](http://hbiostat.org/doc/bbr.pdf) (pdf).
 - Frank E. Harrell [Regression Modeling Strategies](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Harrell_Regression_Modeling_Strategies_2015_2e_protected.pdf), 2nd Edition, 2015.
 
+## Confused a bit by the Pipe %>% in R?
+
+Pipes are explained in detail in [the Pipes chapter of R for Data Science](https://r4ds.had.co.nz/pipes.html). "The point of the pipe is to help you write code in a way that is easier to read and understand." As Wyatt suggests, the pipe is sometimes read as " ... and then ... " as a way of facilitating this thinking...
+
+My two new favorite intuitive explanations of the pipe: %>% in R follow...
+
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class05/figures/pipe_1.png)
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class05/figures/pipe_2.png)
+
+Link to [Andrew Heiss' tweet](https://twitter.com/andrewheiss/status/1359583543509348356), and to [Hadley Wickham's reply](https://twitter.com/hadleywickham/status/1359852563726819332), and to [the original reference for Hadley's work](https://www.youtube.com/watch?v=UbxUSsFXYo4).
+
 ## One Last Thing
 
 [Create Your Own Spurious COVID Correlation](https://ivelasq.shinyapps.io/SpuriousCOVIDCorrelationCreator/)
