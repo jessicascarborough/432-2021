@@ -13,7 +13,17 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. To come.
+1. Grades for Lab 01 should be available before Class 5. You'll receive email from Dr. Love about this when it happens.
+
+## Reminders regarding Course Assignments
+
+1. There is a [Minute Paper after Class 5](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers) due at noon Wednesday, 2021-02-17.
+2. Lab 02 is due at 9 PM Monday 2021-02-22.
+3. By now, [we hope you've read through](https://thomaselove.github.io/432/calendar.html) Chapter 2 of *The Signal and the Noise* and four sections of *How to be a modern scientist*.
+4. The Project 1 Proposal is due at 9 PM Monday 2021-03-01. 
+    - We suggest you identify [an acceptable data set](https://github.com/THOMASELOVE/432-2021/blob/master/project1/00_project1_general.md#3-what-makes-an-acceptable-data-set) and ingested it into R by next week at this time in order to meet that deadline. 
+    - Here are [some suggestions for data sets](https://github.com/THOMASELOVE/432-2021/tree/master/project1#need-some-suggestions-for-attractive-data-for-432-projects). 
+    - If you like, you can [run a project idea by us by sending us these five pieces of information about it](https://github.com/THOMASELOVE/432-2021/tree/master/project1#running-a-data-set-past-us-for-project-1) on Piazza or discussing them in office hours.
 
 ## Sources to amplify information from today's class
 
