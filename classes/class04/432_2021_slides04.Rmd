@@ -197,7 +197,7 @@ bind_rows(glance(m_1), glance(m_2), glance(m_1int), glance(m_2int)) %>%
 ```
 
 - The interaction models look better by Adjusted $R^2$ and $\sigma$; AIC likes `m_2int` while BIC likes `m1`. What to do? 
-- More importantly, the testing sample cannot judge between models accurately. Our models have already *seen* that data.
+- More importantly, the training sample cannot judge between models accurately. Our models have already *seen* that data.
 - For fairer comparisons, consider the (held out) testing sample...
 
 ## Model predictions of `bmi` in the testing sample
