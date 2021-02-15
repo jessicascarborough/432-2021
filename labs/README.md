@@ -15,6 +15,21 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 See [the Syllabus](https://thomaselove.github.io/432-2021-syllabus/assignments-and-grading.html) for details on how grading works on Labs.
 
+## Seeing Our Feedback on Your Work
+
+On 2021-02-15, Dr. Love sent you an email with the subject line "432 Lab Code". 
+
+- That Lab Code is a three-digit number that you'll want to make a good note of, because it will enable you to track the feedback we have for you on Labs. 
+- A Google Sheet should now appear on our Shared Google Drive entitled **Lab Feedback for 432 Students**. 
+- That document contains the grades on the lab (each individual question, plus the total) and the TAs' comments for you on your submission, identified by the Lab Code I've sent to you.
+
+We do this for two reasons:
+
+1. It's easier for Dr. Love and the TAs than other options.
+2. Without identifying anyone, we want you to be able to see the challenges that other folks are facing in doing these Labs. 
+
+I remind you that our Syllabus has [more details on how things are graded](https://thomaselove.github.io/432-2021-syllabus/assignments-and-grading.html#minute-papers-and-class-participation), and in particular has [information on the Lab regrade policy](https://thomaselove.github.io/432-2021-syllabus/course-policies.html#regrade-policy) (also listed below), and on [how your final grade will be determined](https://thomaselove.github.io/432-2021-syllabus/assignments-and-grading.html#final-grade), and we ask you to please review those three links before you express (or feel) concern about your grades on any assignment in this class.
+
 ## Grading Errors and Regrade Requests
 
 The Lab Regrade Request Form is now available at http://bit.ly/432-2021-lab-regrade-requests. This is how we handle all grading errors and regrade requests on Labs. 
