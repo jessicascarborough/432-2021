@@ -1,7 +1,7 @@
 432 Lab 02 for Spring 2021
 ================
 
-Version: 2021-01-29 21:41:31
+Version: 2021-02-15 08:39:31
 
 # General Instructions
 
@@ -128,6 +128,9 @@ oh20
     #   freq_mental_distress <dbl>, food_insecure <dbl>, insuff_sleep <dbl>,
     #   median_income <dbl>, population <dbl>, age65plus <dbl>, `african-am` <dbl>,
     #   hispanic <dbl>, white <dbl>, female <dbl>, rural <dbl>
+
+**Note**: There is a Hint for Lab 02 having to do with ingesting these
+data available on Piazza in the `lab02` folder.
 
 ## Question 1 (30 points)
 
