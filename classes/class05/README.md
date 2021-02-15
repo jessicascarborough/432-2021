@@ -13,7 +13,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. Grades for Lab 01 should be available before Class 5. You'll receive email from Dr. Love about this when it happens.
+1. All post-deadline materials for Lab 01 [are now available](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/README.md#post-deadline-materials). This includes your grades and TA comments on your work. See the two emails Dr. Love sent you on 2021-02-15 about this.
 
 ## Reminders regarding Course Assignments
 
