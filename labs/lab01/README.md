@@ -26,3 +26,4 @@ If you have questions about Lab 01, please ask them [at TA office hours](https:/
 2. The [Grading Rubric for Lab 1](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab01/sketch/lab01_rubric.pdf) (pdf) is now available.
 3. Grades and feedback are available in our Shared Google Drive in the **Lab Feedback for 432 Students** document. 
     - Please refer to the email sent by Dr. Love on 2021-02-15 with the subject line **Feedback on Labs for 432 - look for upcoming email** and the follow-up, entitled **432 Lab Code**.
+    - The key information on how to see our feedback on Labs is [also available here](https://github.com/THOMASELOVE/432-2021/tree/master/labs#seeing-our-feedback-on-your-work).
