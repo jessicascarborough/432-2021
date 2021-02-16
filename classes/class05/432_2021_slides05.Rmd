@@ -177,7 +177,7 @@ ggplot(orings1, aes(x = temp, y = burst)) +
 
 ```{r}
 tidy(mod1, conf.int = T) %>% 
-    kable(digits = c(5,3,3,3,3,3))
+    kable(digits = c(0,5,3,3,3,3,3))
 ```
 
 - What does `mod1` predict for the probability of a burst if the temperature at launch is 70 degrees F?
