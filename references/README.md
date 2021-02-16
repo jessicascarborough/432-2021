@@ -40,6 +40,8 @@ All of these items will be linked through [Class READMEs](https://github.com/THO
 8. Simon J. Sheather [A Modern Approach to Regression with R](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Sheather_Modern_Approach_to_Regression_with_R_2009_protected.pdf), 2009.
 9. Eric Vittinghoff, David V. Glidden, Stephen C. Shiboski and Charles E. McCulloch [Regression Methods in Biostatistics](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Vittinghoff_et_al_Regression_Methods_in_Biostatistics_2e_protected.pdf), 2nd Edition, 2012.
 10. Rob J Hyndman and George Athanasopoulos [Forecasting: Principles and Practice](https://otexts.com/fpp2/)
+11. Richard D Riley, Joie Ensor, Kym I E Snell et al. [Calculating the sample size required for developing a clinical prediction model](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Riley_etal_2020_Sample_Size_Required.pdf) (pdf) *BMJ* 2020; 368:m441. [Link at BMJ](https://www.bmj.com/content/368/bmj.m441).
+
 
 ### On Visualization and R
 
