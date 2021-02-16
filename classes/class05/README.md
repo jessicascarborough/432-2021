@@ -22,12 +22,13 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
     - Here are [some suggestions for data sets](https://github.com/THOMASELOVE/432-2021/tree/master/project1#need-some-suggestions-for-attractive-data-for-432-projects). 
     - If you like, you can [run a project idea by us by sending us these five pieces of information about it](https://github.com/THOMASELOVE/432-2021/tree/master/project1#running-a-data-set-past-us-for-project-1) on Piazza or discussing them in office hours, but that's not mandatory.
 
-## Sources for further reading on the Challenger Example
+## Sources for further reading on the *Challenger* Example
 
 - Dalal SR Fowlkes EB Hoadley B [Risk analysis of the space shuttle: pre-Challenger prediction of failure](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Dalal_challenger.pdf). JASA 1989: 84, 945-957.
 - Lavine M [Problems in extrapolation illustrated with space shuttle O-ring data](https://www.tandfonline.com/doi/abs/10.1080/01621459.1991.10475132). JASA 1991: 86, 919--922.
 - UCI Machine Learning Repository [Article on the O-Ring data](https://archive.ics.uci.edu/ml/datasets/Challenger+USA+Space+Shuttle+O-Ring)
- 
+- Qian S [A Statistical Analysis of the Challenger Accident](https://www.rebellionresearch.com/blog/a-statistical-analysis-of-the-challenger-accident) posted 2020-10-26.
+
 ## Confused a bit by the Pipe %>% in R?
 
 Pipes are explained in detail in [the Pipes chapter of R for Data Science](https://r4ds.had.co.nz/pipes.html). "The point of the pipe is to help you write code in a way that is easier to read and understand." The pipe is sometimes read as " ... and then ... " as a way of facilitating this thinking...
