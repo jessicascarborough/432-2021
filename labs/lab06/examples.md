@@ -6,5 +6,6 @@ These are examples of personal websites built by students and TAs affiliated wit
 - Jessica Scarborough's site at http://jessicascarborough.com/
 - Anastasia Vassiliou's site at https://anastasiavassiliou.netlify.app/
 - Long Vu's site at https://long-vu.netlify.app/
+- Patrick Wu's site at https://patrick-wu.netlify.app/
 
 Thank you all for your efforts.
