@@ -24,7 +24,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Sources for further reading on the Challenger Example
 
-- Dalal SR Fowlkes EB Hoadley B Risk analysis of the space shuttle: pre-Challenger prediction of failure. JASA 1989: 84, 945-957.
+- Dalal SR Fowlkes EB Hoadley B [Risk analysis of the space shuttle: pre-Challenger prediction of failure](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Dalal_challenger.pdf). JASA 1989: 84, 945-957.
 - Lavine M Problems in extrapolation illustrated with space shuttle O-ring data. JASA 1991: 86, 919--922.
 - UCI Machine Learning Repository [Article on the O-Ring data](https://archive.ics.uci.edu/ml/datasets/Challenger+USA+Space+Shuttle+O-Ring)
  
