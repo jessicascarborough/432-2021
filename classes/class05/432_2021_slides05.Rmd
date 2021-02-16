@@ -176,13 +176,14 @@ ggplot(orings1, aes(x = temp, y = burst)) +
 ## Making Predictions with `mod1`
 
 ```{r}
-tidy(mod1, conf.int = T) %>% kable(digits = 3)
+tidy(mod1, conf.int = T) %>% 
+    kable(digits = c(5,3,3,3,3,3))
 ```
 
 - What does `mod1` predict for the probability of a burst if the temperature at launch is 70 degrees F?
 
 $$
-Prob(burst) = 2.905 - 0.037 (70) = 0.315
+Prob(burst) = 2.90476 - 0.03738 (70) = 0.288
 $$
 
 - What if the temperature was actually 60 degrees F?
@@ -292,17 +293,17 @@ mod2 <- glm(burst ~ temp, data = orings1,
 
 tidy(mod2, conf.int = TRUE) %>% 
   select(term, estimate, std.error, conf.low, conf.high) %>%
-  knitr::kable(digits = 3)
+  knitr::kable(digits = c(0,4,3,3,3))
 ```
 
 ## Our model `mod2`
 
 ```{r, results = "asis"}
-extract_eq(mod2, use_coefs = TRUE, coef_digits = 3)
+extract_eq(mod2, use_coefs = TRUE, coef_digits = 4)
 ```
 
 $$
-logit(burst) = log(odds(burst)) = 15.043 - 0.232 temp
+logit(burst) = log(odds(burst)) = 15.0429 - 0.2322 temp
 $$
 
 - For a temperature of 70 F at launch, what is the prediction?
@@ -311,16 +312,16 @@ $$
 
 - For a temperature of 70 F at launch, what is the prediction?
 
-log(odds(burst)) = 15.043 - 0.232 (70) = -1.197 
+log(odds(burst)) = 15.0429 - 0.2322 (70) = -1.211
 
 - Exponentiate to get the odds, on our way to estimating the probability.
 
-odds(burst) = exp(-1.197) = 0.302
+odds(burst) = exp(-1.211) = 0.2979
 
 - so, we can estimate the probability by
 
 $$
-Pr(burst) = \frac{0.302}{(0.302+1)} = 0.787.
+Pr(burst) = \frac{0.2979}{(0.2979+1)} = 0.230.
 $$
 
 ## Prediction from `mod2` for temp = 60
@@ -328,20 +329,20 @@ $$
 What is the predicted probability of a burst if the temperature is 60 degrees?
 
 
-- log(odds(burst)) = 15.043 - 0.232 (60) = 1.123
+- log(odds(burst)) = 15.0429 - 0.2322 (60) = 1.1109
 
-- odds(burst) = exp(1.123) = 3.074
+- odds(burst) = exp(1.1109) = 3.0371
 
-- Pr(burst) = 3.074 / (3.074 + 1) = 0.755
+- Pr(burst) = 3.0371 / (3.0371 + 1) = 0.752
 
 
 ## Will `augment` do this, as well?
 
 ```{r}
-temp60 <- tibble(temp = 60)
+temps <- tibble(temp = c(60,70))
 
-augment(mod2, newdata = temp60, type.predict = "link")
-augment(mod2, newdata = temp60, type.predict = "response")
+augment(mod2, newdata = temps, type.predict = "link")
+augment(mod2, newdata = temps, type.predict = "response")
 ```
 
 ## Plotting the Logistic Regression Model
@@ -845,7 +846,7 @@ ggplot(m2_aug, aes(x = .fitted, y = bmilt30)) +
   labs(title = "m2 (Logistic Regression)")
 ```
 
-## Making Classification Decisions (0.5 as cutoff)
+## Making Classification Decisions 
 
 - Our outcome is `bmilt30`, where `bmilt30` = 1 if BMI < 30, and otherwise `bmilt30` = 0.
 - We establish a classification rule based on our model's predicted probabilities of BMI < 30.
