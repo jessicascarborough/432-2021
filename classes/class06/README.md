@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-*Quote/Tweet to come*
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class06/figures/brown_tw.PNG)
 
 ## Materials for Today's Class
 
@@ -13,7 +13,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. To come.
+- I have not completed my review of the Minute Paper after Class 5. I will get this out as soon as possible.
+- Remember Lab 2 is due Monday at 9 PM.
 
 ## Sources to amplify information from today's class
 
@@ -23,7 +24,4 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Frank E. Harrell and Chris Slaughter [Biostatistics for Biomedical Research Notes](http://hbiostat.org/doc/bbr.pdf) (pdf).
 - Frank E. Harrell [Regression Modeling Strategies](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Harrell_Regression_Modeling_Strategies_2015_2e_protected.pdf), 2nd Edition, 2015.
 
-
-## One Last Thing
-
-To come.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class06/figures/hogan_tw.png)
