@@ -1,0 +1,636 @@
+---
+title: "432 Class 06 Slides"
+author: "thomaselove.github.io/432"
+date: "2021-02-18"
+output:
+    beamer_presentation:
+        theme: "Madrid"
+        colortheme: "orchid"
+        fonttheme: "structurebold"
+        fig_caption: FALSE
+---
+
+## Today's Agenda
+
+- Predicting a Binary outcome
+    - using a linear probability model
+    - using logistic regression and `glm`
+
+## Setup 
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(comment = NA)  
+options(width = 60)     
+options(dplyr.summarise.inform = FALSE)
+```
+
+```{r, message = FALSE}
+library(here); library(magrittr)
+library(janitor); library(knitr)
+library(patchwork); library(broom)
+library(simputation); library(naniar)
+library(rsample); library(yardstick)
+library(tidyverse)      
+
+theme_set(theme_bw())
+```
+
+## Regression on a Binary Outcome
+
+**Linear Probability Model** (a linear model)
+
+```
+lm(event ~ predictor1 + predictor2 + ..., data = tibblename)
+```
+
+- Pr(event) is linear in the predictors
+
+**Logistic Regression Model** (generalized linear model)
+
+```
+glm(event ~ pred1 + pred2 + ..., data = tibblename,
+            family = binomial(link = "logit"))
+```
+
+- Logistic Regression forces a prediction in (0, 1)
+- log(odds(event)) is linear in the predictors
+
+## The logistic regression model
+
+$$
+logit(event) = log\left( \frac{Pr(event)}{1 - Pr(event)} \right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_k X_k
+$$
+
+$$
+odds(event) = \frac{Pr(event)}{1 - Pr(event)}
+$$
+
+$$
+Pr(event) = \frac{odds(event)}{odds(event) + 1}
+$$
+
+$$
+Pr(event) = \frac{exp(logit(event))}{1 + exp(logit(event))}
+$$ 
+
+## BRFSS and SMART (Creating `smart3`)
+
+```{r, message = FALSE}
+smart3 <- read_csv(here("data/smart_ohio.csv")) %>%
+    mutate(SEQNO = as.character(SEQNO)) %>%
+    select(SEQNO, mmsa, mmsa_wt, landline, 
+           age_imp, healthplan, dm_status,
+           fruit_day, drinks_wk, activity,
+           smoker, physhealth, bmi, genhealth)
+```
+
+## `smart3` Variables, by Type
+
+Variable | Type | Description
+--------- | :----: | --------------------------------
+`landline` | Binary (1/0) | survey conducted by landline? (vs. cell)
+`healthplan` | Binary (1/0) | subject has health insurance?
+`age_imp` | Quantitative | age (imputed from groups - see Notes)
+`fruit_day` | Quantitative | mean servings of fruit / day
+`drinks_wk` | Quantitative | mean alcoholic drinks / week
+`bmi` | Quantitative | body-mass index (in kg/m^2^)
+`physhealth` | Count (0-30) | of last 30 days, # in poor physical health
+`dm_status` | Categorical | diabetes status (4 levels, *we'll collapse to 2*)
+`activity` | Categorical | physical activity level (4 levels, *we'll re-level*)
+`smoker` | Categorical | smoking status (4 levels, *we'll collapse to 3*)
+`genhealth` | Categorical | self-reported overall health (5 levels)
+
+## Collapsing Two Factors, Re-leveling another
+
+```{r}
+smart3 <- smart3 %>% type.convert() %>%
+    mutate(SEQNO = as.character(SEQNO)) %>%
+    mutate(dm_status = 
+           fct_collapse(factor(dm_status),
+                        Yes = "Diabetes",
+                        No = c("No-Diabetes", 
+                               "Pre-Diabetes", 
+                               "Pregnancy-Induced"))) %>%
+    mutate(smoker = 
+           fct_collapse(factor(smoker), 
+                        Current = c("Current_not_daily",
+                                    "Current_daily"))) %>%
+    mutate(activity = 
+             fct_relevel(factor(activity),
+                         "Highly_Active", "Active", 
+                         "Insufficiently_Active",
+                         "Inactive")) 
+```
+
+## "Simple" Imputation Strategy, with Shadow
+
+```{r}
+smart3_sh <- smart3 %>% bind_shadow() 
+
+set.seed(2021432)
+smart3_sh <- smart3_sh %>%
+    data.frame() %>%
+        impute_rhd(dm_status + smoker ~ 1) %>%
+        impute_rhd(healthplan + activity ~ 1) %>%
+        impute_rlm(age_imp + fruit_day + drinks_wk + bmi ~
+                     mmsa + landline + healthplan) %>%
+        impute_knn(physhealth ~ bmi) %>%
+        impute_cart(genhealth ~ activity + physhealth +
+                      mmsa + healthplan) %>%
+    tibble()
+```
+
+### Saving the `smart3` and `smart3_sh` tibbles to `.Rds`
+
+```{r}
+saveRDS(smart3, "data/smart3.Rds")
+saveRDS(smart3_sh, "data/smart3_sh.Rds")
+```
+
+## Create binary outcome variable
+
+```{r}
+smart3_sh <- readRDS("data/smart3_sh.Rds") %>%
+  mutate(bmilt30 = as.numeric(bmi < 30),
+         dm_status = fct_relevel(dm_status, "No"))
+
+smart3_sh %>%
+  group_by(bmilt30) %>%
+  summarize(n = n(), mean(bmi), min(bmi), max(bmi)) %>%
+  kable(digits = 2)
+```
+
+
+## Predicting `BMI < 30` using diabetes status (a factor)
+
+```{r}
+mod_DM <- smart3_sh %$% 
+  glm(bmilt30 ~ dm_status, 
+      family = binomial(link = logit))
+
+tidy(mod_DM) %>% select(term, estimate) %>% 
+  kable(digits = 3)
+```
+
+Equation: `logit(BMI < 30) = 0.947 - 1.053 (dm_statusYes)`
+
+How can we interpret this result?
+
+## Interpreting the `mod_DM` Equation
+
+`logit(BMI < 30) = 0.947 - 1.053 (dm_status = Yes)`
+
+- Harry has diabetes.
+  - His predicted `logit(BMI < 30)` is 0.947 - 1.053 (1) = -0.106
+- Sally does not have diabetes.
+  - Her predicted `logit(BMI < 30)` is 0.947 - 1.053 (0) = 0.947
+
+Now, `logit(BMI < 30)` = `log(odds(BMI < 30))`, so exponentiate to get the odds...
+
+- Harry has predicted `odds(BMI < 30)` = exp(-0.106) = 0.899
+- Sally has predicted `odds(BMI < 30)` = exp(0.947) = 2.578
+
+Can we convert these `odds` into something more intuitive?
+
+## Converting Odds to Probabilities
+
+- Harry has predicted `odds(BMI < 30)` = exp(-0.106) = 0.899
+- Sally has predicted `odds(BMI < 30)` = exp(0.947) = 2.578
+
+$$
+odds(BMI < 30) = \frac{Pr(BMI < 30)}{1 - Pr(BMI < 30)}
+$$
+
+and
+
+$$
+Pr(BMI < 30) = \frac{odds(BMI < 30)}{odds(BMI < 30) + 1}
+$$
+
+- So Harry's predicted `Pr(BMI < 30)` = 0.899 / 1.899 = 0.47
+- Sally's predicted `Pr(BMI < 30)` = 2.578 / 3.578 = 0.72
+- odds range from 0 to $\infty$, and log(odds) range from $-\infty$ to $\infty$.
+- odds > 1 if probability > 0.5. If odds = 1, then probability = 0.5.
+
+## What about the odds ratio?
+
+`logit(BMI < 30) = 0.947 - 1.053 (dm_status = Yes)`
+
+- Harry, with diabetes, has odds(BMI < 30) = 0.899
+- Sally, without diabetes, has odds(BMI < 30) = 2.578
+
+Odds Ratio for BMI < 30 associated with having diabetes (vs. not) = 
+
+$$
+\frac{0.899}{2.578} = 0.349
+$$
+
+- Our model estimates that a subject with diabetes has 34.9% of the odds of a subject without diabetes of having BMI < 30.
+
+Can we calculate the odds ratio from the equation's coefficients?
+
+- Yes, `exp(-1.053)` = 0.349.
+
+## Tidy with exponentiation
+
+```{r}
+tidy(mod_DM, exponentiate = TRUE, 
+     conf.int = TRUE, conf.level = 0.9) %>% 
+  select(term, estimate, conf.low, conf.high) %>% 
+  kable(digits = 3)
+```
+
+- The odds ratio for BMI < 30 among subjects with diabetes as compared to those without diabetes is 0.349
+- The odds of BMI < 30 are 34.9% as large for subjects with diabetes as they are for subjects without diabetes, according to this model.
+- A 90% uncertainty interval for the odds ratio estimate includes (0.313, 0.389).
+
+## Interpreting these summaries
+
+Connecting the Odds Ratio and Log Odds Ratio to probability statements...
+
+- If the probabilities were the same (for diabetes and non-diabetes subjects) of having BMI < 30, then the odds would also be the same, and so the odds ratio would be 1.
+- If the probabilities of BMI < 30 were the same and thus the odds were the same, then the log odds ratio would be `log(1)` = 0.
+
+`logit(BMI < 30) = 0.947 - 1.053 (dm_status = Yes)`
+
+1. If the log odds of a coefficient (like `diabetes = Yes`) are negative, then what does that imply?
+
+2. What if we flipped the order of the levels for diabetes so our model was about `diabetes = No`?
+
+## Flipping the model changes slope and intercept!
+
+```{r}
+mod_DM_no <- smart3_sh %$% 
+  glm(bmilt30 ~ (dm_status == "No"), 
+      family = binomial(link = logit))
+
+tidy(mod_DM_no) %>% select(term, estimate) %>%
+  kable(digits = 3)
+```
+
+
+Old: `logit(BMI < 30) = 0.947 - 1.053 (dm_status = Yes)`
+New: `logit(BMI < 30) = -0.106 + 1.053 (dm_status = No)`
+
+## Predictions from the two models?
+
+DMYes: `logit(BMI < 30) = 0.947 - 1.053 (dm_status = Yes)`
+DMNo: `logit(BMI < 30) = -0.106 + 1.053 (dm_status = No)`
+
+Harry lives with diabetes. Sally does not.
+
+**Using the DMYes model**:
+
+- logit(Harry's BMI < 30) = 0.947 - 1.053 = -0.106
+- logit(Sally's BMI < 30) = 0.947
+
+**Using the DMNo model**:
+
+- logit(Harry's BMI < 30) = -0.106
+- logit(Sally's BMI < 30) = -0.106 + 1.053 = 0.947
+
+## Two Predictor Model
+
+We'll fit the model with and without an interaction term...
+
+```{r}
+mod_FDmain <- glm(bmilt30 ~ fruit_day + dm_status, 
+              data = smart3_sh, family = binomial)
+mod_FDint <- glm(bmilt30 ~ fruit_day * dm_status,
+               data = smart3_sh, family = binomial) 
+```
+
+1. How will we interpret the model coefficients?
+2. Can we compare the models based on in-sample performance?
+3. (later) How can we assess predictive quality (with a holdout sample)?
+
+## Coefficients in the Model without Interaction
+
+```{r}
+tidy(mod_FDint, conf.int = TRUE, conf.level = 0.95) %>% 
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  kable(dig = 3)
+```
+
+ID | fruit | dm | logit(BMI < 30) | odds(BMI < 30) | Pr(BMI < 30)
+---- | ----- | ------- | :------: | :--------: | :-----:
+Art | 1 | Yes | -0.147 | 0.863 | 0.463
+Bob | 0 | Yes | -0.289 | 0.749 | 0.428
+Cal | 1 | No | 0.904 | 2.469 | 0.712
+Don | 0 | No | 0.762 | 2.143 | 0.682
+
+## Exponentiating `fruit_day` coefficient to get OR
+
+```{r}
+tidy(mod_FDmain, exponentiate = TRUE) %>% 
+  select(term, estimate) %>% kable(dig = 2)
+```
+
+ID | fruit | dm | logit(BMI < 30) | odds(BMI < 30) | Pr(BMI < 30)
+---- | ----- | ------- | :------: | :--------: | :-----:
+Art | 1 | Yes | -0.147 | 0.863 | 0.463
+Bob | 0 | Yes | -0.289 | 0.749 | 0.428
+
+- Art's odds = 0.863. Bob's odds = 0.749
+- Art/Bob odds ratio = 0.863/0.749 = 1.15
+
+## Exponentiating `dm_status` coefficient to get OR
+
+```{r}
+tidy(mod_FDmain, exponentiate = TRUE) %>% 
+  select(term, estimate) %>% kable(dig = 2)
+```
+
+ID | fruit | dm | logit(BMI < 30) | odds(BMI < 30) | Pr(BMI < 30)
+---- | ----- | ------- | :------: | :--------: | :-----:
+Bob | 0 | Yes | -0.289 | 0.749 | 0.428
+Don | 0 | No | 0.762 | 2.143 | 0.682
+
+- Bob's odds = 0.749, Don's odds (2.143)
+- Bob/Don odds ratio = 0.749/2.143 = 0.35
+
+## Same result when `fruit_day` = 1?
+
+```{r}
+tidy(mod_FDmain, exponentiate = TRUE) %>% 
+  select(term, estimate) %>% kable(dig = 2)
+```
+
+ID | fruit | dm | logit(BMI < 30) | odds(BMI < 30) | Pr(BMI < 30)
+---- | ----- | ------- | :------: | :--------: | :-----:
+Art | 1 | Yes | -0.147 | 0.863 | 0.463
+Cal | 1 | No | 0.904 | 2.469 | 0.712
+
+- Art's odds = 0.863, Cal's odds (2.469)
+- Art/Cal odds ratio = 0.863/2.469 = 0.35 as well.
+
+## Coefficients in the Model WITH Interaction
+
+```{r}
+tidy(mod_FDint, conf.int = TRUE, conf.level = 0.95) %>% 
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  kable(dig = 3)
+```
+
+- Again, these estimates are on the logit scale
+- Does the interaction look like it has a large effect?
+
+## Resulting Predictions from `mod_FDint`
+
+ID | fruit | dm | logit(BMI < 30) | odds(BMI < 30) | Pr(BMI < 30)
+---- | ----- | ------- | :------: | :--------: | :-----:
+Art | 1 | Yes | -0.148 | 0.862 | 0.463
+Bob | 0 | Yes | -0.291 | 0.748 | 0.428
+Cal | 1 | No | 0.904 | 2.469 | 0.712
+Don | 0 | No | 0.762 | 2.143 | 0.682
+
+Predicted logits (also rounded to 3 decimal places) from `mod_FDmain` were:
+
+- Art: -0.147, Bob: -0.289, Cal: 0.904, Don: 0.762
+
+That's a small enough difference to leave the (rounded) probability estimates unchanged.
+
+# Split the Sample and Compare Models?
+
+## Let's split our sample
+
+```{r}
+set.seed(432)
+
+sm3_split <- initial_split(smart3_sh, prop = 0.7, 
+                           strata = bmilt30)
+
+sm3_train <- training(sm3_split)
+sm3_test <- testing(sm3_split)
+```
+
+- What does `strata = bmilt30` do?
+
+## Impact of using `strata = bmilt30` in split
+
+```{r}
+sm3_train %>% tabyl(bmilt30)
+```
+
+```{r}
+sm3_test %>% tabyl(bmilt30)
+```
+
+## Now, we'll build and compare three models...
+
+```{r}
+mod_2 <- glm(bmilt30 ~ fruit_day + dm_status, 
+             data = sm3_train, family = binomial)
+
+mod_4 <- glm(bmilt30 ~ fruit_day + dm_status + 
+               genhealth + age_imp,
+             data = sm3_train, family = binomial)
+
+mod_6 <- glm(bmilt30 ~ fruit_day + dm_status +
+               genhealth + age_imp + smoker + physhealth,
+    data = sm3_train, family = binomial)
+```
+
+## Tidied Coefficients for Model 2
+
+```{r}
+tidy(mod_2, conf.int = TRUE) %>%
+  select(term, est = estimate, se = std.error, 
+         conf.low, conf.high) %>%
+  kable(dig = 3)
+```
+
+## Tidied Coefficients for Model 6
+
+```{r, echo = FALSE}
+tidy(mod_4, conf.int = TRUE) %>%
+  select(term, est = estimate, se = std.error, 
+         conf.low, conf.high) %>%
+  kable(dig = 3)
+```
+
+## Tidied Coefficients for Model 6
+
+```{r, echo = FALSE}
+tidy(mod_6, conf.int = TRUE) %>%
+  select(term, est = estimate, se = std.error, 
+         conf.low, conf.high) %>%
+  kable(dig = 3)
+```
+
+## Summary Statistics for In-Sample Fit
+
+```{r}
+bind_rows(glance(mod_2), glance(mod_4), glance(mod_6)) %>%
+  mutate(preds = c("2", "4", "6")) %>%
+  select(preds, nobs, deviance, df.residual, AIC, BIC) %>%
+  kable(digits = 1)
+```
+
+## Likelihood Ratio Test comparing Models 2 and 4
+
+```{r}
+anova(mod_2, mod_4, test = "LRT")
+```
+
+Could also consider
+
+- Rao's efficient score test (`test = "Rao"`) 
+- Pearson's chi-square test (`test = "Chisq"`).
+
+## Likelihood Ratio Test comparing Models 4 and 6
+
+```{r}
+anova(mod_4, mod_6, test = "LRT")
+```
+
+## Mallows' Cp statistic?
+
+```{r}
+anova(mod_2, mod_4, mod_6, test = "Cp")
+```
+
+- Same as what `glance` provided for AIC in this case.
+
+## Build `mod_2` Confusion Matrix with 0.5 cutoff
+
+```{r}
+mod2_aug <- augment(mod_2, data = sm3_train,
+                    type.predict = "response")
+
+confuse2 <- mod2_aug %>%
+  mutate(bmilt30_act = factor(bmilt30 == "1"),
+         bmilt30_pre = factor(.fitted >= 0.5),
+         bmilt30_act = fct_relevel(bmilt30_act, "TRUE"),
+         bmilt30_pre = fct_relevel(bmilt30_pre, "TRUE")) %$%
+  table(bmilt30_pre, bmilt30_act)
+```
+
+- We'll review the confusion matrix on the next slide...
+
+## Confusion Matrix for `mod_2` with 0.5 cutoff 
+
+```{r}
+confuse2
+```
+
+- Total # of Predictions = 3291 + 1333 + 258 + 308 = 5190
+- 3291 + 308 = 3599 accurate predictions (69.3% accuracy)
+- *Sensitivity* = 3291 / (3291 + 258) = 0.927
+    - if subject actually has BMI < 30 `mod_2` with this 0.5 cutoff decision rule correctly predicts BMI < 30 92.7% of the time.
+- *Specificity* = 308 / (308 + 1333) = 0.188
+    - if subject actually doesn't have BMI < 30 `mod_2` with this 0.5 cutoff decision rule correctly predicts BMI >= 30 18.8% of the time.
+  
+## Get confusion matrix more easily?
+
+```{r}
+mod2_aug <- mod2_aug %>%
+  mutate(obs = factor(bmilt30),
+         pred = factor(ifelse(.fitted >= 0.5, 1, 0)))
+
+conf_mat(data = mod2_aug, truth = obs, estimate = pred)
+```
+
+## Accuracy and Kappa Results for `mod_2`
+
+```{r}
+metrics(data = mod2_aug, truth = obs, estimate = pred)
+```
+
+- Kappa = a correlation statistic from -1 to +1, with complete agreement +1 and complete disagreement -1.
+- Kappa measures the inter-rater reliability of our predicted and true classifications.
+
+## Confusion Matrix for `mod_4` with 0.5 cutoff
+
+```{r}
+mod4_aug <- augment(mod_4, data = sm3_train,
+                    type.predict = "response") %>%
+  mutate(obs = factor(bmilt30),
+         pred = factor(ifelse(.fitted >= 0.5, 1, 0)))
+
+conf_mat(data = mod4_aug, truth = obs, estimate = pred)
+```
+
+- 3325 + 309 = 3634 accurate predictions (70.0% accuracy)
+- *Sensitivity* = 3325 / (3325 + 224) = 0.937
+- *Specificity* = 309 / (309 + 1332) = 0.188
+
+## Confusion Matrix for `mod_6` with 0.5 cutoff
+
+```{r, echo = FALSE}
+mod6_aug <- augment(mod_6, data = sm3_train,
+                    type.predict = "response") %>%
+  mutate(obs = factor(bmilt30),
+         pred = factor(ifelse(.fitted >= 0.5, 1, 0)))
+```
+
+```{r}
+conf_mat(data = mod6_aug, truth = obs, estimate = pred)
+```
+
+- 3331 + 312 = 3643 accurate predictions (70.2% accuracy)
+- *Sensitivity* = 3331 / (3331 + 218) = 0.939
+- *Specificity* = 312 / (312 + 1329) = 0.190
+
+## `metrics` for models 2, 4 and 6
+
+```{r}
+bind_cols(
+metrics(data = mod2_aug, truth = obs, estimate = pred) %>% 
+  select(.metric, mod2 = .estimate),
+metrics(data = mod4_aug, truth = obs, estimate = pred) %>% 
+  select(mod4 = .estimate),
+metrics(data = mod6_aug, truth = obs, estimate = pred) %>% 
+  select(mod6 = .estimate),
+)
+```
+
+## Holdout Sample?
+
+```{r}
+mod2_aug_test <- augment(mod_2, 
+                         newdata = sm3_test,
+                         type.predict = "response") %>%
+  mutate(obs = factor(bmilt30),
+         pred = factor(ifelse(.fitted >= 0.5, 1, 0)))
+```
+
+- do the same thing for models 4 and 6...
+
+```{r, echo = FALSE}
+mod4_aug_test <- augment(mod_4, 
+                         newdata = sm3_test,
+                         type.predict = "response") %>%
+  mutate(obs = factor(bmilt30),
+         pred = factor(ifelse(.fitted >= 0.5, 1, 0)))
+```
+
+```{r, echo = FALSE}
+mod6_aug_test <- augment(mod_6, 
+                         newdata = sm3_test,
+                         type.predict = "response") %>%
+  mutate(obs = factor(bmilt30),
+         pred = factor(ifelse(.fitted >= 0.5, 1, 0)))
+```
+
+## `metrics` for test sample: models 2, 4 and 6
+
+```{r}
+bind_cols(
+metrics(data = mod2_aug_test, 
+        truth = obs, estimate = pred) %>% 
+  select(.metric, mod2 = .estimate),
+metrics(data = mod4_aug_test, 
+        truth = obs, estimate = pred) %>% 
+  select(mod4 = .estimate),
+metrics(data = mod6_aug_test, 
+        truth = obs, estimate = pred) %>% 
+  select(mod6 = .estimate)
+)
+```
+
+## What's next?
+
+- ROC curve analysis
+- Using `lrm` and `ols` from the `rms` package to fit and evaluate logistic and linear regressions, respectively
+
