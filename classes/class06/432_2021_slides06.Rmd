@@ -307,7 +307,7 @@ mod_FDint <- glm(bmilt30 ~ fruit_day * dm_status,
 ## Coefficients in the Model without Interaction
 
 ```{r}
-tidy(mod_FDint, conf.int = TRUE, conf.level = 0.95) %>% 
+tidy(mod_FDmain, conf.int = TRUE, conf.level = 0.95) %>% 
   select(term, estimate, std.error, conf.low, conf.high) %>%
   kable(dig = 3)
 ```
