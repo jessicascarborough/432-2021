@@ -440,7 +440,7 @@ tidy(mod_2, conf.int = TRUE) %>%
   kable(dig = 3)
 ```
 
-## Tidied Coefficients for Model 6
+## Tidied Coefficients for Model 4
 
 ```{r, echo = FALSE}
 tidy(mod_4, conf.int = TRUE) %>%
