@@ -4,7 +4,9 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-*Quote/Tweet to come*
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/figures/spear_tw.png)
+
+More about [Mary Eleanor Spear here](https://medium.com/nightingale/credit-where-credit-is-due-mary-eleanor-spear-6a7a1951b8e6), and on [her Wikipedia page](https://en.wikipedia.org/wiki/Mary_Eleanor_Spear).
 
 ## Materials for Today's Class
 
@@ -15,8 +17,6 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 1. There is a [Minute Paper after Class 07](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers). Please complete it by noon Wednesday 2021-02-24.
 2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01.
-
-
 
 ## One Last Thing
 
