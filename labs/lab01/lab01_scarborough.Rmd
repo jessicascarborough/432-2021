@@ -1,0 +1,393 @@
+---
+title: "432 Lab 01"
+author: "Jessica Scarborough"
+date: "`r Sys.Date()`"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+        number_sections: TRUE
+        code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+## Package Loading {-}
+
+```{r load_packages, message = FALSE}
+library(here)
+library(magrittr)
+library(janitor)
+library(knitr) # for kable
+library(naniar) # for missing value tools
+library(mosaic) # for fav stats
+library(patchwork) # for organizing multiple ggplots
+library(tableone)
+library(tidymodels)
+library(tidyverse)
+```
+
+## Import the `hbp3456` Data {-}
+
+To start, we'll load the `hbp3456.csv` data set from a sub-folder called `data` in the project's directory. 
+
+
+```{r, message = FALSE}
+lab01 <- read_csv(here("data", "hbp3456.csv")) %>%
+    mutate(record = as.character(record))
+
+lab01
+```
+
+
+# Question 1
+
+## Create our working data set (q01_clean) 
+
+
+First, we're going to clean up the data set to include only subjects that were seen at the "Highland" and "Sycamore" `practice`. Next, we'll convert all character variables into factors, except for the `record` variable, which needs to remain a character. For ease of viewing, we'll select only the variables of interest for this question (`record`, `age`, `race`, `eth_hisp`, `sex`, `insurance`, `height`, `weight`, `sbp`, `dbp`). At this point, let's take a look at the data set we've got so far.  
+
+The preview shows us that all the variables have the appropriate type. Of note, none of the current categorical variables need to be ordered. 
+
+
+
+```{r q01_data_cleaning}
+
+q01_clean <- lab01 %>%
+    filter(practice %in% c('Highland', 'Sycamore')) %>%
+    type.convert() %>%                                      # convert all character variables into factors
+    mutate(record = as.character(record)) %>%
+    select(record, practice, age, race, eth_hisp, sex, insurance, height, weight, sbp, dbp)
+
+
+q01_clean
+
+```
+
+
+## Initial Data Checking (Quantitative Variables)
+
+Let's take a look at all of our quantitative variables to ensure that the range of values observed look plausible. 
+
+
+### `age`
+
+```{r qc_age}
+
+favstats(~ age, data = q01_clean) %>% kable(dig = 1)
+
+```
+
+The ages are reasonable and in agreement with the limitations discussed in the eligibility criteria, and there are no missing values. Notably, the highest age is 80, but the criteria tells us that all patients 80 and over are listed as age 80.  
+
+### `height`
+
+```{r qc_height}
+
+favstats(~ height, data = q01_clean) %>% kable(dig = 1)
+
+```
+
+The subjects' height measurements (in meters) are reasonable and there are 3 subjects with missing values. 
+
+### `weight`
+
+```{r qc_weight}
+
+favstats(~ weight, data = q01_clean) %>% kable(dig = 1)
+
+```
+
+The subjects' weight measurements (in kg) are reasonable and there are 4 subjects with missing values. 
+
+### `sbp` (systolic blood pressure)
+
+```{r qc_sbp}
+
+favstats(~ sbp, data = q01_clean) %>% kable(dig = 1)
+
+```
+
+The subjects' systolic blood pressure measurements are reasonable and are within the eligibility criteria listed. There are no missing values. 
+
+### `dbp` (diastolic blood pressure)
+
+```{r qc_dbp}
+
+favstats(~ dbp, data = q01_clean) %>% kable(dig = 1)
+
+```
+
+The subjects' diastolic blood pressure measurements are reasonable and are within the eligibility criteria listed. There are no missing values. 
+
+
+## Initial Data Checking (Categorical Variables)
+
+Next, we'll take a look at the count for each level in all of our categorical variables.
+
+```{r qc_practice}
+
+q01_clean %>% count(practice)
+
+```
+The patients are split evenly between each practice and there are no missing values, which is to be expected based on the description of this data set. 
+
+
+### `race` 
+
+```{r qc_race}
+
+q01_clean %>% count(race)
+
+```
+
+There are many more African American/Black and White patients in our data set than patients who are classified as Asian or Other. No re-ordering or collapsing of variables is necessary and there are 31 subjects where race is a missing value. 
+
+### `eth_hisp` (is the subject of Hispanic/Latino ethnicity? Yes or No)
+
+```{r qc_eth_hisp}
+
+q01_clean %>% count(eth_hisp)
+
+```
+
+There are 34 subjects with missing values in this variable, but no re-ordering or collapsing is necessary. 
+
+### `sex`
+
+```{r qc_sex}
+
+q01_clean %>% count(sex)
+
+```
+
+There are more women than men in this study, which is interesting, because most general medical studies have the inverse skew. There are no missing values
+
+
+### `insurance`
+
+```{r qc_insurance}
+
+q01_clean %>% count(insurance)
+
+```
+
+The counts for the subjects' primary insurance appear reasonable, and there are no missing values. 
+
+
+
+## Remove missing values
+
+Finally, we'll use `miss_case_table` from the `naniar` package to count the missing values for each subject. We'll then extract only subjects with no missing values and the number of samples removed due to missing data will be noted in the footnote of the Table 1. As a sanity check, we'll confirm that the final data set contains 823 subjects. 
+
+
+To summarize, we see that 31 subjects are missing 2 values, 10 subjects are missing 1  value, and 823 subjects have no missing values. As a sanity check, we'll confirm that the final data set contains 823 subjects, which it does. 
+
+```{r extract_complete}
+
+miss_case_table(q01_clean)
+
+q01_clean <- q01_clean %>%
+    filter(complete.cases(.))
+
+print(paste("There are now", nrow(q01_clean), "subjects in our cleaned data set."))
+
+```
+
+## Add body mass index (BMI) variables
+
+Here, we're going to use the `mutate` function to add a BMI variable (`bmi`), and then we will use `mutate` and `case_when` to create a BMI category variable (`bmi_cat`) which is based on the [How is BMI Interpreted for Adults](https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html) section of this description of Adult BMI by the Centers for Disease Control's website.  We'll use `mutate` and `relevel` with the `bmi_cat` variable to order it from smaller to larger BMI's. Finally, we'll check our new variables to ensure that everything looks as to be expected, and we see that the BMI values and BMI category counts look reasonable. 
+
+```{r add_bmi}
+
+q01_clean <- q01_clean %>%
+    mutate(bmi = weight/(height**2)) %>% # bmi = kg/(m^2)
+    mutate(bmi_cat = case_when(
+        bmi < 18.5 ~ "Underweight",
+        bmi >= 18.5 & bmi < 25 ~ "Normal", 
+        bmi >= 25 & bmi < 30 ~ "Overweight", 
+        bmi >= 30 ~ "Obese")) %>%
+    mutate(bmi_cat = 
+               fct_relevel(bmi_cat, "Underweight", "Normal", 
+                           "Overweight", "Obese"))
+
+
+favstats(~ bmi, data = q01_clean) %>% kable(dig = 1)
+
+q01_clean %>% count(bmi_cat)
+
+```
+## Assess normality (`sbp`)
+
+In order to decide upon the appropriate statistical analyses for our Table 1, we need to determine if our quantitative variables of interest are normally distributed or not. These variables include: `age`, `bmi`, `sbp`, and `dbp.` Using `ggplot`, we'll build a histogram for each quantitative variable, and look at them together to decide whether or not the variables should be displayed as median with quartiles (non-normal data) or mean with standard deviation (normal data). Additionally, normal variables will be compared using t-tests, while non-normally distributed variables will be compared with the Wilcoxon signed rank test, which is non-parametric. 
+
+Based on the results below, none of our variables are perfectly normally distributed, with `age` being left skewed and `bmi`, `sbp`, and `dbp` being right skewed to varying degrees. We'll consider these variables non-normal for the purposes of making Table 1.
+
+```{r q01_normal}
+
+
+p_age <- ggplot(q01_clean, aes(x = age)) +
+    geom_histogram(fill = "seashell4", col = "white", 
+                   binwidth = 2) +
+    labs(title = "Histogram of Age")
+
+p_bmi <- ggplot(q01_clean, aes(x = bmi)) +
+    geom_histogram(fill = "thistle3", col = "white", 
+                   binwidth = 2) +
+    labs(title = "Histogram of BMI")
+
+
+p_sbp <- ggplot(q01_clean, aes(x = sbp)) +
+    geom_histogram(fill = "tomato2", col = "white", 
+                   binwidth = 5) +
+    labs(title = "Histogram of Systolic BP")
+
+
+p_dbp <- ggplot(q01_clean, aes(x = dbp)) +
+    geom_histogram(fill = "lightsteelblue3", col = "white", 
+                   binwidth = 5) +
+    labs(title = "Histogram of Diastolic BP")
+
+
+(p_age + p_bmi) / (p_sbp + p_dbp)
+
+```
+
+
+
+
+## Make Table 1
+
+Now, we'll make a Table 1 comparing the Highland practice subjects to the Sycamore practice subjects for the following variables: `age`, `race`, `eth_hisp`, `sex`, `insurance`, `bmi`, `bmi_cat`, `sbp`, and `dbp`. We'll use the `CreateTableOne` function from the `tableone` package. 
+
+```{r q01_table1}
+
+
+q01_vars <- c("age", "race", "eth_hisp", "sex", "insurance", "bmi", "bmi_cat", 
+              "sbp", "dbp")
+q01_strata <- c("practice")
+q01_nonnormal <- c("age", "bmi", "sbp", "dbp")
+q01_exact <- c("race", "eth_hisp", "insurance", "bmi_cat")
+
+q01_tbl1 <- CreateTableOne(vars = q01_vars, 
+                            strata = q01_strata,
+                            data = q01_clean)
+
+print(q01_tbl1, nonnormal = q01_nonnormal, exact = q01_exact)
+```
+
+* There were 41 subjects removed due to missing values
+* Quantitative variables (`age`, `bmi`, `sbp`, and `dbp`) are summarized using median and interquartile range, because they are not normally distributed.
+* Categorical variables that have fewer than 10 subjects in each category (`race`, `eth_hisp`, `insurance`, `bmi_cat`) use an exact test instead of Pearson, because one of the categories has fewer than 10 subjects. 
+
+## Table 1 Description 
+
+Table 1 compares nine variables between the patient populations at two medical practices, Highland and Sycamore. The Sycamore location tends to have patients who are older and have either commercial or medicare insurance. The Highland population, younger, has a range of primary insurances. While the Sycamore location is predominately Black, the majority of the Highland location patients are white. Each population has a very similar median BMI, systolic BP, and diastolic BP. Of note, median diastolic BP is statistically significantly different between practices, although this difference is unlikely to be clinically meaningful.   
+
+# Question 2
+
+Here, we're being asked to assess whether or not insurance status impacts a patient's systolic blood pressure, after adjusting for whether or not they have a beta-blocker subscription. 
+
+## Assess normality (`sbp`)
+
+Because we will be using a linear model, we're going to first assess systolic blood pressure for normality. Using `ggplot`, we'll build a simple histogram and Q-Q plot of `sbp` (systolic blood pressure). Below, we see that although the data are not perfectly normally distributed (there is minimal right skew), they are acceptable for moving ahead with building a linear model without transforming the systolic blood pressure variable. 
+
+```{r q02_normal}
+
+p1 <- ggplot(lab01, aes(x = (sbp))) +
+    geom_histogram(fill = "navy", binwidth = 5) +
+    labs(title = "Histogram of Systolic BP") 
+
+p2 <- ggplot(lab01, aes(sample = (sbp))) +
+    geom_qq(col = "navy") + geom_qq_line(col = "red") + 
+    labs(title = "Normal Q-Q Plot of SBP")
+
+p1 + p2
+
+```
+
+
+## Investigate interaction term
+
+Next, we will use `ggplot` to assess the rank of mean `sbp` between insurance status groups in patients who do and do not have a beta-blocker prescription. The plot below has a point for the mean value of each group, and the mean values for the same primary insurance groups (between `Yes`/`No` for beta-blocker prescription) are connected by a line. Each mean value is also flanked by an error bar, which represents two times the standard deviation of the mean estimate. 
+
+This plot demonstrates that there may be an interaction between insurance status and beta blocker, as the mean systolic blood pressure for each insurance group ranks differently between patients who have and do not have a beta-blocker prescription. However, this interaction may be very minimal as the differences in mean `sbp` are very small. 
+
+```{r q02_interaction_plot, message = FALSE}
+
+summaries_1 <- lab01 %>%
+    group_by(insurance, bp_med) %>%
+    summarise(n = n(), mean = mean(sbp), 
+              stdev = sd(sbp))
+
+
+pd <- position_dodge(0.1)
+ggplot(summaries_1, aes(x = bp_med, y = mean,
+                        col = insurance)) + 
+    geom_errorbar(aes(ymin = mean - stdev,
+                      ymax = mean + stdev),
+                  width = 0.1, position = pd) +
+    geom_point(size = 2, position = pd) +
+    geom_line(aes(group = insurance)) +
+    labs(y = "sbp",
+         title = "Observed means of Systolic Blood Pressure", 
+         subtitle = "by Insurance Status and Beta Blocker Prescription") + 
+    theme(plot.title = element_text(hjust = 0.5),
+          plot.subtitle = element_text(hjust = 0.5))
+
+
+
+```
+
+## Build linear model
+
+We'll first build a linear model that includes the interaction term and assess whether it is appropriate to keep that term in the model. We'll use `tidy` to examine the coefficients of each variable in the model and `kable` to display the results. This shows us that the 90% confidence intervals (`low90` and `high90`) for all of the interaction terms overlap with 0, making it unlikely that they are influencing the model greatly. This confirms our earlier suspicion that the interaction term is unnecessary. 
+
+```{r q02_interaction_model}
+
+lm1 <- lm(sbp ~ insurance * bp_med, data = lab01)
+
+tidy(lm1, conf.int = TRUE, conf.level = 0.90) %>%
+    select(term, estimate, 
+           low90 = conf.low, high90 = conf.high, 
+           se = std.error, p = p.value) %>%
+    kable(digits = c(0,3,2,2,2,3))
+
+```
+
+
+Finally, we'll build our final linear model, assessing the influence of primary insurance on systolic blood pressure, taking into account whether or not a patient has been prescribed a beta-blocker. This does not take into account the interaction between primary insurance and the beta-blocker prescription. 
+
+Although the model we build is considered "statistically significant" using a cutoff of p < 0.05, the model only captures 0.4% of the variability in the systolic blood pressure data. We see that patients who have medicaid, medicare, and no insurance are predicted to have 1.82, 0.25, and 1.46 mm Hg greater `sbp` than patients with commercial insurance, respectively. Likewise, patients who have been prescribed a beta-blocker are predicted to have 3.91 mm Hg greater `sbp` than patients who have not been prescribed a beta-blocker. 
+
+```{r q02_lm}
+
+lm2 <- lm(sbp ~ insurance + bp_med, data = lab01)
+
+summary(lm2)
+
+```
+
+
+
+# Question 3
+
+My work as a graduate student aims to extract biomarkers of chemotherapy response. These biomarkers can be used as predictive tests, helping clinicians assess which treatment is best for each patient. The goal can be summarized using the title of Nate Silver's book, *The Signal and the Noise*, as we are trying to find patterns (signal) in vast data sets containing tumor genomics, transcriptomics, and proteomics (noise). An important consideration when creating these tests is comparing the data source we have for validation to the data we hope to use the test in clinically. Silver explains this concept eloquently in the "Out of Sample, Out of Mind: A Formula for a Failed Prediction" section of Chapter 1, *The Signal and the Noise* (page 44). There, he explains that models cannot be used to predict "out-of-sample events," as occurred in 2008 with the assumption that one person's mortgage has no relation to another person's mortgage in the setting of widespread financial collapse. There are straightforward examples of this concept in our work: we cannot create a test that is predictive in patients with lung cancer and assume that the test will work in liver cancer. Yet, this consideration is also important in less apparent scenarios. For example, we often have access to tumor tissue when a patient has had surgery (implying that they had an advanced, aggressive tumor). A test that is extracted and validated on said data may not accurately predict treatment response in patients with less advanced disease. We must produce and validate models using data from the same sample that we plan to predict with in the future. 
+
+
+# Question 4
+
+I have posted on Piazza in response to Question 4.
+
+# Question 5
+
+My github name is jessicascarborough. 
+
+# Session Information {-}
+
+```{r}
+xfun::session_info()
+```
+

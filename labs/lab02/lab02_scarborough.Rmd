@@ -118,13 +118,8 @@ g2
 
 # Question 2
 
-Identify an important thing that you learned about prediction from your reading of Nate Silver’s The Signal and the Noise either in Chapter 2 (about political predictions) or in chapters 3 (baseball), 4 (weather) or 5 (earthquakes). What does this thing you learned suggest to you about the way you build prediction models, and how can you adopt this new way of thinking to improve the models you’ll generate in this Lab and elsewhere in your scientific life?
+In academia, there is perhaps no truer phrase than "Publish or perish." Simply put, if an investigator is unable to publish their work in respected journals, they will have a difficult time achieving conventional career milestones (e.g. grant funding, employment at a prestigious university, tenure, etc.). When one examines the typical requirements for having an article accepted for publication, it becomes clear why so many scientists are "desperately seeking signal" from their data. Journals typically assess manuscripts not only on experimental design, but also on the novelty of the results. In my work, this pressure is certainly present when producing predictive models. Our hopes of finding a signal from noisy data can lead to complex models with too many parameters which overfit the data. In *The Signal and the Noise*, Nate Silver explains, "Overfitting represents a double whammy: it makes our model look better on paper but perform worse in the real world" (Silver, Chapter 6). He aptly points out that overfit models may look ``better'' than properly fit models using traditional metrics, such as r-squared. However, my passion for research is based in translational science--that is, science which aims to move discoveries from the laboratory bench (or computer) to clinical care. With my future work, these principles will help me remember that although overfit models may provide a short term gain (easier publications), they will hinder our ability to help patients in the long run.  
 
-Write a short essay (between 150 and 250 words is appropriate) using clearly constructed and complete sentences to respond to this. The essay should be composed using R Markdown.
-
-- We encourage you to provide brief citations or quotes from Silver and elsewhere as needed.
-- In citing The Signal and the Noise a quotation with (Silver, Chapter X) is sufficient.
-- In citing another work, a more detailed citation is appropriate. Citations and quotations do not count towards the suggested word limit.
 
 # Question 3
 
@@ -258,12 +253,22 @@ g_housing_water
 g_pm2_5_water
 
 ```
-Create a logistic regression model to predict the presence of a water violation (as contained in h2oviol) on the basis of sev_housing and  pm2.5. Specify and then carefully interpret the estimated odds ratio associated with the sev_housing effect and a 90% uncertainty interval around that estimate in context using nothing but complete English sentences. Use a model with main effects only.
+
+Below, we'll use the `glm` function to predict `h2oviol` as a factor, using `sev_housing` and `pm2_5` as predictors. We'll then assess the exponentiated coefficients using `tidy`, and further, we'll look at the 90% uncertainty interval for these coefficients using  `confint` (again, exponentiating those results).
+
+
+The odds ratio between two counties whose severe housing percentage differs by 1% is 0.953. In other words, our model estimates that a county with 1% more of their population living with severe housing problems (`sev_housing`) will have 95.3% of the odds of having water violation (`h20viol`) compared to a county without that increased percentage of the population living with severe housing problems.  We are 90% confident that this odds ratio falls between 0.80 and 1.12. Because this uncertainty interval clearly overlaps with 1, we cannot assert that changes in the population living with severe housing problems are associated with statistically detectable changes in the odds ratio. 
+
 
 ```{r q05_log_regr}
 
+m1_q05 <- glm(factor(h2oviol) ~ sev_housing + pm2_5, data = q05,
+            family = binomial(link = "logit"))
 
+tidy(m1_q05, exponentiate = TRUE) %>%
+  select(term, estimate)
 
+exp(confint(m1_q05, level = 0.90))
 
 ```
 
