@@ -6,7 +6,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/figures/spear_tw.png)
 
-More about [Mary Eleanor Spear here](https://medium.com/nightingale/credit-where-credit-is-due-mary-eleanor-spear-6a7a1951b8e6), and on [her Wikipedia page](https://en.wikipedia.org/wiki/Mary_Eleanor_Spear).
+The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://medium.com/nightingale/credit-where-credit-is-due-mary-eleanor-spear-6a7a1951b8e6), and check out [her Wikipedia page](https://en.wikipedia.org/wiki/Mary_Eleanor_Spear) as well, if you like.
 
 ## Materials for Today's Class
 
