@@ -13,7 +13,10 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. To come.
+1. There is a [Minute Paper after Class 07](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers). Please complete it by noon Wednesday 2021-02-24.
+2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01.
+
+
 
 ## One Last Thing
 
