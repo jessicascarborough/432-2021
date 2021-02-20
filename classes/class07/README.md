@@ -17,7 +17,8 @@ The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://m
 
 We'll be discussing the tools for regression fitting and evaluation in the `rms` package (developed by Frank Harrell and colleagues) quite a bit over the next couple of weeks. 
 
-- You may be interested in [An introduction to the Harrell verse](https://www.nicholas-ollberding.com/post/an-introduction-to-the-harrell-verse-predictive-modeling-using-the-hmisc-and-rms-packages/) by Nicholas Ollberding. Quoting that work: "(The) `Hmisc` and `rms` packages link users to a much broader set of materials on modern statistical methods and computing including predictive modeling, estimation, hypothesis testing, and study design."
+- You may be interested in [An introduction to the Harrell verse](https://www.nicholas-ollberding.com/post/an-introduction-to-the-harrell-verse-predictive-modeling-using-the-hmisc-and-rms-packages/) by Nicholas Ollberding. 
+- Quoting that work: "(The) `Hmisc` and `rms` packages link users to a much broader set of materials on modern statistical methods and computing including predictive modeling, estimation, hypothesis testing, and study design."
 
 Two key book-length references from Frank are:
 
