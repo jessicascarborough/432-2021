@@ -41,9 +41,17 @@ Each row in this data set represents a county within the United States.
 
 # Loading and Tidying the Data
 
+We'll start by loading the PLACES data set from the `data` directory in our project directory. This file is completely unchanged from the original downloaded file from the [PLACES website](https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-County-Data-20/swc5-untb).
+
 ## Loading the Raw Data
 
-Ingest your raw data here.
+```{r load_data}
+
+
+counties_raw <- read.csv(here("data", "PLACES__Local_Data_for_Better_Health__County_Data_2020_release.csv"))
+
+unique(counties_raw$Measure)
+```
 
 ## Cleaning the Data
 
@@ -108,15 +116,7 @@ Follow the instructions.
 
 # Affirmation 
 
-Be sure to include the text provided in the instructions.
-
-Note that for Task 2 (Analyses and Presentation), we will add in sections called:
-
-- Linear Regression Modeling
-- Logistic Regression Modeling
-- Discussion
-
-before the Affirmation but otherwise leave the template alone.
+I am certain that it is completely appropriate for these data to be shared with anyone, without any conditions. There are no concerns about privacy or security.
 
 # References
 

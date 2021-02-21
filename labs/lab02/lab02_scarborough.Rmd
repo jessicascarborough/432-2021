@@ -1,6 +1,6 @@
 ---
-title: "432 Lab 02 Template"
-author: "Your Name Goes Here"
+title: "432 Lab 02"
+author: "Jessica Scarborough"
 date: "`r Sys.Date()`"
 output:
   rmdformats::downcute:
@@ -38,7 +38,7 @@ library(tidyverse)
 
 ## Import the `oh_counties_2020` Data {-}
 
-This template assumes that you've placed the `oh_counties_2020.csv` data set in a sub-folder called `data` beneath the `lab02` project directory you're using in R Studio.
+We're going to load the `oh_counties_2020.csv` data set from a sub-folder called `data` in our project directory. We'll make sure the county ID variable (`fips`) is a character variable. And additionally, we'll use `clean_names` to make our column names more computer-appropriate. 
 
 ```{r, message = FALSE}
 oh20 <- read_csv(here("data", "oh_counties_2020.csv")) 
@@ -91,7 +91,7 @@ q01 <- q01 %>%
 
 ```
 
-Finally, we'll produce our visualization using `ggplot`, comparing `food_env` and `unemployed` with as scatter plots faceted by the `age65plus_fct` variable. 
+Finally, we'll produce our visualization using `ggplot`, comparing `food_env` and `unemployed` with scatter plots faceted by the `age65plus_fct` variable. 
 
 ```{r q01_data_viz}
 
@@ -118,7 +118,7 @@ g2
 
 # Question 2
 
-In academia, there is perhaps no truer phrase than "Publish or perish." Simply put, if an investigator is unable to publish their work in respected journals, they will have a difficult time achieving conventional career milestones (e.g. grant funding, employment at a prestigious university, tenure, etc.). When one examines the typical requirements for having an article accepted for publication, it becomes clear why so many scientists are "desperately seeking signal" from their data. Journals typically assess manuscripts not only on experimental design, but also on the novelty of the results. In my work, this pressure is certainly present when producing predictive models. Our hopes of finding a signal from noisy data can lead to complex models with too many parameters which overfit the data. In *The Signal and the Noise*, Nate Silver explains, "Overfitting represents a double whammy: it makes our model look better on paper but perform worse in the real world" (Silver, Chapter 6). He aptly points out that overfit models may look ``better'' than properly fit models using traditional metrics, such as r-squared. However, my passion for research is based in translational science--that is, science which aims to move discoveries from the laboratory bench (or computer) to clinical care. With my future work, these principles will help me remember that although overfit models may provide a short term gain (easier publications), they will hinder our ability to help patients in the long run.  
+In academia, there is perhaps no truer phrase than "Publish or perish." Simply put, if an investigator is unable to publish their work in respected journals, they will have a difficult time achieving conventional career milestones (e.g. grant funding, employment at a prestigious university, tenure, etc.). When one examines the typical requirements for having an article accepted for publication, it becomes clear why so many scientists are "desperately seeking signal" from their data. Journals typically assess manuscripts not only on experimental design, but also on the novelty of the results. In my work, this pressure is certainly present when producing predictive models. Our hopes of finding a signal from noisy data can lead to complex models with too many parameters which overfit the data. In *The Signal and the Noise*, Nate Silver explains, "Overfitting represents a double whammy: it makes our model look better on paper but perform worse in the real world" (Silver, Chapter 6). He aptly points out that overfit models may look ``better'' than properly fit models using traditional metrics, such as r-squared. However, my passion for research is based in translational science--that is, science which aims to move discoveries from the laboratory bench (or computer) to clinical care. With my future work, these principles will help me remember that although overfit models may provide a short-term gain (easier publications), they will hinder our ability to help patients in the long run.  
 
 
 # Question 3
@@ -135,7 +135,7 @@ miss_case_table(q03)
 
 ```
 
-As we can see there are no missing values, so we'll move forward with plotting the distribution of each variable. As we see below, none of the variables are egregiously non-normal, so we will move forward without transforming any of them.
+As we can see, there are no missing values, so we'll move forward with plotting the distribution of each variable. Additionally, none of the variables are egregiously non-normal, so we will move forward without transforming any of them.
 
 
 ```{r q03_data_viz}
@@ -185,8 +185,6 @@ tidy(m1_q03, conf.int = TRUE, conf.level = 0.90) %>%
 
 # Question 4
 
-Evaluate the quality of the model you fit in Question 3 in terms of adherence to regression modeling assumptions, through the specification and written evaluation of residual plots. What might be done to improve the fit of the model you’ve developed in Question 3? Identify by name any outlying counties and explain why they are flagged as outliers.
-
 Next, we'll examine the residual plots for the model produced in Question 3, `m1_q03`. 
 
 Based on the plots below, our model adheres to the principles of regression modeling assumptions well. The Residuals vs. Fitted plot does not have any obvious pattern or bend to the curve, indicating acceptably constant variance. Similarly, the Scale-Location plot does not indicate non-constant variance, as the loess smooth curve is relatively flat. The Residuals vs. Fitted plot shows us that the counties from rows 43, 46, and 68 are the biggest outliers in the data, as they have the three largest residuals. However, based on the Residuals vs. Leverage plot, they aren't influencing the model very much. Additionally, the Normal Q-Q plot does not demonstrate substantial non-normality. 
@@ -201,7 +199,7 @@ par(mfrow = c(1,1))
 
 ```
 
-Here, we'll use the `slice` function to identify the greatest outliers based on the row numbers identified in the Residuals vs. Fitted plot. Those counties are Lake, Logan, and Preble county. Based on the plot Logan County (row 46) was under-predicted by our model, while Lake County and Preble County were over-predicted by our model.
+Here, we'll use the `slice` function to identify the greatest outliers based on the row numbers identified in the Residuals vs. Fitted plot above. Those counties are Lake, Logan, and Preble county. Based on this plot, Logan County (row 46) was under-predicted by our model, while Lake County and Preble County were over-predicted by our model.
 
 
 ```{r q04_outliers}
