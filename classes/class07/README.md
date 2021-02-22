@@ -10,8 +10,14 @@ The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://m
 
 ## Materials for Today's Class
 
-- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/432_2021_slides07.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/432_2021_slides07.Rmd).
+- Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/432_2021_slides07.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/432_2021_slides07.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
+
+## Announcements
+
+1. There is a [Minute Paper after Class 07](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers). Please complete it by noon Wednesday 2021-02-24.
+2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01.
+3. The [Answer Sketch for Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) will be posted in time for class.
 
 ## Sources for Today's Class
 
@@ -25,16 +31,11 @@ Two key book-length references from Frank are:
 - Frank E. Harrell and Chris Slaughter [Biostatistics for Biomedical Research Notes](http://hbiostat.org/doc/bbr.pdf) (pdf).
 - Frank E. Harrell [Regression Modeling Strategies](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Harrell_Regression_Modeling_Strategies_2015_2e_protected.pdf), 2nd Edition, 2015.
 
-We won't get to these other references today, but they'll come up going forward...
+We won't get to these other references much today, but they'll come up going forward...
 
 - [Spending our data](https://www.tmwr.org/splitting.html), which is a chapter in Max Kuhn and Julia Silge [Tidy Modeling with R](https://www.tmwr.org/).
 - Peter C. Austin and Ewout W. Steyerberg (2015) [The number of subjects per variable required in linear regression analyses](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Austin_and_Steyerberg_2015_subjects_per_variable_in_linear_regression_jce.pdf) *J Clinical Epidemiology* 68: 627-636.
 - Richard D Riley, Joie Ensor, Kym I E Snell et al. [Calculating the sample size required for developing a clinical prediction model](https://github.com/THOMASELOVE/432-2021/blob/master/references/pdf/Riley_etal_2020_Sample_Size_Required.pdf) (pdf) *BMJ* 2020; 368:m441. [Link at BMJ](https://www.bmj.com/content/368/bmj.m441).
-
-## Announcements
-
-1. There is a [Minute Paper after Class 07](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers). Please complete it by noon Wednesday 2021-02-24.
-2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01.
 
 ## One Last Thing
 
