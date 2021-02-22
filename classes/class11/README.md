@@ -14,7 +14,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 ## Announcements
 
 1. Dr. Love's Feedback on the Minute Paper will be posted by class time.
-2. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class. Our next Class (Class 12) will be held on 2021-03-18.
+2. Quiz A will be made available on 2021-03-12, and is due 2021-03-22 at 9 PM.
+3. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class. Our next Class (Class 12) will be held on 2021-03-18.
 
 ## One Last Thing
 
