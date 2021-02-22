@@ -382,9 +382,15 @@ show.influence(w, d)
 - Use `maleptsd %>% slice(32)` to see row 32 in its entirety.
 - Use residual plots (with an `lm` fit) to check Cook's distances.
 
-## Fitting Residual Plots for this model
+## Residuals vs. Fitted Values is an easy plot
 
-To fit residual plots (and sometimes to do other things) we will fit the `lm` version of this same model...
+```{r, fig.height = 5}
+plot(resid(mod_first) ~ fitted(mod_first))
+```
+
+## Fitting all Residual Plots for `mod_first`
+
+To fit more complete residual plots (and to do other things) we will fit the `lm` version of this same model...
 
 ```{r, eval = FALSE}
 mod_first_lm <- lm(ptsd ~ over2 + over3, data = maleptsd)
@@ -796,6 +802,12 @@ plot(nomogram(mod_second))
 
 ```{r, fig.height = 5}
 ggplot(Predict(mod_second))
+```
+
+## Residuals vs. Fitted Values to check assumptions
+
+```{r, fig.height = 5}
+plot(resid(mod_second) ~ fitted(mod_second))
 ```
 
 ## Checking the model's calibration
