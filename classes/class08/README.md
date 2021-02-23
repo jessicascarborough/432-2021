@@ -14,8 +14,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 ## Announcements
 
 1. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/tree/master/project1) is due at 9 PM Monday 2021-03-01.
-2. A reminder that **we will not have class** on Tuesday 2021-03-02. Our next class (Class 09) will be held on Thursday 2021-03-04.
-3. Use the "free" time next week to be sure you're caught up on the reading. You should be finished with the Leek book this weekend, and up to Chapter 6 in *The Signal and the Noise*.
+2. A reminder that **we will not have class** on Tuesday 2021-03-02. [Class 09](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class09) will be held on Thursday 2021-03-04.
+3. Use the "free" time next Tuesday to be sure you're caught up on the reading. You should be finished with the Leek book this weekend, and up to Chapter 6 in *The Signal and the Noise*.
 4. [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due at 9 PM Monday 2021-03-08.
 
 ## Where was Dr. Love this morning (and again through next Tuesday)?
