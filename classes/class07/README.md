@@ -22,6 +22,7 @@ The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://m
     - If you are looking for interesting approaches to visualizing data, perhaps in light of the Lab, I encourage you to take a look at Claus O. Wilke's [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) for lots of interesting ideas.
     - I also strongly recommend Winston Chang's [R Graphics Cookbook, 2nd edition](https://r-graphics.org/) for specific and very useful advice including step-by-step instructions for creating all sorts of plots using R.
 4. I have changed the Course Calendar to move the deadline for [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) back one week to Monday 2021-03-15 at 9 PM.
+5. I'll also remind you that we don't have class next Tuesday 2021-03-02.
 
 ## Sources for Today's Class
 
