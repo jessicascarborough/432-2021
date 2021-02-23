@@ -18,6 +18,23 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 3. Use the "free" time next Tuesday to be sure you're caught up on the reading. You should be finished with the Leek book this weekend, and up to Chapter 6 in *The Signal and the Noise*.
 4. [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due at 9 PM Monday 2021-03-15.
 
+## Project Data Cleaning Advice
+
+There is nothing here that is a new requirement, or that should be interpreted as changing the original instructions. Just a few tips.
+
+1. You cannot use the same variable (or any form of the same underlying variable) as both an outcome and a predictor in the same model.
+2. Collapse levels sensibly for multi-categorical variables with more than 6 categories, and be sure that all have at least 30 observations in each level, and that they're treated as **factors** in R. 
+3. Some binary variables are coded 1 and 2. Fix that by using the real names and treating the variable as a factor, or by converting the 1-2 to a proper 1-0 indicator variable.
+   - Use the formula **NEWVAR = 2 - OLDVAR** to turn OLDVAR: 1 = Yes, 2 = No into NEWVAR: 1 = Yes, 0 = No.
+   - If you have OLDVAR: 1 = No, 2 = Yes, create a NEWVAR with 1 = Yes, 0 = No using **NEWVAR = OLDVAR - 1**.
+4. Things I would treat as missing include Refused, Don't Know, Unknown, No response and missing. Be sure that R recognizes things that are missing as missing and filters them out if you look for complete cases.
+5. If you find yourself with `labelled` variables after import with (for example, the `read_xpt()` function), get rid of them with `zap_labels()` from the `haven` package, part of the tidyverse.
+6. **Hmisc::describe** (a required part of the proposal) is an incredibly useful step to support range checks across all of your variables as a final check that you've cleaned the data properly. Things to check after cleaning any kind of data:
+    - Make sure all of your quantitative variables have a sensible minimum and maximum value.
+    - Be sure that all of your categorical variables only include sensible, interpretable categories, contain a reasonable number of subjects, and that don't know/refused/missing are not included as categories. All of your categorical predictors have at least 2 levels and no more than 6 levels after collapsing. 
+7. Run a spell-check before knitting the R Markdown into HTML. Just hit F7.
+8. Look at the HTML version of your work, not just the R Markdown, to make sure we can read everything.
+
 ## Where was Dr. Love this morning (and again through next Tuesday)?
 
 - Meeting as part of the [Agency for Health Care Research and Quality's](https://www.ahrq.gov/) [Health Care Research Training Study Section](https://www.ahrq.gov/funding/process/study-section/hcrtrst.html).
