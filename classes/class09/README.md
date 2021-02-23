@@ -13,7 +13,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. To come.
+1. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM.
 
 ## One Last Thing
 
