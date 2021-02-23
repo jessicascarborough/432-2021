@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-*Quote/Tweet to come*
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/figures/harrell_tw.png)
 
 ## Materials for Today's Class
 
