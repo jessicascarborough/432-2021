@@ -55,4 +55,4 @@ I'll link to an interesting presentation of some survey results on nearly 4000 s
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/figures/phd_fig2.png)
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/figures/phd_fig3.png)
 
-- Interested in drawing charts like these in R? Check out [Beautiful Radar CHarts in R using the fmsb and ggradar packages](https://www.datanovia.com/en/blog/beautiful-radar-chart-in-r-using-fmsb-and-ggplot-packages/) at datanovia.com.
+- Interested in drawing charts like these in R? Check out [Beautiful Radar Charts in R using the fmsb and ggradar packages](https://www.datanovia.com/en/blog/beautiful-radar-chart-in-r-using-fmsb-and-ggplot-packages/) at datanovia.com.
