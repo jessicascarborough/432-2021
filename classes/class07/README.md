@@ -19,6 +19,8 @@ The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://m
 2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01. If you don't have a data set ingested into R yet, I'd get on that today.
     - A tip: when developing an outcome for a *logistic* regression model, frame it as a "1 = yes/0 = no" numeric variable in R for modeling purposes, even if it originally comes as a Yes/No or other type of character variable. We will want to see that you have such a variable in place in your proposal, and it's perfectly OK if you also want to have it in your data as a named factor as well (perhaps for plotting purposes?)
 3. The [Answer Sketch for Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) will be posted in time for today's class.
+    - If you are looking for interesting approaches to visualizing data, perhaps in light of the Lab, I encourage you to take a look at Claus O. Wilke's [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) for lots of interesting ideas.
+    - I also strongly recommend Winston Chang's [R Graphics Cookbook, 2nd edition](https://r-graphics.org/) for specific and very useful advice including step-by-step instructions for creating all sorts of plots using R.
 
 ## Sources for Today's Class
 
