@@ -23,6 +23,7 @@ The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://m
     - I also strongly recommend Winston Chang's [R Graphics Cookbook, 2nd edition](https://r-graphics.org/) for specific and very useful advice including step-by-step instructions for creating all sorts of plots using R.
 4. I have changed the Course Calendar to move the deadline for [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) back one week to Monday 2021-03-15 at 9 PM.
 5. I'll also remind you that we don't have class next Tuesday 2021-03-02.
+6. We will be learning a bit about the [tidymodels ecosystem](https://www.tidymodels.org/) (of which broom, rsample and yardstick are parts) starting around Class 10. The [tidymodels book](https://www.tmwr.org/) by Max Kuhn and Julia Silge will be a helpful follow-up resource for what we'll be doing. I'll remind you that Max Kuhn, one of the authors of that book, will be presenting at [a Cleveland R Meetup session on TidyModels from 6 to 7:30 PM tomorrow (2021-02-24)](https://www.meetup.com/Cleveland-UseR-Group/events/273725112/). If you're interested, [go here to register (for free) and attend](https://www.meetup.com/Cleveland-UseR-Group/events/273725112/). The talk will also be recorded and archived on the [Cleveland R Users Group YouTube channel](https://www.youtube.com/channel/UC7C4YZ-9itQW7Nl4RVKDflg).
 
 ## Sources for Today's Class
 
