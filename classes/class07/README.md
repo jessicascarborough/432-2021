@@ -16,8 +16,9 @@ The [Credit Where Credit is Due article on Mary Eleanor Spear is here](https://m
 ## Announcements
 
 1. There is a [Minute Paper after Class 07](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers). Please complete it by noon Wednesday 2021-02-24.
-2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01.
-3. The [Answer Sketch for Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) will be posted in time for class.
+2. The [Project 1 Proposal](https://github.com/THOMASELOVE/432-2021/blob/master/project1/01_project1_proposal.md) is due at 9 PM Monday 2021-03-01. If you don't have a data set ingested into R yet, I'd get on that today.
+    - A tip: when developing an outcome for a *logistic* regression model, frame it as a "1 = yes/0 = no" numeric variable in R for modeling purposes, even if it originally comes as a Yes/No or other type of character variable. We will want to see that you have such a variable in place in your proposal, and it's perfectly OK if you also want to have it in your data as a named factor as well (perhaps for plotting purposes?)
+3. The [Answer Sketch for Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) will be posted in time for today's class.
 
 ## Sources for Today's Class
 
@@ -39,4 +40,4 @@ We won't get to these other references much today, but they'll come up going for
 
 ## One Last Thing
 
-To come.
+I'll link to a note and visualization by Jia You in *Science* from 2017-04-27 entitled "[Here's the visual proof of why vaccines do more good than harm](Here’s the visual proof of why vaccines do more good than harm)" in case you might be interested, as Ohio begins to announce its priorities for subsequent COVID-19 vaccination administration after the current group of people ages 65 and older.
