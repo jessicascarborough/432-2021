@@ -29,7 +29,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 I'll link to an interesting presentation of some survey results on nearly 4000 science and engineering PhDs reported by Maggie Kuo and Jia You in *Science* for 2017-11-27, entitled [Explore the skills that can open career doors after your doctoral training](https://www.sciencemag.org/careers/2017/11/explore-skills-can-open-career-doors-after-your-doctoral-training). 
 
-- A series of what are called [radar charts](https://en.wikipedia.org/wiki/Radar_chart) illustrate how well PhD training prepares you for a job.
+- A series of what are called [radar charts](https://en.wikipedia.org/wiki/Radar_chart) (also known as spider charts or web charts) illustrate how well PhD training prepares you for a job.
 - Separate charts describe technical skills, then interpersonal skills and then day-to-day skills.
 - The three images I've clipped below describe results across all sectors, but in [the actual presentation](https://www.sciencemag.org/careers/2017/11/explore-skills-can-open-career-doors-after-your-doctoral-training), you can look at specific subgroups including several types of research positions, consulting, scientific writing, teaching, and others.
 
@@ -37,4 +37,4 @@ I'll link to an interesting presentation of some survey results on nearly 4000 s
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/figures/phd_fig2.png)
 ![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/figures/phd_fig3.png)
 
-
+- Interested in drawing charts like these in R? Check out [Beautiful Radar CHarts in R using the fmsb and ggradar packages](https://www.datanovia.com/en/blog/beautiful-radar-chart-in-r-using-fmsb-and-ggplot-packages/) at datanovia.com.
