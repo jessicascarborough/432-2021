@@ -19,7 +19,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 3. Use the "free" time next Tuesday to be sure you're caught up on the reading. You should be finished with the Leek book this weekend, and up to Chapter 6 in *The Signal and the Noise*.
 4. [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due at 9 PM Monday 2021-03-15.
 
-## Project Data Cleaning Advice
+## Project Data Cleaning Advice (repeated here from note on Piazza)
 
 There is nothing here that is a new requirement, or that should be interpreted as changing the original instructions. Just a few tips.
 
@@ -41,7 +41,6 @@ There is nothing here that is a new requirement, or that should be interpreted a
 - Meeting as part of the [Agency for Health Care Research and Quality's](https://www.ahrq.gov/) [Health Care Research Training Study Section](https://www.ahrq.gov/funding/process/study-section/hcrtrst.html).
     - This study section reviews applications requesting support for health services research training and career development at the dissertation, junior faculty, and senior faculty level. Research infrastructure applications are also reviewed in this study section and demonstrations and evaluations in topics spanning the entire spectrum of health services research, including but not limited to cost, quality, access, outcomes, quality and effectiveness research, and implementation and innovation research. 
     - The study section will review applications submitted through the auspices of the National Research Service Awards (NRSA) (institutional T32 awards, individual fellowship awards [such as F32 postdoctoral awards and other similar programs]); requesting support for dissertation research (R36), curriculum development, training models, innovations (R25 awards), individual and program career development awards (K series grants), mid-career training enhancement awards, healthcare-related IT training; and training-related conferences and workshops (R13).
-
 
 ## One Last Thing
 
