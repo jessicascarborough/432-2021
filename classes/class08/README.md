@@ -9,6 +9,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 ## Materials for Today's Class
 
 - Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/432_2021_slides08.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/432_2021_slides08.Rmd).
+    - We will first clean up slides 56-74 from Class 07, before looking at the slides for Class 08. You can get [the PDF for Class 07 here](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class07/432_2021_slides07.pdf).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
 ## Announcements
