@@ -1,0 +1,160 @@
+---
+title: "432 Lab 02 Answer Sketch"
+author: "432 Instructional Staff"
+date: "Due 2021-02-22. Version: `r Sys.Date()`"
+output:
+  rmdformats::downcute:
+    self_contained: TRUE
+    number_sections: TRUE
+    code_folding: show
+    df_print: paged
+    code_download: TRUE
+---
+
+## Setup {-}
+
+```{r setup, message = FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+opts_chunk$set(comment=NA)
+opts_knit$set(width=75)
+```
+
+## Package Loading {-}
+
+```{r load_packages, message = FALSE}
+library(here)
+library(magrittr)
+library(janitor)
+library(ggrepel)
+library(broom)
+
+library(tidyverse)
+```
+
+## Import the `oh_counties_2020` Data {-}
+
+This template assumes that you've placed the `oh_counties_2020.csv` data set in a sub-folder called `data` beneath the `lab02` project directory you're using in R Studio.
+
+```{r, message = FALSE}
+oh20 <- read_csv(here("data", "oh_counties_2020.csv")) 
+
+oh20 <- oh20 %>%
+  clean_names() %>%
+    mutate(fips = as.character(fips)) 
+
+oh20
+```
+
+# Question 1 (30 points)
+
+There are, literally, thousands of appropriate options here, so it's difficult to write a sketch. Of course, that statement is true for all of these questions. 
+
+What Dr. Love assumed most people would do is some sort of labeled scatterplot. Here's an example.
+
+```{r message = FALSE}
+ggplot(oh20, aes(x = teen_births, y = lbw_pct, 
+                col= hsgrads))  +
+    geom_point() +
+    geom_smooth(method = "loess", se = FALSE) +
+    geom_label_repel(aes(
+        label=ifelse(hsgrads<80, as.character(county),'')),
+        segment.color = 'grey50') +
+    theme_bw() +
+    scale_color_viridis_c(end = 0.8, option = "magma",
+        (name="High School \nGraduation %"), 
+        trans = "reverse") +
+    labs(
+        title = "Rates of Low Birth Weights and Teen Births\nand Educational Attainment in Ohio's counties",
+        subtitle = "Data from County Health Rankings report, 2017",
+        caption="Labeled Counties have lower than 80% high school graduation rate",
+        y = "% of Births with Low Birth Weight", 
+        x = "Teen Birth rate per 1,000 females age 15-19")
+```
+
+Some people built maps, as well. That's great, but it's hard to show more than one variable at a time on a map of Ohio's counties. Dr. Love will share some of the plots we found to be most effective in class.
+
+# Question 2 (20 points)
+
+We don't write answer sketches to essay questions.
+
+# Question 3 (20 points)
+
+>> Create a linear regression model to predict `obese_pct` as a function of `food_env` adjusting for `median_income`, and treating all three variables as quantitative. Specify and then carefully interpret the estimated coefficient of `food_env` and a 90% uncertainty interval around that estimate in context using nothing but complete English sentences. A model using main effects only, entered as linear predictors, will be sufficient.
+
+The model we had in mind was 
+
+```{r}
+modelq3 <- lm(obese_pct ~ food_env + median_income, data = oh20)
+
+tidy(modelq3, conf.int = TRUE, conf.level = 0.90) 
+```
+
+The value of the estimated effect of a change of 1 point in `food_env` is an increase of 1.40 percentage points in `obese_pct`, with a 90% CI of (0.28, 2.53), assuming `median_income` is unchanged. 
+
+# Question 4 (10 points)
+
+>> Evaluate the quality of the model you fit in Question 3 in terms of adherence to regression modeling assumptions, through the specification and written evaluation of residual plots. What might be done to improve the fit of the model you've developed in Question 3? Identify by name any outlying counties and explain why they are flagged as outliers.
+
+To evaluate the quality of the model in terms of adherence to regression modeling assumptions, plotting the model might be a good idea. Remember, you are trying to check the following four assumptions: linearity, constant variance (homoscedasticity), normality and independence.  
+- The residuals vs fitted plot doesn't show any significant concerns for non-linearity  
+- The scale-location plot has a relatively flat loess smooth, so it doesn't concern us for non-constant variance  
+- The normal Q-Q plot doesn't show any concerns for regarding normality  
+- The residuals vs leverage plot does show some outliers, but none reach Cook's distance - so we aren't concerned about their inclusion substantially changing the fit of the model. 
+
+```{r}
+par(mfrow=c(2,2))
+plot(modelq3)
+plot(modelq3, 4)
+```
+
+Some of outliers identified in the above plots above are the counties in the kable below. 
+
+```{r}
+oh20 %>% slice(46, 68, 43, 80, 28) %>%
+  select(county, obese_pct, food_env, median_income) %>% kable()
+```
+
+Why are they outliers? Well, Logan county appears to have a much larger `obese_pct`, and Union and Geauga counties look to have much larger `median_incomes`. Preble and Lake counties appear to be poorly fit by the model. 
+
+```{r}
+oh20 %$% sort(obese_pct) %>% tail()
+oh20 %$% sort(food_env) %>% tail()
+oh20 %$% sort(median_income) %>% tail()
+```
+
+Assessing the fit of the model: the current model explains about 28% of the variation in `obese_pct`. 
+
+```{r}
+mq3 <- glance(modelq3) %>% 
+    mutate(name="mod_1") %>% 
+    select(name, r.squared, adj.r.squared, sigma, AIC, BIC) %>%
+    knitr::kable(digits = c(0,4,4,4,4,4))
+mq3
+```
+
+
+# Question 5 (20 points)
+
+>> Create a logistic regression model to predict the presence of a water violation (as contained in `h2oviol`) on the basis of `sev_housing` and `pm2_5`. Specify and then carefully interpret the estimated odds ratio associated with the `sev_housing` effect and a 90% uncertainty interval around that estimate in context using nothing but complete English sentences. Use a model with  main effects only.
+
+## Answer 5
+
+The model we had in mind was: 
+
+```{r}
+modelq5 <- glm(h2oviol == "Yes" ~ sev_housing + pm2_5, data = oh20, family = binomial())
+
+tidy(modelq5, conf.int = TRUE, conf.level = 0.90, exponentiate = TRUE)
+```
+
+- The value of the estimated effect of a change of 1 percentage point in `sev_housing` is an increase by a factor of 0.95 in the odds of a water violation, with a 90% CI of (0.80, 1.12), assuming `pm2_5` is unchanged. 
+
+
+# Session Information {-}
+
+```{r}
+xfun::session_info()
+```
