@@ -40,4 +40,4 @@ We won't get to these other references much today, but they'll come up going for
 
 ## One Last Thing
 
-I'll link to a note and visualization by Jia You in *Science* from 2017-04-27 entitled "[Here's the visual proof of why vaccines do more good than harm](Here’s the visual proof of why vaccines do more good than harm)" in case you might be interested, as Ohio begins to announce its priorities for subsequent COVID-19 vaccination administration after the current group of people ages 65 and older.
+I'll link to a note and visualization by Jia You in *Science* from 2017-04-27 entitled "[Here's the visual proof of why vaccines do more good than harm](https://www.sciencemag.org/news/2017/04/here-s-visual-proof-why-vaccines-do-more-good-harm)" in case you might be interested, as Ohio begins to announce its priorities for subsequent COVID-19 vaccination administration after the current group of people ages 65 and older.
