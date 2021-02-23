@@ -27,4 +27,11 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## One Last Thing
 
-To come.
+I'll link to an interesting presentation of some survey results on nearly 4000 science and engineering PhDs reported by Maggie Kuo and Jia You in *Science* for 2017-11-27, entitled [Explore the skills that can open career doors after your doctoral training](https://www.sciencemag.org/careers/2017/11/explore-skills-can-open-career-doors-after-your-doctoral-training). 
+
+- Separate plots illustrate how well PhD training prepares you for a job (divided into various sectors) through the use of figures like the one shown below.
+- The figures describe technical skills, then interpersonal skills and then day-to-day skills.
+
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/figures/phd_fig.png)
+
+
