@@ -21,6 +21,14 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 5. [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due at 9 PM Monday 2021-03-15.
     - You'll need material I'll discuss in Class 09 to do Question 1, and material from Class 10 to do Question 2. (Question 3 should be something you can do now.)
 
+## Notes from Dr. Love on Effect Size and Interpreting Effect Sizes
+
+I [built a description of effect sizes and how to discuss them](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/class08_effects_note.pdf). 
+
+- I strongly encourage you to read this document. 
+- If you want to see the R Markdown file I used to generate this result, [here it is](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class08/class08_effects_note.Rmd).
+- For more on these sorts of handouts (popularized by Edward Tufte) see [RStudio's implpementation](https://rstudio.github.io/tufte/)
+
 ## Project Data Cleaning Advice (repeated here from note on Piazza)
 
 There is nothing here that is a new requirement, or that should be interpreted as changing the original instructions. Just a few tips.
