@@ -13,7 +13,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Announcements
 
-1. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM. You'll need to wait on Question 2 until after Class 10, definitely.
+1. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM. 
+    - You should wait on Question 2 until after Class 10, but Questions 1 and 3 can be done anytime after today's class.
 
 ## One Last Thing
 
