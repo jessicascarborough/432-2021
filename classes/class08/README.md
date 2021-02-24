@@ -21,6 +21,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 5. [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due at 9 PM Monday 2021-03-15.
     - You'll need material I'll discuss in Class 09 to do Question 1, and material from Class 10 to do Question 2. (Question 3 should be something you can do now.)
 6. A semi-authoritative source suggests the [correct pronounciation of Gini](https://www.youtube.com/watch?v=Wy7_EwDtrcM) is the same as the word "Genie" (think the Aladdin stories).
+7. If you like [skim() and the skimr package](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html), you might also be interested in [the summarytools package](https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html) and the `dfSummary()` function.
 
 ## Notes from Dr. Love on Effect Size and Interpreting Effect Sizes
 
