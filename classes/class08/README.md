@@ -19,6 +19,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 3. A reminder that **we will not have class** on Tuesday 2021-03-02. [Class 09](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class09) will be held on Thursday 2021-03-04.
 4. Use the "free" time next Tuesday to be sure you're caught up on the reading. You should be finished with the Leek book this weekend, and up to Chapter 6 in *The Signal and the Noise*.
 5. [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due at 9 PM Monday 2021-03-15.
+    - You'll need material I'll discuss in Class 09 to do Question 1, and material from Class 10 to do Question 2. (Question 3 should be something you can do now.)
 
 ## Project Data Cleaning Advice (repeated here from note on Piazza)
 
