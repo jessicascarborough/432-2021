@@ -4,16 +4,16 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-*Quote/Tweet to come*
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/figures/maarten_tw.png)
 
 ## Materials for Today's Class
 
-- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/432_2021_slides09.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/432_2021_slides09.Rmd).
+- Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/432_2021_slides09.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/432_2021_slides09.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
 ## Announcements
 
-1. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM.
+1. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM. You'll need to wait on Question 2 until after Class 10, definitely.
 
 ## One Last Thing
 
