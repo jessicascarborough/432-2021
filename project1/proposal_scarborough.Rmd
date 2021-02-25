@@ -47,19 +47,126 @@ We'll start by loading the PLACES data set from the `data` directory in our proj
 
 ```{r load_data}
 
+counties_raw <- read.csv(here("data", "PLACES__Local_Data_for_Better_Health__County_Data_2020_release.csv"), na.strings = c(""))
 
-counties_raw <- read.csv(here("data", "PLACES__Local_Data_for_Better_Health__County_Data_2020_release.csv"))
-
-unique(counties_raw$Measure)
+?read.csv
+unique(counties_raw$Data_Value_Unit)
 ```
+
+<!-- regression:  -->
+<!-- physical health not good ~ visits to the doctor for check up + arthritis + stroke + ckd -->
+
+<!-- classifier:  -->
+<!-- mental health ~ no leisure time + sleeping less than 7 hours + physical health not good + binge drinking -->
 
 ## Cleaning the Data
 
-All cleaning and tidying goes here, leading to a single tibble in R. Be sure to explain what you're doing and why you're doing it. Do not show listings of the data as you clean it. 
+In this section, we'll work through taking the raw PLACSE 2020 dataset to a clean tibble that only contains our variables of interest. 
 
-## Another Cleaning the Data subheading.
+### Extracting variables of interest 
 
-I expect you'll use several subheadings here to help delineate tasks.
+To start cleaning our dataset, we'll filter the raw dataset to extract the measures and data types that we are interested in. 
+
+First, we'll remove any row that has a missing value for `LocationName`. Then, we'll filter the `Data_Value_Type` variable to include only `Age-adjusted prevalence`, and we'll filter the `Measure` column to include only the following variables of interest: 
+
+- `Physical health not good for >=14 days among adults aged >=18 years`
+- `Visits to dentist or dental clinic among adults aged >=18 years`
+- `Arthritis among adults aged >=18 years`
+- `Stroke among adults aged >=18 years`
+- `Chronic kidney disease among adults aged >=18 years`
+- `Mental health not good for >=14 days among adults aged >=18 years`
+- `No leisure-time physical activity among adults aged >=18 years`
+- `Sleeping less than 7 hours among adults aged >=18 years`
+- `Binge drinking among adults aged >=18 years`
+
+Additionally, we'll use mutate to create a new column, `CountyState_ID`, which will serve as the unique identifier for each entry, using `paste` to combine the county name (`LocationName`) and state abbreviation (`StateAbbr`) variables.
+
+```{r p1_extract_data}
+
+counties_clean <- counties_raw %>%
+  filter(!(is.na(LocationName))) %>%
+  filter(Data_Value_Type == "Age-adjusted prevalence") %>%
+  filter(Measure %in% c("Physical health not good for >=14 days among adults aged >=18 years", 
+                        "Visits to dentist or dental clinic among adults aged >=18 years",
+                        "Arthritis among adults aged >=18 years",
+                        "Stroke among adults aged >=18 years",
+                        "Chronic kidney disease among adults aged >=18 years",
+                        "Mental health not good for >=14 days among adults aged >=18 years",
+                        "No leisure-time physical activity among adults aged >=18 years",
+                        "Sleeping less than 7 hours among adults aged >=18 years",
+                        "Binge drinking among adults aged >=18 years")) %>%
+  mutate(CountyState_ID = paste(LocationName, StateAbbr, sep = "-"))
+
+
+
+```
+
+### Formatting tibble
+
+Next, we'll adjust the format of the tibble so that each row is a single county, while each column is a metric of interest. To do this, we'll use `pivot_wider` so that each unique `Measure` is a column, each row is a unique `CountyState_ID`, and the data are from `Data_Value`. Here, we'll also confirm that the `CountyState_ID` is unique for each row by showing that the number of rows in the tibble is the same as the number of unique values in the `CountyState_ID` column. 
+
+
+```{r p1_format_data}
+
+counties_clean <- counties_clean %>%
+  pivot_wider(id_cols = CountyState_ID, names_from = Measure, values_from = Data_Value)
+
+
+paste("Number of rows:", nrow(counties_clean))
+paste("Number of unique CountyState_ID rows:", length(unique(counties_clean$CountyState_ID)))
+
+```
+
+
+### Shorten column names
+
+Let's shorten the column names for ease of use and readability. They will be adjusted as follows:
+
+- `Physical health not good for >=14 days among adults aged >=18 years` --> `Poor_Physical_Health`
+- `Visits to dentist or dental clinic among adults aged >=18 years` --> `Dentist_Visit`
+- `Arthritis among adults aged >=18 years` --> `Arthritis`
+- `Stroke among adults aged >=18 years` --> `Stroke`
+- `Chronic kidney disease among adults aged >=18 years` --> `CKD`
+- `Mental health not good for >=14 days among adults aged >=18 years` --> `Poor_Mental_Health`
+- `No leisure-time physical activity among adults aged >=18 years` --> `No_Leisure_Exer`
+- `Sleeping less than 7 hours among adults aged >=18 years` --> `Less_Sleep`
+- `Binge drinking among adults aged >=18 years` --> `Binge_Drinking`
+
+```{r p1_adj_colnames}
+
+colnames(counties_clean) <- c("CountyState_ID", "Poor_Physical_Health", "Dentist_Visit", "Arthritis", "Stroke", "CKD", "Poor_Mental_Health", "No_Leisure_Exer", "Less_Sleep", "Binge_Drinking")
+
+```
+### Convert `Poor_Mental_Health`, `Dentist_Visit`, and `No_Leisure_Exercise` into categorical variables
+
+Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_Mental_Health` into a binary variable called `Poor_Mental_Health_Binary`, while `Dentist_Visit` and `No_Leisure_Exercise` will be converted into ordered categorical variables called `Dentist_Visit_Quartile` and `No_Leisure_Exer_Quintile`, respectively. `Poor_Mental_Health_Binary` will be categorized based on counties that are above and below the median value for the `Poor_Mental_Health` variable. `Dentist_Visit_Quartile` will be based on being in the first, second, third, or fourth quartile of the `Dentist_Visit` variable. `No_Leisure_Exer_Quintile` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. 
+
+Finally, we'll remove the continuous `Dentist_Visit` and `No_Leisure_Exercise` variables, because they won't be used in our future analysis. 
+
+```{r p1_convert_factor}
+
+
+counties_clean <- counties_clean %>%
+  mutate(Poor_Mental_Health_Binary = case_when(Poor_Mental_Health < median(Poor_Mental_Health) ~ factor(0),
+                                               Poor_Mental_Health >= median(Poor_Mental_Health) ~ factor(1)),
+         Dentist_Visit_Quartile = case_when(Dentist_Visit < quantile(Dentist_Visit, 0.25) ~ 1,
+                                            Dentist_Visit >= quantile(Dentist_Visit, 0.25) & 
+                                              Dentist_Visit < quantile(Dentist_Visit, 0.5)  ~ 2,
+                                            Dentist_Visit >= quantile(Dentist_Visit, 0.5) & 
+                                              Dentist_Visit < quantile(Dentist_Visit, 0.75)  ~ 3,
+                                            Dentist_Visit >= quantile(Dentist_Visit, 0.75) ~ 4),
+         No_Leisure_Exer_Quintile = case_when(No_Leisure_Exer < quantile(No_Leisure_Exer, 0.2) ~ 1,
+                                              No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.2) &
+                                                No_Leisure_Exer < quantile(No_Leisure_Exer, 0.4) ~ 2,
+                                              No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.4) &
+                                                No_Leisure_Exer < quantile(No_Leisure_Exer, 0.6) ~ 3,
+                                              No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.6) &
+                                                No_Leisure_Exer < quantile(No_Leisure_Exer, 0.8) ~ 4,
+                                              No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.8) ~ 5))
+
+
+
+```
 
 # The Tidy Tibble
 
