@@ -67,7 +67,7 @@ In this section, we'll work through taking the raw PLACSE 2020 dataset to a clea
 
 To start cleaning our dataset, we'll filter the raw dataset to extract the measures and data types that we are interested in. 
 
-First, we'll remove any row that has a missing value for `LocationName`. Then, we'll filter the `Data_Value_Type` variable to include only `Age-adjusted prevalence`, and we'll filter the `Measure` column to include only the following variables of interest: 
+First, we'll remove any row that has a missing value for `LocationName`. Based on the population size for these rows, they appear to represent an aggregate for the entire United States. As such, they do not represent the county-level data we are assessing with this project. Then, we'll filter the `Data_Value_Type` variable to include only `Age-adjusted prevalence`, and we'll filter the `Measure` column to include only the following variables of interest: 
 
 - `Physical health not good for >=14 days among adults aged >=18 years`
 - `Visits to dentist or dental clinic among adults aged >=18 years`
@@ -139,16 +139,16 @@ colnames(counties_clean) <- c("CountyState_ID", "Poor_Physical_Health", "Dentist
 ```
 ### Convert `Poor_Mental_Health`, `Dentist_Visit`, and `No_Leisure_Exercise` into categorical variables
 
-Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_Mental_Health` into a binary variable called `Poor_Mental_Health_Binary`, while `Dentist_Visit` and `No_Leisure_Exercise` will be converted into ordered categorical variables called `Dentist_Visit_Quartile` and `No_Leisure_Exer_Quintile`, respectively. `Poor_Mental_Health_Binary` will be categorized based on counties that are above and below the median value for the `Poor_Mental_Health` variable. `Dentist_Visit_Quartile` will be based on being in the first, second, third, or fourth quartile of the `Dentist_Visit` variable. `No_Leisure_Exer_Quintile` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. 
+Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_Mental_Health` into a binary variable called `Poor_Mental_Health_Binary`, while `Dentist_Visit` and `No_Leisure_Exer` will be converted into ordered categorical variables called `Dentist_Visit_Quartile` and `No_Leisure_Exer_Quintile`, respectively. `Poor_Mental_Health_Binary` will be categorized based on counties that are above and below the median value for the `Poor_Mental_Health` variable. `Dentist_Visit_Quartile` will be based on being in the first, second, third, or fourth quartile of the `Dentist_Visit` variable. `No_Leisure_Exer_Quintile` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. These three new variables will be converted to ordered factors. 
 
-Finally, we'll remove the continuous `Dentist_Visit` and `No_Leisure_Exercise` variables, because they won't be used in our future analysis. 
+We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. Seeing that it does, we'll remove the continuous `Dentist_Visit` and `No_Leisure_Exer` variables, because they won't be used in our future analysis.
 
 ```{r p1_convert_factor}
 
 
 counties_clean <- counties_clean %>%
-  mutate(Poor_Mental_Health_Binary = case_when(Poor_Mental_Health < median(Poor_Mental_Health) ~ factor(0),
-                                               Poor_Mental_Health >= median(Poor_Mental_Health) ~ factor(1)),
+  mutate(Poor_Mental_Health_Binary = case_when(Poor_Mental_Health < median(Poor_Mental_Health) ~ 0,
+                                               Poor_Mental_Health >= median(Poor_Mental_Health) ~ 1),
          Dentist_Visit_Quartile = case_when(Dentist_Visit < quantile(Dentist_Visit, 0.25) ~ 1,
                                             Dentist_Visit >= quantile(Dentist_Visit, 0.25) & 
                                               Dentist_Visit < quantile(Dentist_Visit, 0.5)  ~ 2,
@@ -162,18 +162,65 @@ counties_clean <- counties_clean %>%
                                                 No_Leisure_Exer < quantile(No_Leisure_Exer, 0.6) ~ 3,
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.6) &
                                                 No_Leisure_Exer < quantile(No_Leisure_Exer, 0.8) ~ 4,
-                                              No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.8) ~ 5))
+                                              No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.8) ~ 5)) %>%
+  mutate(Poor_Mental_Health_Binary = factor(Poor_Mental_Health_Binary, ordered = TRUE),
+         Dentist_Visit_Quartile = factor(Dentist_Visit_Quartile, ordered = TRUE),
+         No_Leisure_Exer_Quintile = factor(No_Leisure_Exer_Quintile, ordered = TRUE))
 
+
+counties_clean$No_Leisure_Exer_Quintile
+
+
+counties_clean %>%
+  group_by(Poor_Mental_Health_Binary) %>%
+  summarise(n = length(Poor_Mental_Health),
+            min = min(Poor_Mental_Health),
+            max = max(Poor_Mental_Health))
+
+counties_clean %>%
+  group_by(Dentist_Visit_Quartile) %>%
+  summarise(n = length(Dentist_Visit),
+            min = min(Dentist_Visit),
+            max = max(Dentist_Visit))
+
+counties_clean %>%
+  group_by(No_Leisure_Exer_Quintile) %>%
+  summarise(n = length(No_Leisure_Exer),
+            min = min(No_Leisure_Exer),
+            max = max(No_Leisure_Exer))
+
+
+counties_clean <- counties_clean %>%
+  select(-c(Dentist_Visit, No_Leisure_Exer))
 
 
 ```
+
+### Subsampling
+
+Our last step will be sampling the data to ensure that there are no more than 1200 rows. We are performing this step last, because we wanted to ensure that the `Poor_Mental_Health_Binary`, `Dentist_Visit_Quartile`, `No_Leisure_Exer_Quintile` were categorized based on their original, continuous value's relationship (e.g. above/below the median) to the entire dataset, not just the subsampling. We'll use `sample_n` from the `dpylr` package to choose 1200 counties without replacement.
+
+```{r p1_sampling}
+
+counties_sample <- counties_clean %>%
+  sample_n(size = 1200, replace = FALSE)
+
+
+```
+
+
 
 # The Tidy Tibble
 
 ## Listing the Tibble
 
-Here, you will list the tibble, after all cleaning is complete. Just list the tibble.
+Let's take a look at our tidy tibble. 
 
+```{r p1_list_tbl}
+
+counties_sample
+
+```
 ## Size and Identifiers
 
 Do what we asked you to do in the instructions.
