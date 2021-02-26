@@ -15,7 +15,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 1. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM. 
     - You should wait on Question 2 until after Class 10, but Questions 1 and 3 can be done anytime after today's class.
-2. I made some small updates to Chapters 2 and 6 of the Class Notes on 2021-02-26. 
+2. I made some small updates to Chapters 2 and 6 of the [Course Notes](https://thomaselove.github.io/432-notes/) on 2021-02-26. 
 3. You might be interested in this [Data Science Career Q&A session](https://www.youtube.com/watch?v=Nd3fvAILfMk), which is designed to help people (mostly undergraduates, but there is useful advice here at all levels) learn about transitioning from being a student to being someone with a job to do data science. It's part of the [Pod of Ascelepius](https://www.youtube.com/channel/UCkEz2tDR5K6AjlKw-JrV57w) I've mentioned in the past.
 
 
