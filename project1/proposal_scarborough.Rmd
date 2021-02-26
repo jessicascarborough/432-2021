@@ -49,15 +49,9 @@ We'll start by loading the PLACES data set from the `data` directory in our proj
 
 counties_raw <- read.csv(here("data", "PLACES__Local_Data_for_Better_Health__County_Data_2020_release.csv"), na.strings = c(""))
 
-?read.csv
-unique(counties_raw$Data_Value_Unit)
+unique(counties_raw$Measure)
+
 ```
-
-<!-- regression:  -->
-<!-- physical health not good ~ visits to the doctor for check up + arthritis + stroke + ckd -->
-
-<!-- classifier:  -->
-<!-- mental health ~ no leisure time + sleeping less than 7 hours + physical health not good + binge drinking -->
 
 ## Cleaning the Data
 
@@ -70,7 +64,7 @@ To start cleaning our dataset, we'll filter the raw dataset to extract the measu
 First, we'll remove any row that has a missing value for `LocationName`. Based on the population size for these rows, they appear to represent an aggregate for the entire United States. As such, they do not represent the county-level data we are assessing with this project. Then, we'll filter the `Data_Value_Type` variable to include only `Age-adjusted prevalence`, and we'll filter the `Measure` column to include only the following variables of interest: 
 
 - `Physical health not good for >=14 days among adults aged >=18 years`
-- `Visits to dentist or dental clinic among adults aged >=18 years`
+- `Visits to doctor for routine checkup within the past year among adults aged >=18 years`
 - `Arthritis among adults aged >=18 years`
 - `Stroke among adults aged >=18 years`
 - `Chronic kidney disease among adults aged >=18 years`
@@ -87,7 +81,7 @@ counties_clean <- counties_raw %>%
   filter(!(is.na(LocationName))) %>%
   filter(Data_Value_Type == "Age-adjusted prevalence") %>%
   filter(Measure %in% c("Physical health not good for >=14 days among adults aged >=18 years", 
-                        "Visits to dentist or dental clinic among adults aged >=18 years",
+                        "Visits to doctor for routine checkup within the past year among adults aged >=18 years",
                         "Arthritis among adults aged >=18 years",
                         "Stroke among adults aged >=18 years",
                         "Chronic kidney disease among adults aged >=18 years",
@@ -122,40 +116,40 @@ paste("Number of unique CountyState_ID rows:", length(unique(counties_clean$Coun
 
 Let's shorten the column names for ease of use and readability. They will be adjusted as follows:
 
-- `Physical health not good for >=14 days among adults aged >=18 years` --> `Poor_Physical_Health`
-- `Visits to dentist or dental clinic among adults aged >=18 years` --> `Dentist_Visit`
+- `Physical health not good for >=14 days among adults aged >=18 years` --> `Poor_PHealth`
+- `Visits to doctor for routine checkup within the past year among adults aged >=18 years` --> `Doc_Visit`
 - `Arthritis among adults aged >=18 years` --> `Arthritis`
 - `Stroke among adults aged >=18 years` --> `Stroke`
 - `Chronic kidney disease among adults aged >=18 years` --> `CKD`
-- `Mental health not good for >=14 days among adults aged >=18 years` --> `Poor_Mental_Health`
+- `Mental health not good for >=14 days among adults aged >=18 years` --> `Poor_MHealth`
 - `No leisure-time physical activity among adults aged >=18 years` --> `No_Leisure_Exer`
 - `Sleeping less than 7 hours among adults aged >=18 years` --> `Less_Sleep`
 - `Binge drinking among adults aged >=18 years` --> `Binge_Drinking`
 
 ```{r p1_adj_colnames}
 
-colnames(counties_clean) <- c("CountyState_ID", "Poor_Physical_Health", "Dentist_Visit", "Arthritis", "Stroke", "CKD", "Poor_Mental_Health", "No_Leisure_Exer", "Less_Sleep", "Binge_Drinking")
+colnames(counties_clean) <- c("CountyState_ID", "Poor_PHealth", "Doc_Visit", "Arthritis", "Stroke", "CKD", "Poor_MHealth", "No_Leisure_Exer", "Less_Sleep", "Binge_Drinking")
 
 ```
-### Convert `Poor_Mental_Health`, `Dentist_Visit`, and `No_Leisure_Exercise` into categorical variables
+### Convert `Poor_MHealth`, `Doc_Visit`, and `No_Leisure_Exercise` into categorical variables
 
-Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_Mental_Health` into a binary variable called `Poor_Mental_Health_Binary`, while `Dentist_Visit` and `No_Leisure_Exer` will be converted into ordered categorical variables called `Dentist_Visit_Quartile` and `No_Leisure_Exer_Quintile`, respectively. `Poor_Mental_Health_Binary` will be categorized based on counties that are above and below the median value for the `Poor_Mental_Health` variable. `Dentist_Visit_Quartile` will be based on being in the first, second, third, or fourth quartile of the `Dentist_Visit` variable. `No_Leisure_Exer_Quintile` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. These three new variables will be converted to ordered factors. 
+Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_MHealth` into a binary variable called `Poor_MHealth_Bin`, while `Doc_Visit` and `No_Leisure_Exer` will be converted into ordered categorical variables called `Doc_Visit_Quar` and `No_Leisure_Exer_Quin`, respectively. `Poor_MHealth_Bin` will be categorized based on counties that are above and below the median value for the `Poor_MHealth` variable. `Doc_Visit_Quar` will be based on being in the first, second, third, or fourth quartile of the `Doc_Visit` variable. `No_Leisure_Exer_Quin` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. These three new variables will be converted to ordered factors. 
 
-We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. Seeing that it does, we'll remove the continuous `Dentist_Visit` and `No_Leisure_Exer` variables, because they won't be used in our future analysis.
+We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. Seeing that it does, we'll remove the continuous `Doc_Visit`, `No_Leisure_Exer`, and `Poor_MHealth` variables, because they won't be used in our future analysis.
 
 ```{r p1_convert_factor}
 
 
 counties_clean <- counties_clean %>%
-  mutate(Poor_Mental_Health_Binary = case_when(Poor_Mental_Health < median(Poor_Mental_Health) ~ 0,
-                                               Poor_Mental_Health >= median(Poor_Mental_Health) ~ 1),
-         Dentist_Visit_Quartile = case_when(Dentist_Visit < quantile(Dentist_Visit, 0.25) ~ 1,
-                                            Dentist_Visit >= quantile(Dentist_Visit, 0.25) & 
-                                              Dentist_Visit < quantile(Dentist_Visit, 0.5)  ~ 2,
-                                            Dentist_Visit >= quantile(Dentist_Visit, 0.5) & 
-                                              Dentist_Visit < quantile(Dentist_Visit, 0.75)  ~ 3,
-                                            Dentist_Visit >= quantile(Dentist_Visit, 0.75) ~ 4),
-         No_Leisure_Exer_Quintile = case_when(No_Leisure_Exer < quantile(No_Leisure_Exer, 0.2) ~ 1,
+  mutate(Poor_MHealth_Bin = case_when(Poor_MHealth < median(Poor_MHealth) ~ 0,
+                                               Poor_MHealth >= median(Poor_MHealth) ~ 1),
+         Doc_Visit_Quar = case_when(Doc_Visit < quantile(Doc_Visit, 0.25) ~ 1,
+                                            Doc_Visit >= quantile(Doc_Visit, 0.25) & 
+                                              Doc_Visit < quantile(Doc_Visit, 0.5)  ~ 2,
+                                            Doc_Visit >= quantile(Doc_Visit, 0.5) & 
+                                              Doc_Visit < quantile(Doc_Visit, 0.75)  ~ 3,
+                                            Doc_Visit >= quantile(Doc_Visit, 0.75) ~ 4),
+         No_Leisure_Exer_Quin = case_when(No_Leisure_Exer < quantile(No_Leisure_Exer, 0.2) ~ 1,
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.2) &
                                                 No_Leisure_Exer < quantile(No_Leisure_Exer, 0.4) ~ 2,
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.4) &
@@ -163,47 +157,50 @@ counties_clean <- counties_clean %>%
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.6) &
                                                 No_Leisure_Exer < quantile(No_Leisure_Exer, 0.8) ~ 4,
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.8) ~ 5)) %>%
-  mutate(Poor_Mental_Health_Binary = factor(Poor_Mental_Health_Binary, ordered = TRUE),
-         Dentist_Visit_Quartile = factor(Dentist_Visit_Quartile, ordered = TRUE),
-         No_Leisure_Exer_Quintile = factor(No_Leisure_Exer_Quintile, ordered = TRUE))
+  mutate(Poor_MHealth_Bin = factor(Poor_MHealth_Bin, ordered = TRUE),
+         Doc_Visit_Quar = factor(Doc_Visit_Quar, ordered = TRUE),
+         No_Leisure_Exer_Quin = factor(No_Leisure_Exer_Quin, ordered = TRUE))
 
 
-counties_clean$No_Leisure_Exer_Quintile
+counties_clean$No_Leisure_Exer_Quin
 
 
 counties_clean %>%
-  group_by(Poor_Mental_Health_Binary) %>%
-  summarise(n = length(Poor_Mental_Health),
-            min = min(Poor_Mental_Health),
-            max = max(Poor_Mental_Health))
+  group_by(Poor_MHealth_Bin) %>%
+  summarise(n = length(Poor_MHealth),
+            min = min(Poor_MHealth),
+            max = max(Poor_MHealth))
 
 counties_clean %>%
-  group_by(Dentist_Visit_Quartile) %>%
-  summarise(n = length(Dentist_Visit),
-            min = min(Dentist_Visit),
-            max = max(Dentist_Visit))
+  group_by(Doc_Visit_Quar) %>%
+  summarise(n = length(Doc_Visit),
+            min = min(Doc_Visit),
+            max = max(Doc_Visit))
 
 counties_clean %>%
-  group_by(No_Leisure_Exer_Quintile) %>%
+  group_by(No_Leisure_Exer_Quin) %>%
   summarise(n = length(No_Leisure_Exer),
             min = min(No_Leisure_Exer),
             max = max(No_Leisure_Exer))
 
 
 counties_clean <- counties_clean %>%
-  select(-c(Dentist_Visit, No_Leisure_Exer))
+  select(-c(Doc_Visit, No_Leisure_Exer, Poor_MHealth))
 
 
 ```
 
 ### Subsampling
 
-Our last step will be sampling the data to ensure that there are no more than 1200 rows. We are performing this step last, because we wanted to ensure that the `Poor_Mental_Health_Binary`, `Dentist_Visit_Quartile`, `No_Leisure_Exer_Quintile` were categorized based on their original, continuous value's relationship (e.g. above/below the median) to the entire dataset, not just the subsampling. We'll use `sample_n` from the `dpylr` package to choose 1200 counties without replacement.
+Our last step will be sampling the data to ensure that there are no more than 1200 rows. We are performing this step last, because we wanted to ensure that the `Poor_MHealth_Bin`, `Doc_Visit_Quar`, `No_Leisure_Exer_Quin` were categorized based on their original, continuous value's relationship (e.g. above/below the median) to the entire dataset, not just the subsampling. We'll set a seed and then use `sample_n` from the `dpylr` package to choose 1200 counties without replacement.
 
 ```{r p1_sampling}
 
+set.seed(0)
+
 counties_sample <- counties_clean %>%
   sample_n(size = 1200, replace = FALSE)
+
 
 
 ```
@@ -223,11 +220,24 @@ counties_sample
 ```
 ## Size and Identifiers
 
-Do what we asked you to do in the instructions.
+This dataset has 1200 rows and 10 columns, which is confirmed with the tibble listed above. The `CountyState_ID` column contains a unique identifier for each row, which we will confirm below using `unique`.
+
+```{r p1_size}
+
+length(unique(counties_sample$CountyState_ID))
+
+```
+
 
 ## Saving the R data set
 
-Now, save your tibble as an R data set (.Rds file, which you'll also provide to us.)
+Now, we'll save this final dataset as an .rds file, using `saveRDS`.
+
+```{r p1_saveRDS}
+
+saveRDS(counties_sample, file = here("data", "places_clean_subsample.rds"))
+
+```
 
 # The Code Book
 
@@ -237,14 +247,32 @@ See the instructions and be sure that your code book includes all necessary elem
 
 Here, to help you get started, is the example from the instructions.
 
-Variable | Role | Type | Description
--------- | ---- | ---- | -----------------
-`subjectID` | identifier | - | character code for subjects
-`sysbp` | outcome | quant | Most Recent Systolic Blood Pressure, in mm Hg
-`statin` | input | 2-cat | Has a current statin prescription? (Yes or No)
+Variable               | Role              | Type  | Description
+---------------------- | ----------------- | ----- | ------------------------------------------------------------
+`CountyState_ID`       | identifier        | \-    | 
+`Poor_PHealth`         | outcome and input | quant |  
+`Arthritis`            | input             | quant |  
+`Stroke`               | input             | quant |  
+`CKD`                  | input             | quant |  
+`Less_Sleep`           | input             | quant |  
+`Binge_Drinking`       | input             | quant |  
+`Poor_MHealth_Bin`     | outcome           | 2-cat |  
+`Doc_Visit_Quar`       | input             | 4-cat |  
+`No_Leisure_Exer_Quin` | input             | 5-cat |  
 
+<!-- regression:  -->
+<!-- physical health not good ~ visits to the doctor for check up + arthritis + stroke + ckd -->
+
+<!-- classifier:  -->
+<!-- mental health ~ no leisure time + sleeping less than 7 hours + physical health not good + binge drinking -->
 
 ## Numerical Description
+
+```{r p1_describe}
+
+Hmisc::describe(counties_sample)
+
+```
 
 Here's where you would run `describe` from `Hmisc`.
 
