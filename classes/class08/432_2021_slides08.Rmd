@@ -31,7 +31,7 @@ library(tidyverse)
 Heart and Estrogen/Progestin Study (HERS)
 
 - Clinical trial of hormone therapy for the prevention of recurrent heart attacks and deaths among 2763 post-menopausal women with existing coronary heart disease (see Hulley et al 1998 and many subsequent references, including Vittinghoff, Chapter 4.)
-- We're exluding the women in the trial with a diabetes diagnosis.
+- We're excluding the women in the trial with a diabetes diagnosis.
 
 ```{r, message = FALSE}
 hers_raw <- read_csv(here("data/hersdata.csv")) %>% 
@@ -167,7 +167,7 @@ Resampling results for determining the complexity of imputation models
 
 Variable being imputed: ldl
 
-Bootstrap bias-corrrected summaries:
+Bootstrap bias-corrected summaries:
 
 Statistic | nk = 0 | nk = 3 | nk = 4 | nk = 5
 -----------------: | -----: | -----: | -----: | -----: 
@@ -550,8 +550,6 @@ anova(m3imp)
 ```{r, echo = FALSE, fig.align = "center", out.width = '90%'}
 include_graphics("figures/fig_m3C.png")
 ```
-
-## `summary(m3imp)`
 
 ## Summary of Effect Estimates for `m3imp`
 
