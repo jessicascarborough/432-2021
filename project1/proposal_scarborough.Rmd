@@ -22,7 +22,7 @@ opts_knit$set(width=75)
 ```{r packages, message = FALSE}
 library(knitr); library(rmdformats)
 library(here); library(janitor); library(magrittr)
-library(rms); library(broom)
+library(rms); library(broom); library(patchwork)
 
 # other packages as needed can go here
 
@@ -249,16 +249,16 @@ Here, to help you get started, is the example from the instructions.
 
 Variable               | Role              | Type  | Description
 ---------------------- | ----------------- | ----- | ------------------------------------------------------------
-`CountyState_ID`       | identifier        | \-    | 
-`Poor_PHealth`         | outcome and input | quant |  
-`Arthritis`            | input             | quant |  
-`Stroke`               | input             | quant |  
-`CKD`                  | input             | quant |  
-`Less_Sleep`           | input             | quant |  
-`Binge_Drinking`       | input             | quant |  
-`Poor_MHealth_Bin`     | outcome           | 2-cat |  
-`Doc_Visit_Quar`       | input             | 4-cat |  
-`No_Leisure_Exer_Quin` | input             | 5-cat |  
+`CountyState_ID`       | identifier        | \-    | character identifier for counties
+`Poor_PHealth`         | outcome and input | quant | age-adjusted prevalence of physical health not good for >= 14 days out of the last 30 days among adults aged >= 18 years old 
+`Arthritis`            | input             | quant | age-adjusted prevalence of arthritis among adults aged >= 18 years old
+`Stroke`               | input             | quant | age-adjusted prevalence of stroke among adults aged >= 18 years old 
+`CKD`                  | input             | quant | age-adjusted prevalence of chronic kidney disease among adults aged >= 18 years old
+`Less_Sleep`           | input             | quant | age-adjusted prevalence of sleeping less than an average of 7 hours in a 24 hour period among adults aged >= 18 years old
+`Binge_Drinking`       | input             | quant | age-adjusted prevalence of binge drinking (4+ drinks for women and 5+ drinks for men in one occassion) in the past 30 days among adults aged >= 18 years old
+`Poor_MHealth_Bin`     | outcome           | 2-cat | age-adjusted prevalence of mental health not good for >= 14 days out of the last 30 days  among adults aged >= 18 years old, converted into 2 categories (`0`, `1`) separated by median.
+`Doc_Visit_Quar`       | input             | 4-cat (ordinal) | age-adjusted prevalence of visits to doctor for routine checkup within the past year among adults aged >= 18 years old, converted into 4 ordinal categories (`1`, `2`, `3`, `4`) based on quartiles.
+`No_Leisure_Exer_Quin` | input             | 5-cat (ordinal) | age-adjusted prevalence of no leisure-time physical activity among adults aged >= 18 years old, converted into 5 ordinal categories (`1`, `2`, `3`, `4`, `5`) based on quintiles.
 
 <!-- regression:  -->
 <!-- physical health not good ~ visits to the doctor for check up + arthritis + stroke + ckd -->
@@ -278,23 +278,199 @@ Here's where you would run `describe` from `Hmisc`.
 
 # Linear Regression Plans
 
+Using linear regression, I plan to assess whether the prevalence of poor physical health for the majority of the month can be predicted using prevalence of visiting the doctor for a checkup, arthritis, stroke, and chronic kidney disease. 
+
 ## My Quantitative Outcome
 
-Follow the instructions.
+
+Our quantitative outcome, `Poor_PHealth`, is defined as a county's age-adjusted prevalence of poor physical health for >= 14 days in the last 30 days. We're interested in predicting this variable, as it provides a general assessment from individuals of how they view their physical health.  
+
+As demonstrated in the Codebook's Numerical Description section, our dataset contains no missing values, therefore we have 1200 samples with complete information on this outcome. Below, we can see a histogram of the `Poor_PHealth` variable, with a normal distribution curve with the same mean and standard deviation as the `Poor_PHealth` distribution. We can see that although the variable has minimal right skew, it is not drastically non-normal. Therefore, we will choose to not transform the variable for the sake of simplicity. Additionally, we calculated 168 unique values in this variable, confirming that it is a relatively continuous variable and meets the standard for a quantitative variable to be used in this project (>= 10 distinct, ordered values observed).
+
+```{r p1_phealth_distribution}
+
+unique_values <- length(unique(counties_sample$Poor_PHealth))
+
+bin_w <- 1
+res <- mosaic::fav_stats(counties_sample$Poor_PHealth)
+hist_plot <-  ggplot(counties_sample, aes(x = Poor_PHealth)) +
+  geom_histogram(binwidth = bin_w, color = "white", fill = "darkseagreen") + 
+  stat_function( # Plot Normal curve
+        fun = function(x) dnorm(x, mean = res$mean,
+                                sd = res$sd) * 
+            res$n * bin_w,
+        col = "darkgreen", size = 1.5) + 
+  labs(title = "The `Poor_PHealth` variable has minimal right skew",
+       subtitle = paste0(unique_values, " unique values"),
+       x = "Poor Physical Health Prevalence (%)", y = "Count") + 
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+hist_plot
+
+
+```
+
 
 ## My Planned Predictors (Linear Model)
 
-Follow the instructions.
+Now, tell us precisely which four (or more) candidate predictors (inputs) you intend to use for your linear regression model.
+
+- Please use the variable names that appear in your code book and tibble.
+- Demonstrate to us that you have at least one input which is quantitative, specifically that it has at least 10 different, ordered, observed values.
+- Demonstrate to us that you have at least one categorical input which has between 3 and 6 categories, that will be used as a factor in your modeling, and that has at least 30 observations in each level of the factor.
+- Demonstrate that the total number of candidate predictors you suggest is no more than 4 + (N-100)/100 candidate regression inputs, rounding down, where N is the sample size for your tibble.
+
+```{r p1_lin_predictors}
+
+
+unique_values <- length(unique(counties_sample$Arthritis))
+
+bin_w1 <- 1
+res1 <- mosaic::fav_stats(counties_sample$Arthritis)
+hist_plot_arthritis <-  ggplot(counties_sample, aes(x = Arthritis)) +
+  geom_histogram(binwidth = bin_w1, color = "white", fill = "darkolivegreen2") + 
+  stat_function( # Plot Normal curve
+        fun = function(x) dnorm(x, mean = res1$mean,
+                                sd = res1$sd) * 
+            res1$n * bin_w1,
+        col = "navyblue", size = 1.5) + 
+  labs(title = "`Arthritis` Distribution",
+       subtitle = paste0(unique_values, " unique values"),
+       x = "Arthritis Prevalence (%)", y = "Count") + 
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+
+unique_values <- length(unique(counties_sample$Stroke))
+bin_w2 <- 0.2
+res2 <- mosaic::fav_stats(counties_sample$Stroke)
+hist_plot_stroke <-  ggplot(counties_sample, aes(x = Stroke)) +
+  geom_histogram(binwidth = bin_w2, color = "white", fill = "darkolivegreen3") + 
+  stat_function( # Plot Normal curve
+        fun = function(x) dnorm(x, mean = res2$mean,
+                                sd = res2$sd) * 
+            res2$n * bin_w2,
+        col = "navyblue", size = 1.5) + 
+  labs(title = "`Stroke` Distribution",
+       subtitle = paste0(unique_values, " unique values"),
+       x = "Stroke Prevalence (%)", y = "Count") + 
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+
+unique_values <- length(unique(counties_sample$CKD))
+bin_w3 <- 2
+res3 <- mosaic::fav_stats(counties_sample$CKD)
+hist_plot_CKD <-  ggplot(counties_sample, aes(x = CKD)) +
+  geom_histogram(binwidth = bin_w3, color = "white", fill = "darkolivegreen4") + 
+  stat_function( # Plot Normal curve
+        fun = function(x) dnorm(x, mean = res3$mean,
+                                sd = res3$sd) * 
+            res3$n * bin_w3,
+        col = "navyblue", size = 1.5) + 
+  labs(title = "`CKD` Distribution",
+       subtitle = paste0(unique_values, " unique values"),
+       x = "CKD Prevalence (%)", y = "Count") + 
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+
+bar_plot_doc <- ggplot(counties_sample, aes(x = Doc_Visit_Quar, fill = Doc_Visit_Quar)) + 
+  geom_bar(stat = "count", fill = c("lightsteelblue1", "lightsteelblue2", "lightsteelblue3", "lightsteelblue4")) +
+  labs(title = "Number of Counties in `Doc_Visit_Quar` Categories",
+       x = "Quartile Category for `Doc_Visit_Quar` Variable") +
+  theme_classic() + 
+  theme(legend.position = 0,
+        plot.title = element_text(hjust = 0.5)) +
+  geom_text(stat='count', aes(label=paste0("n = ", ..count..)), vjust=1.3)
+  
+(hist_plot_arthritis  + hist_plot_stroke + hist_plot_CKD) / bar_plot_doc
+
+
+```
 
 # Logistic Regression Plans
 
+Using logistic regression, I plan to assess whether prevalence of poor mental health can be predicted by prevalence of no leisure-time exercise, limited sleep, poor physical health for the majority of the month, and binge drinking. 
+
 ## My Binary Outcome
 
-Follow the instructions.
+This logistic regression will predict `Poor_MHealth_Bin`, which is a binary variable representing whether a county is above the median for prevalence of >=14 poor mental health days out of the last 30 days, where `0` = No and `1` = Yes. We're using this variable as our outcome, because it is well known that the causes of poor mental health are multifactorial and I'm interested in assessing if there are any intriguing relationships with other health-related variables in our dataset. 
+
+Below, we'll group our data frame using `group_by` and `count` to show that there are 581 samples in the `0` category and 619 samples in the `1` category.
+
+```{r p1_log_outcome}
+
+counties_sample %>% 
+  group_by(Poor_MHealth_Bin) %>%
+  count()
+
+```
 
 ## My Planned Predictors (Logistic Model)
 
-Follow the instructions.
+```{r p1_predictors_log}
+
+unique_values <- length(unique(counties_sample$Less_Sleep))
+
+bin_w1 <- 1
+res1 <- mosaic::fav_stats(counties_sample$Less_Sleep)
+hist_plot_sleep <-  ggplot(counties_sample, aes(x = Less_Sleep)) +
+  geom_histogram(binwidth = bin_w1, color = "white", fill = "wheat2") + 
+  stat_function( # Plot Normal curve
+        fun = function(x) dnorm(x, mean = res1$mean,
+                                sd = res1$sd) * 
+            res1$n * bin_w1,
+        col = "wheat4", size = 1.5) + 
+  labs(title = "`Less_Sleep` Distribution",
+       subtitle = paste0(unique_values, " unique values"),
+       x = "Poor Sleep Prevalence (%)", y = "Count") + 
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+
+unique_values <- length(unique(counties_sample$Binge_Drinking))
+bin_w2 <- 0.2
+res2 <- mosaic::fav_stats(counties_sample$Binge_Drinking)
+hist_plot_binge <-  ggplot(counties_sample, aes(x = Binge_Drinking)) +
+  geom_histogram(binwidth = bin_w2, color = "white", fill = "burlywood3") + 
+  stat_function( # Plot Normal curve
+        fun = function(x) dnorm(x, mean = res2$mean,
+                                sd = res2$sd) * 
+            res2$n * bin_w2,
+        col = "wheat4", size = 1.5) + 
+  labs(title = "`Binge_Drinking` Distribution",
+       subtitle = paste0(unique_values, " unique values"),
+       x = "Binge Drinking Prevalence (%)", y = "Count") + 
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+
+bar_plot_exer <- ggplot(counties_sample, aes(x = No_Leisure_Exer_Quin, fill = No_Leisure_Exer_Quin)) + 
+  geom_bar(stat = "count", fill = c("#CDFCED", "#B9E3D6", "#9FC3B8", "#728C84", "#556762")) +
+  labs(title = "Number of Counties in `No_Leisure_Exer` Categories",
+       x = "Quintile Category for `No_Leisure_Exer` Variable") +
+  theme_classic() + 
+  theme(legend.position = 0,
+        plot.title = element_text(hjust = 0.5)) +
+  geom_text(stat='count', aes(label=paste0("n = ", ..count..)), vjust=1.3)
+  
+(hist_plot_sleep + hist_plot_binge) / bar_plot_exer
+
+
+```
+
+Now, tell us precisely which four (or more) candidate predictors you intend to use for your logistic regression model.
+
+- If you are using some of the same predictors as in your linear regression model, there’s no need to repeat yourself. Simply tell us which variables you’ll use again, and then provide descriptions for any new predictors that did not appear in your plans for the linear model.
+
 
 # Affirmation 
 
