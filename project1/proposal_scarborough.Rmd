@@ -1,5 +1,5 @@
 ---
-title: "Real Title Goes Here"
+title: "What influences our physical and mental health?"
 author: "Jessica Scarborough"
 date: "`r Sys.Date()`"
 output:
@@ -131,11 +131,11 @@ Let's shorten the column names for ease of use and readability. They will be adj
 colnames(counties_clean) <- c("CountyState_ID", "Poor_PHealth", "Doc_Visit", "Arthritis", "Stroke", "CKD", "Poor_MHealth", "No_Leisure_Exer", "Less_Sleep", "Binge_Drinking")
 
 ```
+
+
 ### Convert `Poor_MHealth`, `Doc_Visit`, and `No_Leisure_Exercise` into categorical variables
 
 Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_MHealth` into a binary variable called `Poor_MHealth_Bin`, while `Doc_Visit` and `No_Leisure_Exer` will be converted into ordered categorical variables called `Doc_Visit_Quar` and `No_Leisure_Exer_Quin`, respectively. `Poor_MHealth_Bin` will be categorized based on counties that are above and below the median value for the `Poor_MHealth` variable. `Doc_Visit_Quar` will be based on being in the first, second, third, or fourth quartile of the `Doc_Visit` variable. `No_Leisure_Exer_Quin` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. These three new variables will be converted to ordered factors. 
-
-We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. Seeing that it does, we'll remove the continuous `Doc_Visit`, `No_Leisure_Exer`, and `Poor_MHealth` variables, because they won't be used in our future analysis.
 
 ```{r p1_convert_factor}
 
@@ -161,9 +161,12 @@ counties_clean <- counties_clean %>%
          Doc_Visit_Quar = factor(Doc_Visit_Quar, ordered = TRUE),
          No_Leisure_Exer_Quin = factor(No_Leisure_Exer_Quin, ordered = TRUE))
 
+```
 
-counties_clean$No_Leisure_Exer_Quin
 
+We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. Seeing that it does, we'll remove the continuous `Doc_Visit`, `No_Leisure_Exer`, and `Poor_MHealth` variables, because they won't be used in our future analysis.
+
+```{r p1_factor_check}
 
 counties_clean %>%
   group_by(Poor_MHealth_Bin) %>%
@@ -200,7 +203,6 @@ set.seed(0)
 
 counties_sample <- counties_clean %>%
   sample_n(size = 1200, replace = FALSE)
-
 
 
 ```
@@ -241,11 +243,12 @@ saveRDS(counties_sample, file = here("data", "places_clean_subsample.rds"))
 
 # The Code Book
 
-See the instructions and be sure that your code book includes all necessary elements.
+Here, we're going to put together a code book, first defining each of our variables in the order they appear in the dataframe. Then, we'll take a look at the numerical description of each of the variables.
+
 
 ## Defining the Variables
 
-Here, to help you get started, is the example from the instructions.
+Below, we'll see a table defining the role, type, and description of each of our data set's variables. 
 
 Variable               | Role              | Type  | Description
 ---------------------- | ----------------- | ----- | ------------------------------------------------------------
@@ -260,13 +263,12 @@ Variable               | Role              | Type  | Description
 `Doc_Visit_Quar`       | input             | 4-cat (ordinal) | age-adjusted prevalence of visits to doctor for routine checkup within the past year among adults aged >= 18 years old, converted into 4 ordinal categories (`1`, `2`, `3`, `4`) based on quartiles.
 `No_Leisure_Exer_Quin` | input             | 5-cat (ordinal) | age-adjusted prevalence of no leisure-time physical activity among adults aged >= 18 years old, converted into 5 ordinal categories (`1`, `2`, `3`, `4`, `5`) based on quintiles.
 
-<!-- regression:  -->
-<!-- physical health not good ~ visits to the doctor for check up + arthritis + stroke + ckd -->
-
-<!-- classifier:  -->
-<!-- mental health ~ no leisure time + sleeping less than 7 hours + physical health not good + binge drinking -->
 
 ## Numerical Description
+
+
+And here, we'll use `describe` from `Hmisc` to provide a numerical description of each of our variables.  We can see that each of our variables has a reasonable range of values, although `Arthritis` has a surprisingly high prevalence. This is likely due, in part, to the process of converting the variables to age-adjusted prevalence. Additionally, the categorical variables, `Poor_MHealth_Bin`, `Doc_Visit_Quar`, and `No_Leisure_Exer_Quin` have the appropriate number of distinct categories. 
+
 
 ```{r p1_describe}
 
@@ -274,18 +276,19 @@ Hmisc::describe(counties_sample)
 
 ```
 
-Here's where you would run `describe` from `Hmisc`.
 
 # Linear Regression Plans
 
-Using linear regression, I plan to assess whether the prevalence of poor physical health for the majority of the month can be predicted using prevalence of visiting the doctor for a checkup, arthritis, stroke, and chronic kidney disease. 
+Using linear regression, I plan to assess whether the prevalence of self-reported poor physical health for the majority of the month can be predicted using prevalence of visiting the doctor for a checkup, arthritis, stroke, and chronic kidney disease. 
 
 ## My Quantitative Outcome
 
 
-Our quantitative outcome, `Poor_PHealth`, is defined as a county's age-adjusted prevalence of poor physical health for >= 14 days in the last 30 days. We're interested in predicting this variable, as it provides a general assessment from individuals of how they view their physical health.  
+Our quantitative outcome, `Poor_PHealth`, is defined as a county's age-adjusted prevalence of poor physical health for >= 14 days in the last 30 days. We're interested in predicting this variable, as it provides a general assessment from individuals of how they view their physical health. I'm interested in assessing whether keeping up with preventative medicine practices by going to the doctor for a checkup regularly provides an impact on how one view's the physical health.  
 
-As demonstrated in the Codebook's Numerical Description section, our dataset contains no missing values, therefore we have 1200 samples with complete information on this outcome. Below, we can see a histogram of the `Poor_PHealth` variable, with a normal distribution curve with the same mean and standard deviation as the `Poor_PHealth` distribution. We can see that although the variable has minimal right skew, it is not drastically non-normal. Therefore, we will choose to not transform the variable for the sake of simplicity. Additionally, we calculated 168 unique values in this variable, confirming that it is a relatively continuous variable and meets the standard for a quantitative variable to be used in this project (>= 10 distinct, ordered values observed).
+As demonstrated in the Codebook's Numerical Description section, our dataset contains no missing values, therefore we have 1200 samples with complete information on this outcome. Below, we can see a histogram of the `Poor_PHealth` variable, with a normal distribution curve with the same mean and standard deviation as the `Poor_PHealth` distribution. We can see that although the variable has minimal right skew, it is not drastically non-normal. Therefore, we will choose to not transform the variable for the sake of simplicity. Additionally, we calculated 168 unique values in this variable, as noted in the plot's subtitle, confirming that it is a relatively continuous variable and meets the standard for a quantitative variable to be used in this project (>= 10 distinct, ordered values observed).
+
+
 
 ```{r p1_phealth_distribution}
 
@@ -315,12 +318,7 @@ hist_plot
 
 ## My Planned Predictors (Linear Model)
 
-Now, tell us precisely which four (or more) candidate predictors (inputs) you intend to use for your linear regression model.
-
-- Please use the variable names that appear in your code book and tibble.
-- Demonstrate to us that you have at least one input which is quantitative, specifically that it has at least 10 different, ordered, observed values.
-- Demonstrate to us that you have at least one categorical input which has between 3 and 6 categories, that will be used as a factor in your modeling, and that has at least 30 observations in each level of the factor.
-- Demonstrate that the total number of candidate predictors you suggest is no more than 4 + (N-100)/100 candidate regression inputs, rounding down, where N is the sample size for your tibble.
+We will be using `Arthritis`, `Stroke`, `CKD`, and `Doc_Visit_Quar` as our input variables. As seen in the plots below, the `Arthritis`, `Stroke`, and `CKD` variables are quantitative, each with greater than 10 different, ordered, observed values. Additionally, the `Doc_Visit_Quar` categorical variable has 4 categories, each with more than 30 observations in each level of the factor. Finally, as we have 1200 samples, our four candidate predictors are below the limit of 15 regression inputs (using the 4 + (N-100)/100 formula).
 
 ```{r p1_lin_predictors}
 
@@ -414,6 +412,8 @@ counties_sample %>%
 
 ## My Planned Predictors (Logistic Model)
 
+We will be using `Less_Sleep`, `Binge_Drinking`, `Poor_PHealth`, and `No_Leisure_Exer_Quin` as our predictor variables for this model. Our plots below confirm that `Less_Sleep` and `Binge_Drinking` are quantitative variables, each with greater than 10 different, ordered, observed values. The `Poor_PHealth` variable has already been assessed as an quantitative variable under the "My Quantitative Outcome" subsection of the "Linear Regression Plans" section. Finally, the `No_Leisure_Exer_Quin` variable contains 5 categories, each containing greater than 30 samples per factor level. Finally, as we have 1200 samples, the five candidate predictors are below the limit of 15 regression inputs (using the 4 + (N-100)/100 formula).
+
 ```{r p1_predictors_log}
 
 unique_values <- length(unique(counties_sample$Less_Sleep))
@@ -466,11 +466,6 @@ bar_plot_exer <- ggplot(counties_sample, aes(x = No_Leisure_Exer_Quin, fill = No
 
 
 ```
-
-Now, tell us precisely which four (or more) candidate predictors you intend to use for your logistic regression model.
-
-- If you are using some of the same predictors as in your linear regression model, there’s no need to repeat yourself. Simply tell us which variables you’ll use again, and then provide descriptions for any new predictors that did not appear in your plans for the linear model.
-
 
 # Affirmation 
 
