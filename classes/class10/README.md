@@ -18,4 +18,4 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## One Last Thing
 
-To come.
+You may be interested in Bruna Wundervald's [An introduction to the tidymodels package](http://brunaw.com/tidymodels-webinar/slides/slides.html#1) slides
