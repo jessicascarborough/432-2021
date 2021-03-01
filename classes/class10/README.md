@@ -11,11 +11,11 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 - Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class10/432_2021_slides10.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class10/432_2021_slides10.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
-Today we're talking about `tidymodels`. Excellent resources for learning more include:
+Today we're introducing the `tidymodels` set of packages. Excellent resources for learning more include:
 
 1. The [tidymodels website](https://www.tidymodels.org/), in particular the [Get Started](https://www.tidymodels.org/start/) tutorials, and the [Learn section](https://www.tidymodels.org/learn/), which has additional information on performing analyses, tuning models, and developing custom approaches, among other things.
 2. Max Kuhn and Julie Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main way to learn about these approaches.
-3. For lots of videos with great examples using tidymodels, check out [Julie Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I'll highlight...
+3. For videos with great `tidymodels` examples, try [Julie Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I'll highlight...
     - [Model student debt inequality with tidymodels](https://www.youtube.com/watch?v=4ayOjlRv8bA) from 2021-02-12
     - [Get started with tidymodels and classification of penguin data](https://www.youtube.com/watch?v=z57i2GVcdww) from 2020-07-28
     - [Predict astronauts' mission duration with tidymodels and bootstrap aggregation](https://www.youtube.com/watch?v=rzfTA3xi-W0) from 2020-07-15
