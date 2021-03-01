@@ -150,7 +150,8 @@ modelq5 <- glm(h2oviol == "Yes" ~ sev_housing + pm2_5, data = oh20, family = bin
 tidy(modelq5, conf.int = TRUE, conf.level = 0.90, exponentiate = TRUE)
 ```
 
-- The value of the estimated effect of a change of 1 percentage point in `sev_housing` is an increase by a factor of 0.95 in the odds of a water violation, with a 90% CI of (0.80, 1.12), assuming `pm2_5` is unchanged. 
+- Since the point estimate for the odds ratio for `sev_housing` (0.95) is less than 1, an increase of 1 percentage point in `sev_housing` is associated with a drop in the odds of a water violation, holding everything else the same. 
+- That is, the estimated effect of an increase of 1 percentage point in `sev_housing` is that the odds of a water violation will be 0.95 times as large, with a 90% CI of (0.80, 1.12) assuming `pm2_5` is unchanged.
 
 
 # Session Information {-}
