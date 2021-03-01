@@ -19,4 +19,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## One Last Thing
 
-To come.
+It's probably time to trot this out again, from [XKCD](https://xkcd.com/2048/)...
+
+![](https://imgs.xkcd.com/comics/curve_fitting.png)
+
+
