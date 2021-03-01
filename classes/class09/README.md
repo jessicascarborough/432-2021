@@ -20,6 +20,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 4. On 2021-03-24, Alison Hill will be speaking on [Making R Markdown work better for you](https://www.meetup.com/Cleveland-UseR-Group/events/274520287) for the Cleveland R Users Group.
 5. Carl Bergstrom at the University of Washington recently developed a 50 minute lecture (now on YouTube) entitled [Avoiding the Pitfalls of Selection Bias](https://www.youtube.com/watch?v=eSVg_DqPkNM) which may of some interest to you.
 6. [The Climate Crisis: Addressing Impacts on Clinical Practice in the Great Lakes Region](https://www.eventbrite.com/e/the-climate-crisis-addressing-impacts-on-clinical-practice-great-lakes-tickets-138287576865) is a half-day symposium on 2021-03-10 (8 AM to noon) targeting health care professionals, clinicians of all types, students and trainees. From the registration page, "this unique conference will educate and inspire health professionals and students about the health impacts of climate change. The symposium will not only educate participants but inspire motivation and provide the tools to develop solutions to counteract the health effects of climate change."
+7. [RStudio has an internship available this summer](https://rstudio.com/about/job-posting/?gh_jid=4387673003). Not everyone is a good fit, but maybe you are?
+
 
 ## One Last Thing
 
