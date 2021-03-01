@@ -15,7 +15,7 @@ Today we're talking about `tidymodels`. Excellent resources for learning more in
 
 1. The [tidymodels website](https://www.tidymodels.org/), in particular the [Get Started](https://www.tidymodels.org/start/) tutorials, and the [Learn section](https://www.tidymodels.org/learn/), which has additional information on performing analyses, tuning models, and developing custom approaches, among other things.
 2. Max Kuhn and Julie Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main way to learn about these approaches.
-3. [Julie Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos) which includes lots of great videos using tidymodels methods. Five videos of special interest to me were ...
+3. For lots of videos with great examples using tidymodels, check out [Julie Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I'll highlight...
     - [Model student debt inequality with tidymodels](https://www.youtube.com/watch?v=4ayOjlRv8bA) from 2021-02-12
     - [Get started with tidymodels and classification of penguin data](https://www.youtube.com/watch?v=z57i2GVcdww) from 2020-07-28
     - [Predict astronauts' mission duration with tidymodels and bootstrap aggregation](https://www.youtube.com/watch?v=rzfTA3xi-W0) from 2020-07-15
