@@ -21,6 +21,7 @@ Today we're introducing the `tidymodels` set of packages. Excellent resources fo
     - [Predict astronauts' mission duration with tidymodels and bootstrap aggregation](https://www.youtube.com/watch?v=rzfTA3xi-W0) from 2020-07-15
     - [Data preprocessing and resampling using tidymodels](https://www.youtube.com/watch?v=s3TkvZM60iU) from 2020-03-10
     - [Get started with tidymodels using vaccination rate data](https://www.youtube.com/watch?v=E2Ld3QdXYZo) from 2020-02-25
+4. You may be interested in Bruna Wundervald's [An introduction to the tidymodels package](http://brunaw.com/tidymodels-webinar/slides/slides.html#1) slides, too.
 
 ## Announcements
 
@@ -29,4 +30,4 @@ Today we're introducing the `tidymodels` set of packages. Excellent resources fo
 
 ## One Last Thing
 
-You may be interested in Bruna Wundervald's [An introduction to the tidymodels package](http://brunaw.com/tidymodels-webinar/slides/slides.html#1) slides
+[Language for communicating frequentist results about treatment effects](https://discourse.datamethods.org/t/language-for-communicating-frequentist-results-about-treatment-effects/934) from the discourse page at datamethods.org is perhaps worth a little of your time.
