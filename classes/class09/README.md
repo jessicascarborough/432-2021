@@ -23,4 +23,6 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## One Last Thing
 
-To come.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/figures/rochford_tw.png), and see [the responses to this tweet](https://twitter.com/RochfordElle/status/1359887143225733124), too.
+
+
