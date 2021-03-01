@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------: | :-------------:
 for everything | deadlines | expectations | from Dr. Love | zoom info | downloads | read/watch | need help?
 
-![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/figures/maarten_tw.png)
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/figures/rochford_tw.png), and see [the responses to this tweet](https://twitter.com/RochfordElle/status/1359887143225733124), too.
 
 ## Materials for Today's Class
 
@@ -23,6 +23,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## One Last Thing
 
-![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/figures/rochford_tw.png), and see [the responses to this tweet](https://twitter.com/RochfordElle/status/1359887143225733124), too.
+![](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class09/figures/maarten_tw.png)
 
+On a related point, if you are interested, please take a look at [The Many Flavours of Missing Values](https://www.njtierney.com/post/2020/09/17/missing-flavour/) by Nicholas Tierney, to learn more about the different versions of `NA` in R, and how to use them.
 
