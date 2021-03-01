@@ -23,5 +23,6 @@ If you have questions about Lab 02, please ask them [at TA office hours](https:/
 ## Post-Deadline Materials
 
 1. The Answer Sketch for Lab 2 is now available in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab02/sketch/lab02_sketch.Rmd). You can [review the HTML output here](https://rpubs.com/TELOVE/sketch_02_432_2021).
+    - Note that we revised our description of the answer for Question 5 on 2021-03-01 to repair an error in the interpretation of the odds ratio.
 2. The Grading Rubric, Grades and Feedback from the TAs will be available by 2021-03-02.
 
