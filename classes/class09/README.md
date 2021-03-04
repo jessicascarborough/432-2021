@@ -14,7 +14,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 ## Announcements
 
 1. Feedback and Grades for [Lab 2](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02#post-deadline-materials) are now available.
-    - 
+    - I've posted examples of [4 nice visualizations for Question 1 and 4 nice essays in response to Question 2](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab02/sketch/examples.md) from students in this class for your review. These certainly weren't the only nice examples.
 2. [Lab 3](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) is due Monday 2021-03-15 at 9 PM. 
     - You should wait on Question 2 until after Class 10, but Questions 1 and 3 can be done anytime after today's class.
 3. I made some small updates to Chapters 2 and 6 of the [Course Notes](https://thomaselove.github.io/432-notes/) on 2021-02-26. 
