@@ -1,15 +1,15 @@
 # Project 1 Proposal Review Status
 
-As of **12:45 PM 2021-03-04**: 
+As of **3:40 PM 2021-03-04**: 
 
-There are 49 students in the class.
+There are 49 students in the class. Only two groups are working in pairs, so there are 47 projects.
 
 Stage | Students | Status
 :----: | :------: | --------------------------------------------------------------------------------------
 1 | 1 | Project 1 proposal not yet submitted. We await this anxiously.
 2 | 0 | Proposal submitted. TAs will complete initial review tonight.
-3 | 27 | Proposal reviewed by TAs as pretty solid, and awaits Dr. Love's decision and posting to Canvas.
-4 | 10 | Proposal requires revision and resubmission and student has been notified via Canvas.
+3 | 26 | Proposal has been reviewed by TA and awaits Dr. Love's review and posting to Canvas.
+4 | 11 | Proposal requires revision and resubmission and student has been notified via Canvas.
 5 | 11 | Proposal is approved on Canvas (score is 20). Move on to build your portfolio.
 
 - The scoring on Canvas ranges from 0-9 (number of completed elements out of 10) for those in Stage 4 and then jumps to 20 (for those in Stage 5) once the proposal is approved.
