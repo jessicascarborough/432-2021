@@ -5,7 +5,7 @@ As of **Noon 2021-03-04**:
 There are 49 students in the class.
 
 Stage | Students | Status
-----: | -------: | --------------------------------------------------------------------------------------
+:----: | :------: | --------------------------------------------------------------------------------------
 1 | 1 | Project 1 proposal not yet submitted. We await this anxiously.
 2 | 6 | Proposal submitted. TAs will complete initial review tonight.
 3 | 24 | Proposal reviewed by TAs as pretty strong, and is awaiting Dr. Love's reaction/decision
