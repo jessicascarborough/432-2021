@@ -339,7 +339,7 @@ The Brier score can also be decomposed to assess calibration and discrimination 
 
 ## Receiver Operating Characteristic Curve Analysis
 
-One way to assess the predictive accuracy within the model development sample in a logistic regression is to consider an analyses based on the receiver operating characteristic (ROC) curve. ROC curves are commonly used in assessing diagnoses in medical settings, and in signal detection applications.
+One way to assess the predictive accuracy within the model development sample in a logistic regression is to consider analyses based on the receiver operating characteristic (ROC) curve. ROC curves are commonly used in assessing diagnoses in medical settings, and in signal detection applications.
 
 The accuracy of a test can be evaluated by considering two types of errors: false positives and false negatives.
 
