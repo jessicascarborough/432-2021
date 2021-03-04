@@ -10,7 +10,7 @@ Stage | Students | Status
 2 | 0 | Proposal submitted. TAs will complete initial review tonight.
 3 | 19 | Proposal has been reviewed by TA and awaits Dr. Love's review and posting to Canvas.
 4 | 16 | Proposal requires revision and resubmission and student has been notified via Canvas.
-5 | 13 | Proposal is approved on Canvas (score is 20). Move on to build your portfolio.
+5 | 13 | Proposal is approved on Canvas (score is 20). Please review our comments and then go forth and build the Project.
 
 - The scoring on Canvas ranges from 0-9 (number of completed elements out of 10) for those in Stage 4 and then jumps to 20 (for those in Stage 5) once the proposal is approved.
     - If you don't have a score yet on Canvas, your project is in Stages 1-3.
