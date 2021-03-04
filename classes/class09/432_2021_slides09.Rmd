@@ -25,7 +25,7 @@ Fitting and evaluating logistic regression models with `lrm`
     - Single Imputation of Missing Values: `fram_sh`
 - Use `lrm` to predict `chd10` using `glucose`, `smoker`, `sbp` and `educ`
     - on the complete cases (`fram_cc`)
-    - accounting for missingness via simple imputation (`fram_sh`)
+    - accounting for missingness via single imputation (`fram_sh`)
     - accounting for missingness via multiple imputation
 - Consider adding non-linear terms, refit and re-evaluate
 
@@ -136,7 +136,7 @@ miss_var_summary(fram) %>%
     filter(n_miss > 0)
 ```
 
-## Simple Imputation
+## Single Imputation
 
 We will impute:
 
@@ -157,7 +157,7 @@ fram_sh <- fram_sh %>%
     tibble()
 ```
 
-## Check multi-categorical simple imputation?
+## Check multi-categorical single imputation?
 
 ```{r}
 fram_sh %>% count(educ_NA, educ)
@@ -188,7 +188,7 @@ fram_sh <- fram_sh  %>%
 Use `lrm` to fit a four-predictor logistic regression model to predict `chd10` using `glucose`, `smoker`, `sbp` and `educ`
 
 1. Using the complete cases (`fram_cc`)
-2. Accounting for missingness via simple imputation (`fram_sh`)
+2. Accounting for missingness via single imputation (`fram_sh`)
 3. Accounting for missingness via multiple imputation
 
 Then, we'll consider adding several non-linear terms to the "four-predictor" models, and refit.
