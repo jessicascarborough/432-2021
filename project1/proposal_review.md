@@ -8,7 +8,7 @@ Stage | Students | Status
 :----: | :------: | --------------------------------------------------------------------------------------
 1 | 1 | Project 1 proposal not yet submitted. We await this anxiously.
 2 | 0 | Proposal submitted. TAs will complete initial review tonight.
-3 | 16 | Proposal has been reviewed by TA and awaits Dr. Love's review and posting to Canvas.
+3 | 15 | Proposal has been reviewed by TA and awaits Dr. Love's review and posting to Canvas.
 4 | 13 | Proposal requires revision and resubmission and student has been notified via Canvas.
 5 | 20 | Proposal is approved on Canvas (score is 20). Please review our comments and then go forth and build the Project.
 
