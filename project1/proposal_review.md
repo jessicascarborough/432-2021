@@ -9,7 +9,7 @@ There are 49 students in the class.
 3. Proposals for 24 students have been reviewed by the TAs and are awaiting Dr. Love's review, which will happen as soon as possible.
 4. Proposals for 9 students received a score of 9 or lower in the initial TA review and need to revise and resubmit their work.
     - You'll find comments from the TA (mostly) on Canvas (and a grade below 10 points) on Canvas that indicates that you need to revise your work, which we hope will happen as soon as possible, and certainly within 48 hours of the Canvas posting. 
-    - Dr. Love and the TAs will review those revisions, and will start that process as soon as all proposals have received their initial review and feedback on Canvas.
+    - At least 1 student has already completed that revision, and Dr. Love and the TAs will start reviewing those as soon as all proposals have received their initial review and feedback on Canvas.
 5. Proposals for 9 students received a strong initial score from the TA and were then reviewed by Dr. Love, and approved. 
     - You'll find comments from us on Canvas (and a grade of 20) that indicates your proposal has been approved, and you should move on to completing the Project 1 portfolio of work.
 
