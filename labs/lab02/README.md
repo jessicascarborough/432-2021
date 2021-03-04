@@ -25,6 +25,7 @@ If you have questions about Lab 02, please ask them [at TA office hours](https:/
 1. The Answer Sketch for Lab 2 is now available in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab02/sketch/lab02_sketch.Rmd). You can [review the HTML output here](https://rpubs.com/TELOVE/sketch_02_432_2021).
     - Note that we revised our description of the answer for Question 5 on 2021-03-01 to repair an error in the interpretation of the odds ratio.
 2. The [Grading Rubric for Lab 2](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab02/sketch/lab02_rubric.pdf) (pdf) is now available.
-3. Grades and feedback are now in our Shared Google Drive in the **Lab Feedback for 432 Students** document. 
+3. I've provided examples of [4 nice visualizations for Question 1 and 4 nice essays in response to Question 2](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab02/sketch/examples.md) for your review. These certainly weren't the only nice examples.
+4. Grades and feedback are now in our Shared Google Drive in the **Lab Feedback for 432 Students** document. 
     - Please refer to the email sent by Dr. Love on 2021-02-15 with the subject line **Feedback on Labs for 432 - look for upcoming email** and the follow-up, entitled **432 Lab Code**.
     - The key information on how to see our feedback on Labs is [also available here](https://github.com/THOMASELOVE/432-2021/tree/master/labs#seeing-our-feedback-on-your-work).
