@@ -9,7 +9,7 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 The instructions for completing Lab 03 [are now available](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md). 
 
 - On 2021-03-05, Dr. Love simplified [the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) slightly for the fourth part of question 1, and also added [four hints we hope will be helpful for question 1](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md#four-hints-for-question-1). 
-- Also on 2021-03-05, Dr. Love substantially changed Question 2 to make the process of completing each step clearer. Please use this version (dated 2021-03-05) to prepare your responses.
+- Also on 2021-03-05, Dr. Love substantially changed Question 2 to make the process of completing each step clearer. Please use [the version dated 2021-03-05](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) to prepare your responses for Lab 3.
 
 ## Data
 
