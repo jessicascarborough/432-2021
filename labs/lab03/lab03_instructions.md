@@ -1,7 +1,7 @@
 432 Lab 03 for Spring 2021
 ================
 
-Version: 2021-01-29 21:47:26
+Version: 2021-03-05 10:16:35
 
 # General Instructions
 
@@ -61,11 +61,64 @@ model to predict whether the subject has a statin prescription based on:
     conclusion about which of those two models is more effective in
     describing the available set of observations (after those without
     `statin` data are removed) from these four practices. An appropriate
-    response will make use of at least two different assessments of fit
-    quality, and should include at least one graphical depiction of the
-    fit for each model. Be sure to justify your eventual selection
-    (between the “interaction” or “no interaction” model) with complete
-    sentences.
+    response will make use of at least two different validated
+    assessments of fit quality. Be sure to justify your eventual
+    selection (between the “interaction” or “no interaction” model) with
+    complete sentences.
+
+### Four Hints for Question 1
+
+-   **Hint 1**: In parts b and c, we assume you will describe the `ldl`
+    main effect by considering the case of Harry and Sally. Harry has an
+    `ldl` value of 142, equal to the 75th percentile `ldl` value in the
+    data. Sally has an `ldl` value of 85, equal to the 25th percentile
+    `ldl` value in the data. Assume Harry and Sally are the same `age`
+    and receive care at the same `practice`. So the odds ratio of
+    interest here compares the odds of `statin` prescription for Harry
+    to the odds of `statin` prescription for Sally.
+-   **Hint 2**: To obtain a 90% confidence (uncertainty) interval with a
+    fit using one of the `rms` fitting functions rather than the default
+    95% interval, the appropriate code would be
+    `summary(modelname, conf.int = 0.9)`.
+-   **Hint 3**: In part c, we want you to describe the `ldl` main effect
+    by considering the case of Harry and Sally. Harry has an `ldl` value
+    of 142, equal to the 75th percentile `ldl` value in the data. Sally
+    has an `ldl` value of 85, equal to the 25th percentile `ldl` value
+    in the data. Assume Harry and Sally are the same `age` and receive
+    care at the same `practice`. So the odds ratio of interest here
+    compares the odds of `statin` prescription for Harry to the odds of
+    `statin` prescription for Sally. But now, you need to be able to do
+    this separately for each individual level of `practice`, since
+    `practice` interacts with `ldl`. There are at least two ways to
+    accomplish this.
+    -   In one approach, you would create predicted odds values for
+        Harry and Sally, assuming a common age (40 would be a reasonable
+        choice, and it’s the one used in the answer sketch) with `ldl`
+        set to 142 for Harry and 85 for Sally, but creating four
+        different versions of Harry and Sally (one for each practice.)
+        Then use those predicted odds within each practice to obtain
+        practice-specific odds ratios.
+    -   In the other approach, you could convince the `rms` package to
+        use a different practice as the choice for which adjustments are
+        made. By default, `datadist` chooses the modal practice. To
+        change this, you’d need to convince `datadist` instead to choose
+        its practice based on which practice is the first one, and
+        relevel the practice factor accordingly. So, if you’d releveled
+        the practice data so that Elm was first and placed that into a
+        tibble called `dataelm`, you could use the following adjustment
+        to the `datadist` call to ensure that the adjustments made by
+        `datadist` used Elm instead of the modal practice.
+
+<!-- -->
+
+    d_elm <- datadist(dataelm, adjto.cat = "first")
+    options(datadist = "d_elm")
+
+-   **Hint 4** The natural choices for validated assessments of fit
+    quality are a bootstrap-validated C statistic and a
+    bootstrap-validated Nagelkerke *R*<sup>2</sup>. In the answer
+    sketch, we will use `2021` as our random seed for this work, and
+    we’ll do the default amount of bootstrap replications.
 
 ## Question 2 (40 points, 10 points for each part)
 
