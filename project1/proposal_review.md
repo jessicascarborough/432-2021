@@ -8,7 +8,7 @@ Stage | Students | Status
 :----: | :------: | --------------------------------------------------------------------------------------
 3 | 1 | Project 1 proposal initial version submitted, and now under initial review by Dr. Love and TAs.
 4a | 5 | Proposal requires revision and resubmission and student has been notified via Canvas to complete Friday.
-4b | 6 | Student has revised proposal submitted to Canvas and is awaiting review by Dr. Love and TAs.
+4b | 6 | Student has submitted a revised proposal to Canvas, which is awaiting review by Dr. Love and TAs.
 5 | 37 | Proposal is approved on Canvas (score is 20). Please review our comments and then go forth and build the Project.
 
 - The scoring on Canvas ranges from 0-9 (number of completed elements out of 10) for those in Stage 4 and then jumps to 20 (for those in Stage 5) once the proposal is approved.
