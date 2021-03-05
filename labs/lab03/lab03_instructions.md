@@ -1,7 +1,7 @@
 432 Lab 03 for Spring 2021
 ================
 
-Version: 2021-03-05 10:16:35
+Version: 2021-03-05 10:36:03
 
 # General Instructions
 
@@ -189,11 +189,12 @@ you know the outcome.
 ### Please add the session information.
 
 Finally, at the end of this homework and all subsequent assignments
-(including the projects), please add the session information. As usual,
-use the following…
+(including the projects), please add the session information. You can
+either use the usual `sessioninfo::session_info()` approach, or else
+use…
 
 ``` r
-sessioninfo::session_info()
+xfun::session_info()
 ```
 
 ### This is the end of Lab 03.
