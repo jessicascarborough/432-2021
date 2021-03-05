@@ -20,9 +20,10 @@ We'll continue talking about the `tidymodels` packages today. I'll remind you of
 ## Announcements
 
 1. Dr. Love's Feedback on the Minute Paper will be posted by class time.
-2. Quiz A will be made available on 2021-03-12, and is due 2021-03-22 at 9 PM.
-3. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class. Our next Class (Class 12) will be held on 2021-03-18.
-4. If you're interested in another example of formulating a machine learning activity within the tidymodels framework (especially if you've previously worked with the `caret` package) you might enjoy [The simplest tidy machine learning workflow](https://www.r-bloggers.com/2020/02/the-simplest-tidy-machine-learning-workflow/) by Jorge Cimentada.
+2. Lab 3 is due 2021-03-15 at 9 PM. Be sure to use the [current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
+3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be made available on 2021-03-12, and is due 2021-03-22 at 9 PM.
+4. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class. Our next Class (Class 12) will be held on 2021-03-18.
+5. If you're interested in another example of formulating a machine learning activity within the tidymodels framework (especially if you've previously worked with the `caret` package) you might enjoy [The simplest tidy machine learning workflow](https://www.r-bloggers.com/2020/02/the-simplest-tidy-machine-learning-workflow/) by Jorge Cimentada.
 
 ## One Last Thing
 
