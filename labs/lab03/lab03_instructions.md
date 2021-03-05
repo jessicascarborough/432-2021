@@ -1,7 +1,7 @@
 432 Lab 03 for Spring 2021
 ================
 
-Version: 2021-03-05 10:36:03
+Version: 2021-03-05 14:16:17
 
 # General Instructions
 
@@ -120,17 +120,11 @@ model to predict whether the subject has a statin prescription based on:
     sketch, we will use `2021` as our random seed for this work, and
     we’ll do the default amount of bootstrap replications.
 
-## Question 2 (40 points, 10 points for each part)
+## Question 2 (40 points, 4 points per part)
 
-For Question 2, start your work by identifying all observations in
-`hbp3456` excluding the 25 subjects who have missing values of both
-`hsgrad` and `income`. From that set of subjects, use `set.seed(432)` to
-select a random sample of 1000 for use in your Question 2 work, which
-will take advantage of tools we’ve seen in the `tidymodels` group of
-packages.
-
-Now, you will use linear regression methods (with two different engines:
-`lm` and `stan`) to predict **the square root** of a subject’s estimated
+In Question 2, we will walk through the process of fitting and
+evaluating two linear regression fits (one fit with `lm` and the other
+with `stan`) to predict **the square root** of a subject’s estimated
 (neighborhood) median income on the basis of the main effects of the
 following four predictors:
 
@@ -139,29 +133,120 @@ following four predictors:
 -   the subject’s Hispanic/Latinx ethnicity category, and
 -   the subject’s current tobacco status.
 
-You will build your model separately using each engine (first `lm` and
-then `stan` with a reasonable prior), being sure to treat the
-categorical predictors appropriately.
+## Preliminary work
 
-1.  Use a reasonable imputation strategy to deal with missing values on
-    predictors in your sample, and display code that accomplishes this
-    for each of the engines you use to fit the model (`lm` and `stan`).
+Start your work by completing the following tasks to create a tibble
+that we’ll call `hbpq2` in the answer sketch:
 
-2.  Select an appropriate prior for the `stan` engine, and display code
-    that accomplishes this in the context of fitting the model with that
-    engine.
+1.  Exclude the 25 subjects in `hbp3456` who have missing values of
+    either `hsgrad` or `income`.
+2.  Restrict your data to the variables we’ll use in our models for
+    Question 2 (the four predictors listed above, and the estimated
+    neighborhood income) and the subject identifying code (the
+    `record`).
+3.  Ensure that all character variables (other than `record`) in your
+    tibble are recognized as factors.
+4.  Create a new variable called `sqrtinc` which will serve as your
+    response (outcome) for your regression modeling, within your tibble.
+5.  Use `set.seed(432)` and `slice_sample()` to select a random sample
+    of 1000 subjects from the tibble.
 
-3.  Now, fit the model to the **square root** of the subject’s `income`
-    with each engine, and present the resulting regression coefficients
-    using tidy tabular and graphical approaches for each engine. Compare
-    the results in a sentence or two. What difference does the choice of
-    engine make here?
+Your resulting `hbpq2` tibble should look like this:
 
-4.  For each engine, assess the quality of fit through a summary measure
-    developed using 10-fold cross validation on the sample of 1000
-    subjects. Compare the results in a sentence or two. What difference
-    does the choice of engine make here in terms of fit quality (based
-    on an appropriate cross-validated measure)?
+``` r
+hbpq2
+```
+
+    # A tibble: 1,000 x 7
+       record income hsgrad race     eth_hisp tobacco sqrtinc
+       <chr>   <int>  <dbl> <fct>    <fct>    <fct>     <dbl>
+     1 903574  34800   94.9 White    No       Current    187.
+     2 926837  24700   74.2 AA_Black No       Current    157.
+     3 929198  14700   40   AA_Black No       Never      121.
+     4 932367  24700   74.2 AA_Black No       Never      157.
+     5 925592  65600   92.2 <NA>     <NA>     Never      256.
+     6 932404  18500   67.8 AA_Black No       Never      136.
+     7 933953  21500   84.4 White    No       Never      147.
+     8 911527  23000   83.6 White    No       Never      152.
+     9 918228  13400   70.3 AA_Black No       Current    116.
+    10 930262  48300   90   <NA>     <NA>     Never      220.
+    # ... with 990 more rows
+
+The ten questions (Questions 2a - 2j) below will walk you through the
+process of comparing models fit with the `lm` and `stan` engines for
+these data. The steps are meant to be completed in the specified order.
+
+## Question 2a.
+
+How many missing values do you have in each of the important variables
+in your `hbpq2` tibble? The important variables are your outcome (square
+root of estimated neighborhood income) and the four predictors.
+
+## Question 2b.
+
+Use an appropriate method from `tidymodels` to split the data into
+training and testing samples, with 70% of the data in the training
+sample. Use `set.seed(2021)` to create your split. We’ll call the
+training sample `q2_train` in the sketch, and the testing sample
+`q2_test`.
+
+## Question 2c.
+
+Build a recipe for your model, which we’ll call `q2_rec` in the sketch.
+This recipe should work for either of the models you fit and include all
+necessary pre-processing, which includes the following four elements:
+
+-   specifying the roles of the outcome and the predictors,
+-   using imputation via bagged tree models for all predictors with
+    missing data,
+-   creating dummy (indicator) variables for all categorical predictors,
+-   normalizing all quantitative predictors
+
+## Question 2d.
+
+Specify modeling engines, separately, for the `lm` and `stan` fits you
+will create. For the Bayesian fit using `stan`, use as a prior Student’s
+t distribution with one degree of freedom for all parameters.
+
+## Question 2e.
+
+Create a workflow for the `lm` fit, and then use it to fit the `lm`
+model to the training data. Summarize the fit with `tidy`.
+
+## Question 2f.
+
+Create a workflow for the `stan` fit, and then use it to fit the `stan`
+model to the training data. Summarize the fit with `tidy`. If you get an
+error message, use `broom.mixed::tidy()` to do the tidying.
+
+## Question 2g.
+
+Graph the tidied point estimates and 95% confidence intervals for the
+coefficients (excluding the intercept) in the two models in an
+attractive `ggplot` for comparison.
+
+## Question 2h.
+
+Interpret the results from the tidied summaries you generated in
+Question 2f, and the graph you generated in Question 2g. Which
+coefficients change substantially between the two fits (and in what
+direction do they change), and which do not?
+
+## Question 2i.
+
+Assess performance in the training sample using the two fits and three
+performance measures, specifically the root mean squared error, the
+*R*<sup>2</sup>, and the mean absolute error. Which model appears to
+perform better within the training sample? Is there a substantial
+difference between the models in terms of performance on these metrics?
+
+## Question 2j.
+
+Finally, make predictions into the test sample using the two fits and
+the same three performance measures discussed in Question 2i. Now, which
+model appears to perform better within the training sample? Is there a
+substantial difference between the models in terms of performance on
+these metrics?
 
 ## Question 3 (20 points)
 
