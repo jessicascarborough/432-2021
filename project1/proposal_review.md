@@ -1,6 +1,6 @@
 # Project 1 Proposal Review Status
 
-As of **5:35 PM 2021-03-05**
+As of **10:35 PM 2021-03-05**
 
 There are 49 students in the class. Only two groups are working in pairs, so there are 47 projects.
 
