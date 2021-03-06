@@ -7,8 +7,8 @@ There are 49 students in the class. Only two groups are working in pairs, so the
 Stage | Students | Status
 :----: | :------: | --------------------------------------------------------------------------------------
 3 | 1 | Project 1 proposal initial version submitted, and now under initial review by Dr. Love and TAs.
-4a | 5 | Proposal requires first revision and student has been notified via Canvas to complete Friday.
-4b | 0 | Student has submitted a revised proposal to Canvas, which is awaiting review by Dr. Love and TAs.
+4a | 2 | Proposal requires first revision and student has been notified via Canvas to complete Friday.
+4b | 3 | Student has submitted a revised proposal to Canvas, which is awaiting review by Dr. Love and TAs.
 4c | 1 | Proposal requires a second revision, and student has been notified via Canvas to complete before Mon 8 AM.
 5 | 42 | Proposal is approved on Canvas (score is 20). Please review our comments and then go forth and build the Project.
 
