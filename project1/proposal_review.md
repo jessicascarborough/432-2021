@@ -7,8 +7,7 @@ There are 49 students in the class. Only two groups are working in pairs, so the
 Stage | Students | Status
 :----: | :------: | --------------------------------------------------------------------------------------
 4a | 1 | Proposal needs revision, and student is expected to submit Saturday.
-4b | 1 | Student has submitted a revised proposal to Canvas, which Dr. Love will review this AM.
-4c | 4 | Proposal needs revision, and student has been notified via Canvas to complete before Mon 8 AM.
+4b | 5 | Proposal needs revision, and student has been notified via Canvas to complete before Mon 8 AM.
 5 | 43 | Proposal is approved on Canvas (score is 20). Please review our comments and then go forth and build the Project.
 
 - The scoring on Canvas ranges from 0-9 (number of completed elements out of 10) for those in Stage 4 and then jumps to 20 (for those in Stage 5) once the proposal is approved.
