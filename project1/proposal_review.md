@@ -1,14 +1,14 @@
 # Project 1 Proposal Review Status
 
-As of **8:10 AM 2021-03-05**
+As of **9:15 AM 2021-03-05**
 
 There are 49 students in the class. Only two groups are working in pairs, so there are 47 projects.
 
 Stage | Students | Status
 :----: | :------: | --------------------------------------------------------------------------------------
 4a | 1 | Proposal needs revision, and student is expected to submit Saturday.
-4b | 2 | Student has submitted a revised proposal to Canvas, which Dr. Love will review this AM.
-4c | 3 | Proposal needs revision, and student has been notified via Canvas to complete before Mon 8 AM.
+4b | 1 | Student has submitted a revised proposal to Canvas, which Dr. Love will review this AM.
+4c | 4 | Proposal needs revision, and student has been notified via Canvas to complete before Mon 8 AM.
 5 | 43 | Proposal is approved on Canvas (score is 20). Please review our comments and then go forth and build the Project.
 
 - The scoring on Canvas ranges from 0-9 (number of completed elements out of 10) for those in Stage 4 and then jumps to 20 (for those in Stage 5) once the proposal is approved.
