@@ -7,4 +7,4 @@ Quiz A covers material from:
 - the first 9 classes in 432, 
 - Chapters 1-14 of the 432 course notes,
 - all of Jeff Leek's *How to be a modern scientist* and
-- Nate Silver's *The Signal and the Noise* through Chapter 6, particularly Chapters 1, 2 and 6.
+- Nate Silver's *The Signal and the Noise* through Chapter 7, particularly Chapters 1, 2, 6 and 7.
