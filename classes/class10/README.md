@@ -26,14 +26,15 @@ Today we're introducing the `tidymodels` set of packages. Excellent resources fo
 ## Announcements
 
 1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon.
-2. [Lab 3](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) is due next Monday 2021-03-15 at 9 PM.
+2. Most of the Project 1 proposals are done now. [Details here](https://github.com/THOMASELOVE/432-2021/blob/master/project1/proposal_review.md), and thank you, all.
+3. [Lab 3](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) is due next Monday 2021-03-15 at 9 PM.
     - As mentioned on Piazza, on 2021-03-05, Dr. Love changed [the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md). Be sure to use [the current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
         1. We adjusted the instructions (slightly) for the fourth part of question 1, and 
         2. added [four hints we hope will be helpful for question 1](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md#four-hints-for-question-1), and
         3. completely changed the presentation of Question 2 so that it walks you through the process we'd like you to follow, step-by-step, which should make creating the R code much less onerous.
     - Today's class will include the things you need to respond to Question 2 on Lab 3.
-3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be made available on 2021-03-12, and is due 2021-03-22 at 9 PM. It includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
-4. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class.
+4. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be made available on 2021-03-12, and is due 2021-03-22 at 9 PM. It includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
+5. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class.
 
 ## One Last Thing
 
