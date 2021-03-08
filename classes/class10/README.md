@@ -25,8 +25,8 @@ Today we're introducing the `tidymodels` set of packages. Excellent resources fo
 
 ## Announcements
 
-1. There is a Minute Paper after today's class (Class 10) due Wednesday 2021-03-10 at noon.
-2. Lab 3 is due next Monday 2021-03-15 at 9 PM.
+1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon.
+2. [Lab 3](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) is due next Monday 2021-03-15 at 9 PM.
     - As mentioned on Piazza, on 2021-03-05, Dr. Love changed [the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md). Be sure to use [the current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
         1. We adjusted the instructions (slightly) for the fourth part of question 1, and 
         2. added [four hints we hope will be helpful for question 1](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md#four-hints-for-question-1), and
