@@ -6,7 +6,7 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 ## Instructions
 
-The instructions for completing Lab 05 are now available.
+The [instructions for completing Lab 05](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab05/lab05_instructions.md) are now available.
 
 ## Data
 
