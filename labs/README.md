@@ -5,7 +5,7 @@ There are six labs this semester. The first five are required and linked to spec
 - [Lab 01](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab01) instructions and other materials are now available.
 - [Lab 02](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab02) instructions and other materials are now available.
 - [Lab 03](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab03) instructions and other materials are now available.
-- [Lab 04](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab04) materials will appear later.
+- [Lab 04](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab04) instructions and other materials are now available.
 - [Lab 05](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab05) materials will appear later.
 - [Lab 06](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab06) instructions and other materials are now available. Note that Lab 06 is **optional** and can be done at any time during the class.
 
