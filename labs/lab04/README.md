@@ -6,15 +6,11 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 ## Instructions
 
-The instructions for completing Lab 04 will be available soon.
+The [instructions for completing Lab 04](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab04/lab04_instructions.md) are now  available.
 
 ## Data
 
-The data used in Lab 04 will be described here.
-
-## Template
-
-A suggested R Markdown template for Lab 04 will be available soon.
+The data used in Lab 04 are the same `oh_counties_2020.csv` data used in Lab 02, and are posted in the [data subfolder above](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab04/data) as well as on our [course data page](https://github.com/THOMASELOVE/432-data).
 
 ## Questions?
 
