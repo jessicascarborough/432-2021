@@ -11,7 +11,7 @@ Stage | Students | Status
 
 - Your project 1 proposal is approved when you have a score of 20/20 on Canvas, and a note indicating that we approve the proposal, often with some additional feedback. 
 
-## Approved Project 1 proposals
+## Project 1 proposals with Titles
 
 Read your title carefully. If the project title shown below doesn't match your title, it means I prefer this version, probably. (It's also possible I've made a typographical error.)
 
