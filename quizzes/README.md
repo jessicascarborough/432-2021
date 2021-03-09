@@ -12,6 +12,8 @@ More information is provided in the relevant section of the [Course Syllabus](ht
 
 Quiz A will be made available by the mid-March date specified in the [Course Calendar](https://thomaselove.github.io/432/calendar.html), and the submission deadline is also provided in the [Calendar](https://thomaselove.github.io/432/calendar.html).
 
+Quiz A's instructions [will be found here](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA), when posted.
+
 ## Quiz B
 
 Quiz B will be made available by the May date specified in the [Course Calendar](https://thomaselove.github.io/432/calendar.html), and the submission deadline is also provided in the [Calendar](https://thomaselove.github.io/432/calendar.html).

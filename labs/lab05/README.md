@@ -6,15 +6,11 @@ Deadlines for all Labs are provided in the [Course Calendar](https://thomaselove
 
 ## Instructions
 
-The instructions for completing Lab 05 will be available soon.
+The [instructions for completing Lab 05](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab05/lab05_instructions.md) are now available.
 
 ## Data
 
-The data used in Lab 05 will be described here.
-
-## Template
-
-A suggested R Markdown template for Lab 05 will be available soon.
+There are two data sets used in Lab 05, called `remission.csv` and `umaru.csv`. They are are posted in the [data subfolder above](https://github.com/THOMASELOVE/432-2021/tree/master/labs/lab05/data) as well as on our [course data page](https://github.com/THOMASELOVE/432-data).
 
 ## Questions?
 
