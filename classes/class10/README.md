@@ -25,7 +25,7 @@ Today we're introducing the `tidymodels` set of packages. **Note** Rather than c
 
 ## Announcements
 
-1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon.
+1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon. It's a little longer than usual today, in part because I'm considering making some changes to the rest of the course.
 2. All Project 1 proposals are approved. [Details and project titles are here](https://github.com/THOMASELOVE/432-2021/blob/master/project1/proposal_review.md), and thank you, all.
     -  The [Project 1 Portfolio and Presentation](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md) are due 2021-03-29 at 9 PM.
     -  Be sure to read "[Your proposal is approved. Now what?](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md#your-proposal-is-approved-now-what)" if you are unclear on what to do next.
