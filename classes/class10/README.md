@@ -26,9 +26,9 @@ Today we're introducing the `tidymodels` set of packages. **Note** Rather than c
 ## Announcements
 
 1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon.
-2. Most of the Project 1 proposals are approved. [Details and project titles are here](https://github.com/THOMASELOVE/432-2021/blob/master/project1/proposal_review.md), and thank you, all.
+2. All Project 1 proposals are approved. [Details and project titles are here](https://github.com/THOMASELOVE/432-2021/blob/master/project1/proposal_review.md), and thank you, all.
     -  The [Project 1 Portfolio and Presentation](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md) are due 2021-03-29 at 9 PM.
-    -  Be sure to read "[Your proposal is approved. Now what?](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md#your-proposal-is-approved-now-what)" for instructions on what to do next.
+    -  Be sure to read "[Your proposal is approved. Now what?](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md#your-proposal-is-approved-now-what)" if you are unclear on what to do next.
 3. [Lab 3](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) is due next Monday 2021-03-15 at 9 PM.
     - As mentioned on Piazza, on 2021-03-05, Dr. Love changed [the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md). Be sure to use [the current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
         1. We adjusted the instructions (slightly) for the fourth part of question 1, and 
