@@ -8,10 +8,10 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 ## Materials for Today's Class
 
-- Today's Slides will be [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class10/432_2021_slides10.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class10/432_2021_slides10.Rmd).
+- Today's Slides are [available in PDF](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class10/432_2021_slides10.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/432-2021/blob/master/classes/class10/432_2021_slides10.Rmd).
 - All 432 classes are video-recorded, and the recordings will be archived in the Zoom section of [Canvas](https://canvas.case.edu).
 
-Today we're introducing the `tidymodels` set of packages. Excellent resources for learning more include:
+Today we're introducing the `tidymodels` set of packages. **Note** Rather than creating a set of materials (in Chapters 15-17 of the Course Notes) to cover tidymodels topics, I'm going to instead point you to the following excellent external resources for learning more.
 
 1. The [tidymodels website](https://www.tidymodels.org/), in particular the [Get Started](https://www.tidymodels.org/start/) tutorials, and the [Learn section](https://www.tidymodels.org/learn/), which has additional information on performing analyses, tuning models, and developing custom approaches, among other things.
 2. Max Kuhn and Julie Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main way to learn about these approaches.
