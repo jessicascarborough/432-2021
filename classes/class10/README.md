@@ -37,10 +37,28 @@ Today we're introducing the `tidymodels` set of packages. **Note** Rather than c
     - Today's class will include the things you need to respond to Question 2 on Lab 3.
 4. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be made available on 2021-03-12, and is due 2021-03-22 at 9 PM. It includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
 5. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class.
-6. You may be interested in [A clinician's primer on epidemiology for COVID-19](https://www.cell.com/med/fulltext/S2666-6340(21)00068-4).
+6. [Language for communicating frequentist results about treatment effects](https://discourse.datamethods.org/t/language-for-communicating-frequentist-results-about-treatment-effects/934) from the discourse page at datamethods.org is, I think, worth some of your time.
+7. You may be interested in [A clinician's primer on epidemiology for COVID-19](https://www.cell.com/med/fulltext/S2666-6340(21)00068-4).
     - from the abstract: "Here, we provide a brief primer on key concepts and terms related to COVID-19 epidemiology in the hopes that this information will help provide clinicians with a starting point for evaluating the emerging COVID-19 literature."
-7. You might also be interested in a paper we [recently published](https://link.springer.com/article/10.1007/s11606-020-06440-7) on Adoption of Health System Innovations: Evidence of Urban-Rural Disparities from the Ohio Primary Care Marketplace, for the *Journal of General Internal Medicine*. The paper was led by JT Tanenbaum, who completed his MD/PhD at CWRU and is now in his first year of post-graduate work in orthopaedic surgery at Northwestern University.
+8. You might also be interested in a paper [we recently published](https://link.springer.com/article/10.1007/s11606-020-06440-7) on Adoption of Health System Innovations: Evidence of Urban-Rural Disparities from the Ohio Primary Care Marketplace, for the *Journal of General Internal Medicine*. The paper was led by JT Tanenbaum, who completed his MD/PhD at CWRU and is now in his first year of post-graduate work in orthopaedic surgery at Northwestern University.
 
 ## One Last Thing
 
-[Language for communicating frequentist results about treatment effects](https://discourse.datamethods.org/t/language-for-communicating-frequentist-results-about-treatment-effects/934) from the discourse page at datamethods.org is perhaps worth a little of your time.
+Monday was International Women's Day. 
+
+[Here](https://rss.org.uk/news-publication/news-publications/2021/general-news/watch-our-international-women-s-day-playlist/) is the Royal Statistical Society's [International Women's Day Playlist](https://rss.org.uk/news-publication/news-publications/2021/general-news/watch-our-international-women-s-day-playlist/).
+
+I'll highlight three especially interesting talks:
+
+[Using data to improve health from the time of the Crimea to the time of Covid](https://www.youtube.com/watch?v=OrRoeQaucF0)
+
+- The full title is "Florence Nightingale, pigeonholes and mustard seeds: using data to improve health from the time of the Crimea to the time of Covid, and the talk was given by Deborah Ashby in June 2020, when she was President of the Royal Statistical Society.
+
+[What do we learn about significance tests from the replication crisis?](https://www.youtube.com/watch?v=VRF-UwrepAs)
+
+- Deborah Mayo from the Department of Philosophy, Virginia Tech discussed today’s problems of replication and significance tests. She discusses how we should rethink the controversies of statistical significance in light of high-profile failures of replication. Recoding from 2018-10-23.
+
+[Florence Nightingale and her colleagues: Using statistics to save lives](https://www.youtube.com/watch?v=Y2AzKuywBrE)
+
+- Lynn McDonald explores Nightingale's work in analysing data from the Crimean War, peacetime British Army, nurse deaths in hospitals, maternal deaths post-childbirth, deaths in Indigenous residential schools and stressing the need for good population data on health and housing, on to evidence-based healthcare. Recording from 2020-09-08.
+
