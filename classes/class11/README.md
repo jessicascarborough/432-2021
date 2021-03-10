@@ -19,7 +19,7 @@ We'll continue talking about the `tidymodels` packages today. I'll remind you of
 
 ## Announcements about 432
 
-1. Dr. Love's [Feedback on the Minute Paper after Class 10](https://github.com/THOMASELOVE/432-2021/tree/master/minutepapers) will be posted by class time.
+1. Dr. Love's [Feedback on the Minute Paper after Class 10](http://bit.ly/432-2021-min10-feedback) is now available.
 2. [Lab 3](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) is due 2021-03-15 at 9 PM. Be sure to use the [current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
 3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be available by noon tomorrow, and is due 2021-03-22 at 9 PM.
     - The Quiz includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
