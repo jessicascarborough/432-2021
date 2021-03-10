@@ -13,13 +13,13 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 
 We'll continue talking about the `tidymodels` packages today. I'll remind you of some useful supplemental learning resources.
 
-1. Max Kuhn and Julie Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main resource.
-2. For videos with great `tidymodels` examples, try [Julie Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I highlighted a few specific videos in the [Class 10 README](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class10).
+1. Max Kuhn and Julia Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main resource.
+2. For videos with great `tidymodels` examples, try [Julie Silga's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I highlighted a few specific videos in the [Class 10 README](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class10).
 3. The [tidymodels website](https://www.tidymodels.org/), in particular the [Get Started](https://www.tidymodels.org/start/) tutorials, and the [Learn section](https://www.tidymodels.org/learn/).
 
 ## Announcements
 
-1. Dr. Love's Feedback on the Minute Paper will be posted by class time.
+1. Dr. Love's Feedback on the Minute Paper after Class 10 will be posted by class time.
 2. Lab 3 is due 2021-03-15 at 9 PM. Be sure to use the [current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
 3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be made available tomorrow, and is due 2021-03-22 at 9 PM.
     - The Quiz includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
