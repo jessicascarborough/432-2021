@@ -21,8 +21,9 @@ We'll continue talking about the `tidymodels` packages today. I'll remind you of
 
 1. Dr. Love's Feedback on the Minute Paper after Class 10 will be posted by class time.
 2. Lab 3 is due 2021-03-15 at 9 PM. Be sure to use the [current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
-3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be made available tomorrow, and is due 2021-03-22 at 9 PM.
+3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be available by noon tomorrow, and is due 2021-03-22 at 9 PM.
     - The Quiz includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
+    - The instructions for Quiz A [are already posted](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA).
 4. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class. Our next Class (Class 12) will be held on 2021-03-18.
 5. If you're interested in another example of formulating a machine learning activity within the tidymodels framework (especially if you've previously worked with the `caret` package) you might enjoy [The simplest tidy machine learning workflow](https://www.r-bloggers.com/2020/02/the-simplest-tidy-machine-learning-workflow/) by Jorge Cimentada.
 6. The next session in the CAUSE/Journal of Statistics and Data Science Education webinar series is 2021-03-23 at 4 PM. It features talks about two related papers on data ingestation, data collection, and data analysis. [Register or learn more here](https://psu.zoom.us/webinar/register/WN_aTtp-SdYRwi3pLvPkMEGMQ).
