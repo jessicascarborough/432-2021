@@ -19,13 +19,17 @@ We'll continue talking about the `tidymodels` packages today. I'll remind you of
 
 ## Announcements about 432
 
-1. Dr. Love's [Feedback on the Minute Paper after Class 10](http://bit.ly/432-2021-min10-feedback) is now available.
+1. Dr. Love's [Feedback on the Minute Paper after Class 10](http://bit.ly/432-2021-min10-feedback) is now available. Three things to add:
+    - If you want an appealing discussion of some of the exciting things you can do with the `rms` and `Hmisc` packages, take a look at Nicholas Ollberding's [An Introduction to the Harrell-verse: Predictive Modeling using the Hmisc and rms Packages](https://www.nicholas-ollberding.com/post/an-introduction-to-the-harrell-verse-predictive-modeling-using-the-hmisc-and-rms-packages/).
+    - This article has an interesting title: [When and how should multiple imputation be used for handling missing data in randomised clinical trials – a practical guide with flowcharts](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0442-1)
+    - [Introduction to Bayesian Linear Regression: An explanation of the Bayesian approach to linear modeling](https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7) by Will Koehrsen seems like something you might be interested in, too.
 2. [Lab 3](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md) is due 2021-03-15 at 9 PM. Be sure to use the [current version of the instructions](https://github.com/THOMASELOVE/432-2021/blob/master/labs/lab03/lab03_instructions.md).
 3. [Quiz A](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA) will be available by noon tomorrow, and is due 2021-03-22 at 9 PM.
     - The Quiz includes materials from the first 9 classes, from Chapters 1-14 of the course notes, from all of Jeff Leek's *How to be a modern scientist* and from Nate Silver's *The Signal and the Noise* through Chapter 7. It does not include this week's `tidymodels` material.
     - The instructions for Quiz A [are already posted](https://github.com/THOMASELOVE/432-2021/tree/master/quizzes/quizA).
 4. Your [Project 1 Portfolio and Presentation](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md) are due 2021-03-29 at 9 PM. You should be able to complete this work now.
 5. Remember that next Tuesday 2021-03-16 is a University Break day, and so we will not have class. Our next Class (Class 12) will be held on 2021-03-18.
+6. I will spend time in the next week thinking about what to do with my current plans for April and May, and whether some revision to that plan might be helpful, and I expect to announce whether there will be a revision in Class 12. I won't change anything on the Calendar for March. Stay tuned.
 
 ## Other Opportunities
 
