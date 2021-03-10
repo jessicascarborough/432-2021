@@ -39,8 +39,8 @@ All of your answers should be placed in the Google Form Answer Sheet,
 and we will provide a link to that sheet on 2021-03-12. All of your
 answers must be submitted through the Google Form by **9 PM** on Monday
 2021-03-22, without exception. The form will close at that time, and no
-extensions will be made available, so please do not wait until Tuesday
-morning to submit. We will not accept any responses except through the
+extensions will be made available, so please do not wait until Monday
+evening to submit. We will not accept any responses except through the
 Google Form.
 
 The Google Form contains places to provide your responses to each
