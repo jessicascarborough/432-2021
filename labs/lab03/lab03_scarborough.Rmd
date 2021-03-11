@@ -1,0 +1,57 @@
+---
+title: "432 Lab 01 Template"
+author: "Your Name Goes Here"
+date: "`r Sys.Date()`"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+        number_sections: TRUE
+        code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+## Package Loading {-}
+
+```{r load_packages, message = FALSE}
+library(here)
+library(magrittr)
+library(janitor)
+
+# add other packages here as desired
+
+library(tidyverse)
+```
+
+## Import the `hbp3456` Data {-}
+
+This template assumes that you've placed the `hbp3456.csv` data set in a sub-folder called `data` beneath the `lab01` project directory you're using in R Studio.
+
+```{r, message = FALSE}
+lab03 <- read_csv(here("data", "hbp3456.csv")) %>%
+    mutate(record = as.character(record))
+
+lab03
+```
+
+# Question 1
+
+Place your response to Question 1 here.
+
+# Question 2
+
+Place your response to Question 2 here.
+
+# Question 3
+
+A few years ago, I considered undergoing an acne treatment, colloquially known as Accutane. If I had considered only point estimates of the benefits and risks, I would have predicted a very significant reduction in acne and side effects that were noticeable, but manageable. However, I also considered possibilities that were less likely, but not uncommon. The treatment may be ineffective, I may have arthritic-like pain, or the drug could damage my liver. These uncertainties are important to understand, just as the National Weather Service should have reported their margin of error for the crest of Red River in April 1997 (Silver, Chapter 6). Although I still decided to undergo this treatment, I also prepared for these side effects by taking monthly tests to assess my liver function and timing my treatment to end by summertime, so that my activities wouldn't be limited by aches and pains. Likewise, if the Great Plains community understood the risk of flooding, more preparations could be done to decrease the damage. Understanding the uncertainty of a decision, while uncomfortable in the short-term, can create lasting benefits in the long-term. 
+
+# Session Information {-}
+
+```{r}
+xfun::session_info()
+```
+
