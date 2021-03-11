@@ -14,7 +14,7 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 We'll continue talking about the `tidymodels` packages today. I'll remind you of some useful supplemental learning resources.
 
 1. Max Kuhn and Julia Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main resource.
-2. For videos with great `tidymodels` examples, try [Julia Silga's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I highlighted a few specific videos in the [Class 10 README](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class10).
+2. For videos with great `tidymodels` examples, try [Julia Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I highlighted a few specific videos in the [Class 10 README](https://github.com/THOMASELOVE/432-2021/tree/master/classes/class10).
 3. The [tidymodels website](https://www.tidymodels.org/), in particular the [Get Started](https://www.tidymodels.org/start/) tutorials, and the [Learn section](https://www.tidymodels.org/learn/).
 
 ## Announcements about 432
