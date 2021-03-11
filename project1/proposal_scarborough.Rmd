@@ -24,16 +24,14 @@ library(knitr); library(rmdformats)
 library(here); library(janitor); library(magrittr)
 library(rms); library(broom); library(patchwork)
 
-# other packages as needed can go here
-
 library(tidyverse)
 ```
 
 # Data Source
 
-This project utilizes data from the PLACES project 2020 release. The data contain county-level estimates of 27 health-related measures (5 on chronic disease-related unhealthy behaviors, 13 on health outcomes, and 9 on preventative service utilization). There are 3,142 counties included in the data set, covering the 50 states and District of Columbia of the United States. These data are provided by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. It is accessible to the general public and can be accessed by clicking [here](https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-County-Data-20/swc5-untb) [1].  
+This project utilizes data from the PLACES Project 2020 release. The data contain county-level estimates of 27 health-related measures (5 on chronic disease-related unhealthy behaviors, 13 on health outcomes, and 9 on preventative service utilization). There are 3,142 counties included in the data set, covering the 50 states and District of Columbia of the United States. These data are provided by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. It is accessible to the general public and can be accessed [here](https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-County-Data-20/swc5-untb) [1].  
 
-Using the 2017 and 2018 Behavioral Risk Factor Surveillance System (BRFSS) survey results, researchers utilized multilevel regression and post-stratification (MRP) to produce small area estimates of the 27 measures in each county. This approach is described by Zhang et al. (2014) [2] and Zhang et al. (2015) [3]. BRFSS is an annual telephone survey, which uses a standardized questionnaire to ask participants across the country about their health risk activities. It is sponsored by most divisions of the CDC, along with other federal agencies. These data are collected with the purpose of assisting organizations in the building and targeting of health promotion activities. 
+Using the 2017 and 2018 Behavioral Risk Factor Surveillance System (BRFSS) survey results, researchers utilized multilevel regression and post-stratification (MRP) to produce small area estimates of 27 measures in each county. This approach is described by Zhang et al. (2014) [2] and Zhang et al. (2015) [3]. BRFSS is an annual telephone survey, which uses a standardized questionnaire to ask participants across the country about their health risk activities. It is sponsored by most divisions of the CDC, along with other federal agencies. These data are collected with the purpose of assisting organizations in the building and targeting of health promotion activities. 
 
 # The Subjects
 
@@ -47,21 +45,21 @@ We'll start by loading the PLACES data set from the `data` directory in our proj
 
 ```{r load_data}
 
-counties_raw <- read.csv(here("data", "PLACES__Local_Data_for_Better_Health__County_Data_2020_release.csv"), na.strings = c(""))
-
-unique(counties_raw$Measure)
+counties_raw <- read.csv(here("data", 
+                              "PLACES__Local_Data_for_Better_Health__County_Data_2020_release.csv"), 
+                         na.strings = c(""))
 
 ```
 
 ## Cleaning the Data
 
-In this section, we'll work through taking the raw PLACSE 2020 dataset to a clean tibble that only contains our variables of interest. 
+In this section, we'll work through taking the raw PLACES 2020 data set to a clean tibble that only contains our variables of interest. 
 
 ### Extracting variables of interest 
 
-To start cleaning our dataset, we'll filter the raw dataset to extract the measures and data types that we are interested in. 
+To start cleaning our data set, we'll filter the raw data to extract the measures and data types that we are interested in. 
 
-First, we'll remove any row that has a missing value for `LocationName`. Based on the population size for these rows, they appear to represent an aggregate for the entire United States. As such, they do not represent the county-level data we are assessing with this project. Then, we'll filter the `Data_Value_Type` variable to include only `Age-adjusted prevalence`, and we'll filter the `Measure` column to include only the following variables of interest: 
+First, we'll remove any row that has a missing value for `LocationName`. Based on the population size for these rows (>300 million), they appear to represent an aggregate for the entire United States. As such, they do not represent the county-level data we are assessing with this project. Then, we'll filter the `Data_Value_Type` variable to include only `Age-adjusted prevalence`, and we'll filter the `Measure` column to include only the following variables of interest: 
 
 - `Physical health not good for >=14 days among adults aged >=18 years`
 - `Visits to doctor for routine checkup within the past year among adults aged >=18 years`
@@ -135,13 +133,13 @@ colnames(counties_clean) <- c("CountyState_ID", "Poor_PHealth", "Doc_Visit", "Ar
 
 ### Convert `Poor_MHealth`, `Doc_Visit`, and `No_Leisure_Exercise` into categorical variables
 
-Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_MHealth` into a binary variable called `Poor_MHealth_Bin`, while `Doc_Visit` and `No_Leisure_Exer` will be converted into ordered categorical variables called `Doc_Visit_Quar` and `No_Leisure_Exer_Quin`, respectively. `Poor_MHealth_Bin` will be categorized based on counties that are above and below the median value for the `Poor_MHealth` variable. `Doc_Visit_Quar` will be based on being in the first, second, third, or fourth quartile of the `Doc_Visit` variable. `No_Leisure_Exer_Quin` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. These three new variables will be converted to ordered factors. 
+Since all of our variables are continuous, we'll need to convert a few of them into categorical to meet the requirements of this assignment. Using `mutate`, we'll convert `Poor_MHealth` into a binary variable called `Poor_MHealth_High`, while `Doc_Visit` and `No_Leisure_Exer` will be converted into ordered categorical variables called `Doc_Visit_Quar` and `No_Leisure_Exer_Quin`, respectively. `Poor_MHealth_High` will be categorized based on counties that are above and below the median value for the `Poor_MHealth` variable. `Doc_Visit_Quar` will be based whether the county is in the first, second, third, or fourth quartile of the `Doc_Visit` variable. `No_Leisure_Exer_Quin` will be based on being in the first, second, third, fourth, or fifth quintile of the `No_Leisure_Exer`variable. These three new variables will be converted to ordered factors. 
 
 ```{r p1_convert_factor}
 
 
 counties_clean <- counties_clean %>%
-  mutate(Poor_MHealth_Bin = case_when(Poor_MHealth < median(Poor_MHealth) ~ 0,
+  mutate(Poor_MHealth_High = case_when(Poor_MHealth < median(Poor_MHealth) ~ 0,
                                                Poor_MHealth >= median(Poor_MHealth) ~ 1),
          Doc_Visit_Quar = case_when(Doc_Visit < quantile(Doc_Visit, 0.25) ~ 1,
                                             Doc_Visit >= quantile(Doc_Visit, 0.25) & 
@@ -157,19 +155,19 @@ counties_clean <- counties_clean %>%
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.6) &
                                                 No_Leisure_Exer < quantile(No_Leisure_Exer, 0.8) ~ 4,
                                               No_Leisure_Exer >= quantile(No_Leisure_Exer, 0.8) ~ 5)) %>%
-  mutate(Poor_MHealth_Bin = factor(Poor_MHealth_Bin, ordered = TRUE),
+  mutate(Poor_MHealth_High = factor(Poor_MHealth_High, ordered = TRUE),
          Doc_Visit_Quar = factor(Doc_Visit_Quar, ordered = TRUE),
          No_Leisure_Exer_Quin = factor(No_Leisure_Exer_Quin, ordered = TRUE))
 
 ```
 
 
-We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. Seeing that it does, we'll remove the continuous `Doc_Visit`, `No_Leisure_Exer`, and `Poor_MHealth` variables, because they won't be used in our future analysis.
+We'll take a quick look at the new variables to ensure that our code accomplished what we expected it to. For each new categorical variable, we will group the data set by the new variable, and use `summarise` to demonstrates that each group contains close to the same number of samples (`n`), and the minimum value (`min`) and maximum value (`max`) for each group are ordered appropriately.
 
 ```{r p1_factor_check}
 
 counties_clean %>%
-  group_by(Poor_MHealth_Bin) %>%
+  group_by(Poor_MHealth_High) %>%
   summarise(n = length(Poor_MHealth),
             min = min(Poor_MHealth),
             max = max(Poor_MHealth))
@@ -186,16 +184,22 @@ counties_clean %>%
             min = min(No_Leisure_Exer),
             max = max(No_Leisure_Exer))
 
+```
+
+Seeing that our data pass this sanity check, we'll remove the continuous `Doc_Visit`, `No_Leisure_Exer`, and `Poor_MHealth` variables, because they won't be used in our future analysis. We'll also arrange the columns so that the leftmost column is the identifier, followed by the regression outcomes, followed by the regression inputs.
+
+```{r p1_remove_vars}
 
 counties_clean <- counties_clean %>%
-  select(-c(Doc_Visit, No_Leisure_Exer, Poor_MHealth))
-
+  select(-c(Doc_Visit, No_Leisure_Exer, Poor_MHealth)) %>%
+  select(CountyState_ID, Poor_PHealth, Poor_MHealth_High, Arthritis, Stroke, 
+         CKD, Less_Sleep, Binge_Drinking, Doc_Visit_Quar, No_Leisure_Exer_Quin)
 
 ```
 
 ### Subsampling
 
-Our last step will be sampling the data to ensure that there are no more than 1200 rows. We are performing this step last, because we wanted to ensure that the `Poor_MHealth_Bin`, `Doc_Visit_Quar`, `No_Leisure_Exer_Quin` were categorized based on their original, continuous value's relationship (e.g. above/below the median) to the entire dataset, not just the subsampling. We'll set a seed and then use `sample_n` from the `dpylr` package to choose 1200 counties without replacement.
+Our last step will be sampling the data to ensure that there are no more than 1200 rows. We are performing this step last, because we wanted to ensure that the `Poor_MHealth_High`, `Doc_Visit_Quar`, `No_Leisure_Exer_Quin` were categorized based on their original, continuous value's relationship (e.g. above/below the median) to the entire data set, not just the subsampled data set. We'll set a seed (`0`) and then use `sample_n` from the `dpylr` package to choose 1200 counties without replacement.
 
 ```{r p1_sampling}
 
@@ -222,7 +226,7 @@ counties_sample
 ```
 ## Size and Identifiers
 
-This dataset has 1200 rows and 10 columns, which is confirmed with the tibble listed above. The `CountyState_ID` column contains a unique identifier for each row, which we will confirm below using `unique`.
+This data set has 1200 rows and 10 columns, which is confirmed with the tibble listed above. The `CountyState_ID` column contains a unique identifier for each row, which we will confirm below using `unique`.
 
 ```{r p1_size}
 
@@ -233,7 +237,7 @@ length(unique(counties_sample$CountyState_ID))
 
 ## Saving the R data set
 
-Now, we'll save this final dataset as an .rds file, using `saveRDS`.
+Now, we'll save this final data set as an .rds file, using `saveRDS`.
 
 ```{r p1_saveRDS}
 
@@ -243,7 +247,7 @@ saveRDS(counties_sample, file = here("data", "places_clean_subsample.rds"))
 
 # The Code Book
 
-Here, we're going to put together a code book, first defining each of our variables in the order they appear in the dataframe. Then, we'll take a look at the numerical description of each of the variables.
+Here, we're going to put together a code book, first defining each of our variables in the order they appear in the data frame. Then, we'll take a look at the numerical description of each of the variables.
 
 
 ## Defining the Variables
@@ -252,14 +256,14 @@ Below, we'll see a table defining the role, type, and description of each of our
 
 Variable               | Role              | Type  | Description
 ---------------------- | ----------------- | ----- | ------------------------------------------------------------
-`CountyState_ID`       | identifier        | \-    | character identifier for counties
+`CountyState_ID`       | identifier        | char  | character identifier for counties
 `Poor_PHealth`         | outcome and input | quant | age-adjusted prevalence of physical health not good for >= 14 days out of the last 30 days among adults aged >= 18 years old 
+`Poor_MHealth_High`     | outcome           | 2-cat | age-adjusted prevalence of mental health not good for >= 14 days out of the last 30 days  among adults aged >= 18 years old, converted into 2 categories (`0`, `1`) separated by median where `0` = below the median and `1` = above or equal to the median.
 `Arthritis`            | input             | quant | age-adjusted prevalence of arthritis among adults aged >= 18 years old
 `Stroke`               | input             | quant | age-adjusted prevalence of stroke among adults aged >= 18 years old 
 `CKD`                  | input             | quant | age-adjusted prevalence of chronic kidney disease among adults aged >= 18 years old
 `Less_Sleep`           | input             | quant | age-adjusted prevalence of sleeping less than an average of 7 hours in a 24 hour period among adults aged >= 18 years old
-`Binge_Drinking`       | input             | quant | age-adjusted prevalence of binge drinking (4+ drinks for women and 5+ drinks for men in one occassion) in the past 30 days among adults aged >= 18 years old
-`Poor_MHealth_Bin`     | outcome           | 2-cat | age-adjusted prevalence of mental health not good for >= 14 days out of the last 30 days  among adults aged >= 18 years old, converted into 2 categories (`0`, `1`) separated by median.
+`Binge_Drinking`       | input             | quant | age-adjusted prevalence of binge drinking (4+ drinks for women and 5+ drinks for men in one occasion) in the past 30 days among adults aged >= 18 years old
 `Doc_Visit_Quar`       | input             | 4-cat (ordinal) | age-adjusted prevalence of visits to doctor for routine checkup within the past year among adults aged >= 18 years old, converted into 4 ordinal categories (`1`, `2`, `3`, `4`) based on quartiles.
 `No_Leisure_Exer_Quin` | input             | 5-cat (ordinal) | age-adjusted prevalence of no leisure-time physical activity among adults aged >= 18 years old, converted into 5 ordinal categories (`1`, `2`, `3`, `4`, `5`) based on quintiles.
 
@@ -267,7 +271,7 @@ Variable               | Role              | Type  | Description
 ## Numerical Description
 
 
-And here, we'll use `describe` from `Hmisc` to provide a numerical description of each of our variables.  We can see that each of our variables has a reasonable range of values, although `Arthritis` has a surprisingly high prevalence. This is likely due, in part, to the process of converting the variables to age-adjusted prevalence. Additionally, the categorical variables, `Poor_MHealth_Bin`, `Doc_Visit_Quar`, and `No_Leisure_Exer_Quin` have the appropriate number of distinct categories. 
+And here, we'll use `describe` from `Hmisc` to provide a numerical description of each of our variables.  We can see that each of our variables has a reasonable range of values, although `Arthritis` has a surprisingly high prevalence. This is likely due, in part, to the process of converting the variables to age-adjusted prevalence. Additionally, the categorical variables, `Poor_MHealth_High`, `Doc_Visit_Quar`, and `No_Leisure_Exer_Quin` have the appropriate number of distinct categories. 
 
 
 ```{r p1_describe}
@@ -279,14 +283,14 @@ Hmisc::describe(counties_sample)
 
 # Linear Regression Plans
 
-Using linear regression, I plan to assess whether the prevalence of self-reported poor physical health for the majority of the month can be predicted using prevalence of visiting the doctor for a checkup, arthritis, stroke, and chronic kidney disease. 
+Using linear regression, I plan to assess whether the prevalence of self-reported poor physical health for at least 14 days per month can be predicted using prevalence of visiting the doctor for a checkup, arthritis, stroke, and chronic kidney disease. 
 
 ## My Quantitative Outcome
 
 
-Our quantitative outcome, `Poor_PHealth`, is defined as a county's age-adjusted prevalence of poor physical health for >= 14 days in the last 30 days. We're interested in predicting this variable, as it provides a general assessment from individuals of how they view their physical health. I'm interested in assessing whether keeping up with preventative medicine practices by going to the doctor for a checkup regularly provides an impact on how one view's the physical health.  
+Our quantitative outcome, `Poor_PHealth`, is defined as a county's age-adjusted prevalence of poor physical health for >= 14 days in the last 30 days. We're interested in predicting this variable, as it provides a general assessment from individuals of how they view their physical health. I'm interested in assessing whether keeping up with preventative medicine practices by going to the doctor for a checkup regularly provides an impact on how one view's their physical health, while controlling for health problems that can significantly interfere with one's quality of life (arthritis, stroke, and chronic kidney disease).
 
-As demonstrated in the Codebook's Numerical Description section, our dataset contains no missing values, therefore we have 1200 samples with complete information on this outcome. Below, we can see a histogram of the `Poor_PHealth` variable, with a normal distribution curve with the same mean and standard deviation as the `Poor_PHealth` distribution. We can see that although the variable has minimal right skew, it is not drastically non-normal. Therefore, we will choose to not transform the variable for the sake of simplicity. Additionally, we calculated 168 unique values in this variable, as noted in the plot's subtitle, confirming that it is a relatively continuous variable and meets the standard for a quantitative variable to be used in this project (>= 10 distinct, ordered values observed).
+As demonstrated in the Codebook's Numerical Description section, our data set contains no missing values, therefore we have 1200 samples with complete information on this outcome. Below, we can see a histogram of the `Poor_PHealth` variable, with a normal distribution curve with the same mean and standard deviation as the `Poor_PHealth` distribution. We can see that although the variable has minimal right skew, it is not drastically non-normal. Therefore, we will choose to not transform the variable for the sake of simplicity. Additionally, we calculated 168 unique values in this variable, as noted in the plot's subtitle, confirming that it is a relatively continuous variable and meets the standard for a quantitative variable to be used in this project (>= 10 distinct, ordered values observed).
 
 
 
@@ -323,7 +327,7 @@ We will be using `Arthritis`, `Stroke`, `CKD`, and `Doc_Visit_Quar` as our input
 ```{r p1_lin_predictors}
 
 
-unique_values <- length(unique(counties_sample$Arthritis))
+unique_values <- length(unique(counties_sample$Arthritis)) # for plot subtitle
 
 bin_w1 <- 1
 res1 <- mosaic::fav_stats(counties_sample$Arthritis)
@@ -342,7 +346,7 @@ hist_plot_arthritis <-  ggplot(counties_sample, aes(x = Arthritis)) +
         plot.subtitle = element_text(hjust = 0.5))
 
 
-unique_values <- length(unique(counties_sample$Stroke))
+unique_values <- length(unique(counties_sample$Stroke)) # for plot subtitle
 bin_w2 <- 0.2
 res2 <- mosaic::fav_stats(counties_sample$Stroke)
 hist_plot_stroke <-  ggplot(counties_sample, aes(x = Stroke)) +
@@ -360,7 +364,7 @@ hist_plot_stroke <-  ggplot(counties_sample, aes(x = Stroke)) +
         plot.subtitle = element_text(hjust = 0.5))
 
 
-unique_values <- length(unique(counties_sample$CKD))
+unique_values <- length(unique(counties_sample$CKD)) # for plot subtitle
 bin_w3 <- 2
 res3 <- mosaic::fav_stats(counties_sample$CKD)
 hist_plot_CKD <-  ggplot(counties_sample, aes(x = CKD)) +
@@ -380,7 +384,7 @@ hist_plot_CKD <-  ggplot(counties_sample, aes(x = CKD)) +
 
 bar_plot_doc <- ggplot(counties_sample, aes(x = Doc_Visit_Quar, fill = Doc_Visit_Quar)) + 
   geom_bar(stat = "count", fill = c("lightsteelblue1", "lightsteelblue2", "lightsteelblue3", "lightsteelblue4")) +
-  labs(title = "Number of Counties in `Doc_Visit_Quar` Categories",
+  labs(title = "Number of Counties in each `Doc_Visit_Quar` Category",
        x = "Quartile Category for `Doc_Visit_Quar` Variable") +
   theme_classic() + 
   theme(legend.position = 0,
@@ -394,30 +398,29 @@ bar_plot_doc <- ggplot(counties_sample, aes(x = Doc_Visit_Quar, fill = Doc_Visit
 
 # Logistic Regression Plans
 
-Using logistic regression, I plan to assess whether prevalence of poor mental health can be predicted by prevalence of no leisure-time exercise, limited sleep, poor physical health for the majority of the month, and binge drinking. 
+Using logistic regression, I plan to assess whether prevalence of self-reported poor mental health for at least 14 days per month can be predicted by prevalence of no leisure-time exercise, limited sleep, poor physical health for the majority of the month, and binge drinking. 
 
 ## My Binary Outcome
 
-This logistic regression will predict `Poor_MHealth_Bin`, which is a binary variable representing whether a county is above the median for prevalence of >=14 poor mental health days out of the last 30 days, where `0` = No and `1` = Yes. We're using this variable as our outcome, because it is well known that the causes of poor mental health are multifactorial and I'm interested in assessing if there are any intriguing relationships with other health-related variables in our dataset. 
+This logistic regression will predict `Poor_MHealth_High`, which is a binary variable representing whether a county is above the median for prevalence of >=14 poor mental health days out of the last 30 days, where `0` = No and `1` = Yes. We're using this variable as our outcome, because it is well known that the causes of poor mental health are multifactorial and I'm interested in assessing if there are any intriguing relationships with other health-related variables in our data set. 
 
 Below, we'll group our data frame using `group_by` and `count` to show that there are 581 samples in the `0` category and 619 samples in the `1` category.
 
 ```{r p1_log_outcome}
 
 counties_sample %>% 
-  group_by(Poor_MHealth_Bin) %>%
+  group_by(Poor_MHealth_High) %>%
   count()
 
 ```
 
 ## My Planned Predictors (Logistic Model)
 
-We will be using `Less_Sleep`, `Binge_Drinking`, `Poor_PHealth`, and `No_Leisure_Exer_Quin` as our predictor variables for this model. Our plots below confirm that `Less_Sleep` and `Binge_Drinking` are quantitative variables, each with greater than 10 different, ordered, observed values. The `Poor_PHealth` variable has already been assessed as an quantitative variable under the "My Quantitative Outcome" subsection of the "Linear Regression Plans" section. Finally, the `No_Leisure_Exer_Quin` variable contains 5 categories, each containing greater than 30 samples per factor level. Finally, as we have 1200 samples, the five candidate predictors are below the limit of 15 regression inputs (using the 4 + (N-100)/100 formula).
+We will be using `Less_Sleep`, `Binge_Drinking`, `Poor_PHealth`, and `No_Leisure_Exer_Quin` as our predictor variables for this model. Our plots below confirm that `Less_Sleep` and `Binge_Drinking` are quantitative variables, each with greater than 10 different, ordered, observed values. The `Poor_PHealth` variable has already been assessed as a quantitative variable under the "My Quantitative Outcome" subsection of the "Linear Regression Plans" section. Finally, the `No_Leisure_Exer_Quin` variable contains 5 categories, each containing greater than 30 samples per factor level. Finally, as we have 1200 samples, the five candidate predictors are below the limit of 15 regression inputs (using the 4 + (N-100)/100 formula).
 
 ```{r p1_predictors_log}
 
-unique_values <- length(unique(counties_sample$Less_Sleep))
-
+unique_values <- length(unique(counties_sample$Less_Sleep)) # for plot subtitle
 bin_w1 <- 1
 res1 <- mosaic::fav_stats(counties_sample$Less_Sleep)
 hist_plot_sleep <-  ggplot(counties_sample, aes(x = Less_Sleep)) +
@@ -435,7 +438,7 @@ hist_plot_sleep <-  ggplot(counties_sample, aes(x = Less_Sleep)) +
         plot.subtitle = element_text(hjust = 0.5))
 
 
-unique_values <- length(unique(counties_sample$Binge_Drinking))
+unique_values <- length(unique(counties_sample$Binge_Drinking)) # for plot subtitle
 bin_w2 <- 0.2
 res2 <- mosaic::fav_stats(counties_sample$Binge_Drinking)
 hist_plot_binge <-  ggplot(counties_sample, aes(x = Binge_Drinking)) +
