@@ -100,7 +100,7 @@ Install many of the packages in the `tidymodels` ecosystem with `install.package
 
 When you use `library(tidymodels)`, this makes the core packages available in your R session. They include:
 
-- `rsample` which will help with data splitting and reasmpling
+- `rsample` which will help with data splitting and resampling
 - `parsnip` which provides a tidy, unified interface for models
 - `recipes` for data pre-processing and feature engineering
 - `yardstick` for measuring model effectiveness

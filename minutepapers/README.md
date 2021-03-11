@@ -6,7 +6,7 @@
 
 After Class | due at Noon on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
-10 (2021-03-09) | **2021-03-10** | http://bit.ly/432-2021-minute-10 | To appear on 2021-03-11.
+10 (2021-03-09) | **2021-03-10** | http://bit.ly/432-2021-minute-10 | http://bit.ly/432-2021-min10-feedback
 13 (2021-03-23) | 2021-03-24 | To appear by 2021-03-23. | To appear on 2021-03-25.
 17 (2021-04-06) | 2021-04-07 | To appear by 2021-04-06. | To appear on 2021-04-08.
 19 (2021-04-13) | 2021-04-14 | To appear by 2021-04-13. | To appear on 2021-04-15.

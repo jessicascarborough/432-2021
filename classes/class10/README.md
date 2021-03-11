@@ -14,8 +14,8 @@ for everything | deadlines | expectations | from Dr. Love | zoom info | download
 Today we're introducing the `tidymodels` set of packages. **Note** Rather than creating a set of materials (in Chapters 15-17 of the Course Notes) to cover tidymodels topics, I'm going to instead point you to the following excellent external resources for learning more.
 
 1. The [tidymodels website](https://www.tidymodels.org/), in particular the [Get Started](https://www.tidymodels.org/start/) tutorials, and the [Learn section](https://www.tidymodels.org/learn/), which has additional information on performing analyses, tuning models, and developing custom approaches, among other things.
-2. Max Kuhn and Julie Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main way to learn about these approaches.
-3. For videos with great `tidymodels` examples, try [Julie Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I'll highlight...
+2. Max Kuhn and Julia Silge's book [Tidy Modeling with R](https://www.tmwr.org/) which has been my main way to learn about these approaches.
+3. For videos with great `tidymodels` examples, try [Julia Silge's YouTube page](https://www.youtube.com/c/JuliaSilge/videos). I'll highlight...
     - [Model student debt inequality with tidymodels](https://www.youtube.com/watch?v=4ayOjlRv8bA) from 2021-02-12
     - [Get started with tidymodels and classification of penguin data](https://www.youtube.com/watch?v=z57i2GVcdww) from 2020-07-28
     - [Predict astronauts' mission duration with tidymodels and bootstrap aggregation](https://www.youtube.com/watch?v=rzfTA3xi-W0) from 2020-07-15
@@ -25,7 +25,7 @@ Today we're introducing the `tidymodels` set of packages. **Note** Rather than c
 
 ## Announcements
 
-1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon.
+1. There is a [Minute Paper after today's class](https://github.com/THOMASELOVE/432-2021/blob/master/minutepapers/README.md) (Class 10) due Wednesday 2021-03-10 at noon. It's a little longer than usual today, in part because I'm considering making some changes in the April part of the course, and in part because we haven't checked in in a while.
 2. All Project 1 proposals are approved. [Details and project titles are here](https://github.com/THOMASELOVE/432-2021/blob/master/project1/proposal_review.md), and thank you, all.
     -  The [Project 1 Portfolio and Presentation](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md) are due 2021-03-29 at 9 PM.
     -  Be sure to read "[Your proposal is approved. Now what?](https://github.com/THOMASELOVE/432-2021/blob/master/project1/02_project1_analyses.md#your-proposal-is-approved-now-what)" if you are unclear on what to do next.
